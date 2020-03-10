@@ -17,6 +17,7 @@
     z-index: 10000000;
     background-color: white !important;
     padding-top: 0px;
+    border-bottom: solid 1px #EBEBEB;
 }
 
 .help-menu {
@@ -54,14 +55,14 @@
     border-top-color: transparent !important;
     border-left-color: transparent !important;
     border-right-color: transparent !important;
-    border-bottom: 1px solid #949494 !important;
+    border-bottom: 1px solid #EBEBEB !important;
     border-radius: 0px !important;
     outline-style: none;
     box-shadow: none;
 }
 
 .btn-buscar {
-    background-image: url(/arquivos/LUPA2.png) !important;
+    background-image: url(/arquivos/lupa.png) !important;
     background-repeat: no-repeat !important;
     color: transparent !important;
     border-color: transparent !important;
@@ -74,7 +75,7 @@
     border-top-color: transparent !important;
     border-left-color: transparent !important;
     border-right-color: transparent !important;
-    border-bottom: 1px solid #949494 !important;
+    border-bottom: 1px solid #EBEBEB !important;
     background-size: contain;
     border-radius: 0px !important;
     margin-left: -2.5%;
@@ -86,9 +87,6 @@
     padding-right: 0;
 }
 
-.header .sing-in a {
-    padding: 0 12px !important;
-}
 
 .dropdown-menu {
     border: none !important;
@@ -96,9 +94,7 @@
     box-shadow: none !important;
 }
 
-.header .sing-in a {
-    font-size: 10px;
-}
+
 
 #drop-login {
     margin-left: -42px;
@@ -156,6 +152,7 @@
     padding-bottom: 4px;
     color: #444;
     text-decoration: none;
+    text-transform: uppercase;
 }
 
 
@@ -290,6 +287,14 @@
     #headerrow {
         display: flex;
         align-items: center;
+    }
+
+    #usuario-giftlist {
+        margin-top: -0.5em
+    }
+
+    #usuario-cart {
+        margin-top: -0.3em
     }
     
 

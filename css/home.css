@@ -15,27 +15,31 @@
     padding-top: 20px;
 }
 
-.sobre-durval {
-    background-color: #8D7573;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    color: white;
+.waterdropTitle .line {
+    border-bottom: solid 1px #EBEBEB;
+    margin-bottom: -18px;
+    margin-top: 29px;
 }
 
-.sobre-durval a {
-    color: white;
-    text-decoration: underline;
+.waterdropTitle img {
+   max-width: 20px;
+   background-color: white;
 }
 
-.sobre-durval p {
-    font-size: 15px;
-    line-height: 25px;
-}
+.waterdropTitle h3 {
+    color: #007DA5
+ }
 
 .politicas-comerciais ul li img{
     max-width: 90%;
 }
 
+
+
+.box-banner a img {
+    max-width: 100%;
+    height: auto;
+}
 
 
 

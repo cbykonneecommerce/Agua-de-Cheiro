@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce">
+
+<head>
+    <title> Home</title>
+    <vtex:metaTags />
+    <vtex:template id="commonStyles" />
+    <link href="/arquivos/home.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body id="home-page">
+
+    <div class="page">
+
+        <vtex:template id="Header" />
+
+        <!--  SubTemplate: Header -->
+
+        <!-- /SubTemplate: Header -->
+        <section class="container">
+            <div class="fullbanner hidden-xs" style="margin-top:15px">
+                <vtex:contentPlaceHolder id="bannersegmentado" />
+            </div><!-- .fullbanner -->
+            <div class="fullbanner visible-xs">
+                <vtex:contentPlaceHolder id="bannersegmentadomob" />
+            </div><!-- .fullbanner -->
+        </section>
+
+        <div class="politicas-comerciais-faixa">
+            <div class="politicas-comerciais container visible-md visible-lg">
+                <ul>
+                    <li>
+                        <img src="/arquivos/pata.png" alt="" />
+                    </li>
+                    <li>
+                        <img src="/arquivos/produtosexclusivos.png" alt="" />
+                    </li>
+                    <li>
+                        <img src="/arquivos/fretegratis.png" alt="" />
+                    </li>
+                    <li>
+                        <img src="/arquivos/5cento.png" alt="" />
+                    </li>
+                </ul>
+            </div>
+
+            <div class="owl-carousel owl-theme visible-xs visible-sm" id="carouselpropostas">
+                <div class="item">
+
+                    <img src="/arquivos/pata.png" alt="" />
+                </div>
+                <div class="item">
+
+                    <img src="/arquivos/produtosexclusivos.png" alt="" />
+
+
+                </div>
+                <div class="item">
+                    <img src="/arquivos/fretegratis.png" alt="" />
+
+                </div>
+                <div class="item">
+                    <img src="/arquivos/5cento.png" alt="" />
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <section id="home-content" class="container">
+
+            <div id="category-extra-middle"></div>
+
+            <div id="category-extra-vitrine-1"></div>
+
+            <div class="waterdropTitle">
+                <div class="line"></div>
+                <div style="text-align: center"> <img src="/arquivos/gota.png" alt="" />
+                    <h3>OFERTAS</h3>
+                </div>
+            </div>
+
+            <div class="showcase-default showcase-owl">
+                <vtex:contentPlaceHolder id="Ofertas" />
+            </div>
+
+            <div id="category-extra-vitrine-2"></div>
+
+
+            <div class="row">
+               <div class="col-sm-6" style="padding-right: 30px;">
+                   <div class="row" style="margin-bottom: 53px;">
+                    <vtex:contentPlaceHolder id="fleftcoltop" />
+                   </div>
+                   <div class="row">
+                       <div class="col-sm-6">
+                        <vtex:contentPlaceHolder id="fleftcolbottom" />
+                       </div>
+                       <div class="col-sm-6">
+                        <vtex:contentPlaceHolder id="frightcolbottom" />
+                       </div>
+                   </div>
+               </div>
+               <div class="col-sm-6" style="padding-left: 30px;">
+                   <div class="row" style="margin-bottom: 30px;">
+                    <vtex:contentPlaceHolder id="lfirstbanner" />
+                   </div>
+                   <div class="row">
+                    <vtex:contentPlaceHolder id="lsecondbanner" />
+                   </div>
+               </div>
+            </div>
+
+
+            <div class="waterdropTitle">
+                <div class="line"></div>
+                <div style="text-align: center"> <img src="/arquivos/gota.png" alt="" />
+                    <h3>LANÇAMENTOS</h3>
+                </div>
+            </div>
+            <div class="showcase-default showcase-owl">
+                <vtex:contentPlaceHolder id="Lançamentos" />
+            </div>
+
+
+
+
+            <div class="waterdropTitle">
+                <div class="line"></div>
+                <div style="text-align: center"> <img src="/arquivos/gota.png" alt="" />
+                    <h3>MAIS VENDIDOS</h3>
+                </div>
+            </div>
+            <div class="showcase-default showcase-owl">
+                <vtex:contentPlaceHolder id="Destaques" />
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <vtex:contentPlaceHolder id="bottomfirst" />
+                </div>
+                <div class="col-sm-6">
+                    <vtex:contentPlaceHolder id="bottomsecond" />
+                </div>
+            </div>
+
+            <div class="row" style="margin-top: 30px;">
+                <vtex:contentPlaceHolder id="bottomlast" />
+            </div>
+
+            <div class="row" style="margin-top:65px;margin-bottom: 65px">
+                <img src="/arquivos/igpreto.png" alt="" style="max-width: 21px;
+                float: left;
+                margin-right: 15px;
+                margin-top: 4px;" />
+                <p style="font-size: 21px;
+                    line-height: 25px;
+                    color: #000;">@DURVALCALCADOS</p>
+                <div>
+
+                </div>
+            </div>
+        </section><!-- #content -->
+
+        <div class="container-fluid">
+            <!-- LightWidget WIDGET -->
+            <!--
+            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe
+                src="https://cdn.lightwidget.com/widgets/7beb0a80075557e1951940fe71fb795d.html" scrolling="no"
+                allowtransparency="true" class="lightwidget-widget"
+                style="width:100%;border:0;overflow:hidden;"></iframe>-->
+
+        </div>
+
+
+
+
+        <div id="category-extra-bottom"></div>
+
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="Footer" />
+        <!-- /SubTemplate: Footer -->
+
+    </div><!-- .container-fluid -->
+
+</body>
+<vtex:template id="commonScripts" />
+
+</html>
