@@ -126,10 +126,10 @@
 }
 
 #menu-mobile ul li a {
-    color: #000;
+    color: #fff !important;
     font-size: 14px !important;
     line-height: 30px !important;
-    font-weight: 400 !important;
+    font-weight: 300 !important;
 }
 
 .deptos ul {
@@ -142,8 +142,8 @@
 
 
 .welcome-bar p, .welcome-bar a, .welcome-bar span {
-    font-size: 11px;
-    color: white;
+    font-size: 11px !important;
+    color: white !important;
 }
 
 .deptos ul li a {
@@ -190,17 +190,24 @@
 /* Style the sidenav links and the dropdown button */
 
 .sidenav a, .dropdown-btn {
-    padding: 6px 8px 20px 16px;
+    padding: 15px 8px 15px 16px;
     text-decoration: none;
     font-size: 14px;
-    color: #000;
+    color: #fff !important;
     display: block;
     border: none;
+    font-weight: 300;
     background: none;
     width: 100%;
     text-align: left;
     cursor: pointer;
     outline: none;
+    text-transform: uppercase;
+    border-top: solid 1px #3397B7
+}
+
+#menu-mobile {
+    background-color: #007DA5 !important;
 }
 
 /* On mouse-over */

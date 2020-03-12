@@ -24,6 +24,9 @@
             <div class="fullbanner hidden-xs" style="margin-top:15px">
                 <vtex:contentPlaceHolder id="bannersegmentado" />
             </div><!-- .fullbanner -->
+            
+        </section>
+        <section class="container-fluid">
             <div class="fullbanner visible-xs">
                 <vtex:contentPlaceHolder id="bannersegmentadomob" />
             </div><!-- .fullbanner -->
@@ -92,21 +95,21 @@
 
 
             <div class="row">
-               <div class="col-sm-6" style="padding-right: 30px;">
-                   <div class="row" style="margin-bottom: 53px;">
+               <div class="col-xs-12 col-sm-6" id="fixer0">
+                   <div class="row" id="fixer1">
                     <vtex:contentPlaceHolder id="fleftcoltop" />
                    </div>
                    <div class="row">
-                       <div class="col-sm-6">
+                       <div class="col-xs-6">
                         <vtex:contentPlaceHolder id="fleftcolbottom" />
                        </div>
-                       <div class="col-sm-6">
+                       <div class="col-xs-6">
                         <vtex:contentPlaceHolder id="frightcolbottom" />
                        </div>
                    </div>
                </div>
-               <div class="col-sm-6" style="padding-left: 30px;">
-                   <div class="row" style="margin-bottom: 30px;">
+               <div class="col-xs-12 col-sm-6" id="fixer2">
+                   <div class="row" id="fixer3">
                     <vtex:contentPlaceHolder id="lfirstbanner" />
                    </div>
                    <div class="row">
@@ -115,7 +118,23 @@
                </div>
             </div>
 
+<style>
+    @media screen and (min-width: 1200px) {
+   #fixer0 {
+    padding-right: 30px;
+   }
+    #fixer1 {
+        margin-bottom: 53px;
+    }
+    #fixer2 {
+        padding-left: 30px;
+    }
+    #fixer3 {
+        margin-bottom: 30px;
+    }
 
+}
+</style>
             <div class="waterdropTitle">
                 <div class="line"></div>
                 <div style="text-align: center"> <img src="/arquivos/gota.png" alt="" />
@@ -153,16 +172,10 @@
                 <vtex:contentPlaceHolder id="bottomlast" />
             </div>
 
-            <div class="row" style="margin-top:65px;margin-bottom: 65px">
-                <img src="/arquivos/igpreto.png" alt="" style="max-width: 21px;
-                float: left;
-                margin-right: 15px;
-                margin-top: 4px;" />
-                <p style="font-size: 21px;
-                    line-height: 25px;
-                    color: #000;">@DURVALCALCADOS</p>
-                <div>
-
+            <div class="waterdropTitle">
+                <div class="line"></div>
+                <div style="text-align: center"> <img src="/arquivos/instagram.png" alt="" />
+                    <h3>@aguadecheirooficial</h3>
                 </div>
             </div>
         </section><!-- #content -->
