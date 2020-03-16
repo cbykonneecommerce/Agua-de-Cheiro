@@ -249,4 +249,8 @@ margin-bottom: 1em;
         padding: 8px;
         float: right;
     }
+
+    #contact-footer {
+        text-align: center;
+    }
 }

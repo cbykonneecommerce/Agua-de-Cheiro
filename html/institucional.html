@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+
+<head>
+    <title>Institucional</title>
+    <vtex:metaTags />
+    <vtex:template id="commonStyles" />
+    <link href="/arquivos/institucional.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+</head>
+
+<body id="institucional-page">
+
+    <div class="page">
+
+        <!--  SubTemplate: Header -->
+        <vtex:template id="Header" />
+        <!-- /SubTemplate: Header -->
+
+        <div id="institucional-extra-top"></div>
+
+        <section id="institucional-content" class="container">
+
+            <div class="row">
+
+
+                <div id="sidenavCTR" style="position: fixed;top: 50%;z-index: 99;background: #b3b3b3;
+                opacity: .8;">
+                    <a onclick="openNav()" id="open"><img src="/arquivos/seta02.png" /></a>
+                    <a onclick="closeNav()" id="close"><img src="/arquivos/seta01.png" /></a>
+                </div>
+
+                <div id="mySidenav" class="col-sm-7 hidden-md hidden-lg">
+                    <h4><b>Antes da Compra</b></h4>
+                    <ul>
+                        <li><a href="/institucional/compra-segura">Compra Segura</a></li>
+                        <li><a href="/institucional/privacidade">Política de Privacidade</a></li>
+                        <li><a href="tel:1134567890">Televendas <br />
+                                <vtex.cmc:telefone /></a></li>
+                    </ul>
+
+                    <h4><b>Comprando</b></h4>
+                    <ul>
+                        <li><a href="/institucional/pagamento">Formas de pagamento</a></li>
+                    </ul>
+
+                    <h4><b>Após a Compra</b></h4>
+                    <ul>
+                        <li><a href="/account/orders">Acompanhe Seu Pedido</a></li>
+                        <li><a href="/institucional/entrega">Prazo de Entrega</a></li>
+                        <li><a href="/institucional/trocas-devolucoes">Trocas e Devoluções</a></li>
+                    </ul>
+
+                    <h4><b>Institucional</b></h4>
+                    <ul>
+                        <li><a href="/institucional/fale-conosco">Fale Conosco</a><br /><br />
+                            <span>Envie-nos um email de contato, com suas sugesôes e críticas.</span>
+                        </li>
+                        <li><a href="/institucional/quem-somos">Quem Somos</a></li>
+                        <li><a href="/institucional/nossas-lojas">Nossas Lojas</a></li>
+                    </ul>
+                </div>
+
+                <script>
+                    $("#sidenavCTR #close").hide();
+
+                    function openNav() {
+                        document.getElementById("mySidenav").style.left = "0px";
+                        document.getElementById("sidenavCTR").style.left = "64%";
+                        $("#sidenavCTR #open").hide();
+                        $("#sidenavCTR #close").show();
+                    }
+
+                    function closeNav() {
+                        document.getElementById("mySidenav").style.left = "-880px";
+                        document.getElementById("sidenavCTR").style.left = "0%";
+                        $("#sidenavCTR #close").hide();
+                        $("#sidenavCTR #open").show();
+                    }
+                </script>
+                <div class="col-xs-2 hidden-xs">
+                    <h4><b>Antes da Compra</b></h4>
+                    <ul>
+                        <li><a href="/institucional/compra-segura">Compra Segura</a></li>
+                        <li><a href="/institucional/privacidade">Política de Privacidade</a></li>
+                        <li><a href="tel:1134567890">Televendas <br />
+                                <vtex.cmc:telefone /></a></li>
+                    </ul>
+
+                    <h4><b>Comprando</b></h4>
+                    <ul>
+                        <li><a href="/institucional/pagamento">Formas de pagamento</a></li>
+                    </ul>
+
+                    <h4><b>Após a Compra</b></h4>
+                    <ul>
+                        <li><a href="/account/orders">Acompanhe Seu Pedido</a></li>
+                        <li><a href="/institucional/entrega">Prazo de Entrega</a></li>
+                        <li><a href="/institucional/trocas-devolucoes">Trocas e Devoluções</a></li>
+                    </ul>
+
+                    <h4><b>Institucional</b></h4>
+                    <ul>
+                        <li><a href="/institucional/fale-conosco">Fale Conosco</a><br /><br />
+                            <span>Envie-nos um email de contato, com suas sugesôes e críticas.</span>
+                        </li>
+                        <li><a href="/institucional/quem-somos">Quem Somos</a></li>
+                        <li><a href="/institucional/nossas-lojas">Nossas Lojas</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-10">
+                    <h4 style="text-align:center">CENTRAL DE ATENDIMENTO</h4>
+                    <vtex:contentPlaceHolder id="conteudo" />
+                </div>
+            </div>
+
+
+
+        </section><!-- #content -->
+
+
+
+        <!--  SubTemplate: Footer -->
+        <vtex:template id="Footer" />
+        <!-- /SubTemplate: Footer -->
+
+    </div><!-- .container-fluid -->
+
+</body>
+<vtex:template id="commonScripts" />
+<script src="/arquivos/faleconosco.js"></script>
+
+</html>
+
+
+
+
+<h3>TROCAS E DEVOLUÇÕES</h3>
+
+<p>
+    A Água de Cheiro oferece aos seus clientes produtos de qualidade, buscando excelência em
+como os comercializa. Para manter a credibilidade conquistada e alcançar sempre a satisfação
+de seus consumidores, criou sua Política de Troca e Devolução conforme o decreto nº 7.962.
+</p>
+
+<p>
+    1) Considerações Gerais:
+As ocorrências que envolvam troca ou devolução devem ser comunicadas ao Serviço de
+Atendimento ao Cliente (SAC - tel.: 0800 200 1202) ou pela página de CONTATO. Se o produto
+devolvido estiver sem essa comunicação, fora do prazo ou com ausência de itens/acessórios
+que o acompanhem, será reenviado ao cliente sem consulta prévia.
+</p>
+
+<p>
+    Se ocorrer qualquer das hipóteses abaixo, recuse o recebimento do produto:
+</p>
+<ul>
+    <li>- Embalagem aberta ou avariada.</li>
+    <li>- Produto avariado.</li>
+    <li>- Produto em desacordo com o pedido</li>
+</ul>
+
+<p>
+    Se, ainda assim, você receber o produto, por favor, entre em contato com o Serviço de
+Atendimento ao Cliente (SAC - tel.: 0800 200 1202) ou pela página de CONTATO em até 24h.
+</p>
+
+<p>
+    2) Devolução por Arrependimento/Desistência:
+</p>
+
+<p>
+    Para devolver um produto por arrependimento, as seguintes condições deserdo ser
+    observadas:
+</p>
+
+<ul>
+    <li>- O prazo para desistir da compra do produto é de até sete (07) dias corridos, a contar da data
+        do recebimento;</li>
+        <li>
+            - O produto deverá ser encaminhado na embalagem original, sem características de uso, sem
+violação do lacre, acompanhado de nota fiscal e todos os seus acessórios.
+        </li>
+</ul>
+
+<p>
+    3) Produto com Avaria:
+</p>
+
+<p>
+    A solicitação de troca deverá ser comunicada ao Serviço de Atendimento ao Cliente (SAC - tel.:
+0800 200 1202) ou pela página de contato em até sete (07) dias corridos, a contar da data do
+recebimento.
+</p>
+<p>
+    Se o produto adquirido em nossa loja apresentar alguma avaria após sete dias, a contar da
+data do recebimento, mas dentro do prazo de validade, você poderá entrar em contato em
+nosso Serviço de Atendimento ao Cliente (SAC - tel.: 0800 200 1202) ou pela página de
+CONTATO para comunicar a ocorrência e obter instruções de como proceder.
+</p>
+
+<p>
+    Todos os produtos são analisados. Efetuaremos a troca sempre que for constatado qualquer
+avaria e defeito, ou se tiver sido descumprida uma das condições descritas no tópico anterior.
+</p>
+
+<p>
+    4) Como cancelar a compra de um produto:
+</p>
+
+<p>
+    Se a forma de pagamento escolhida foi boleto, e o pagamento ainda não foi efetuado, o
+    pedido será cancelado automaticamente, no prazo de vencimento do mesmo, sem qualquer
+    ônus para você.
+</p>
+
+<p>
+    Caso o pedido tenha sido realizado com outra forma de pagamento, é necessário aguardar a
+confirmação do pagamento.
+</p>
+
+<p>
+    Para solicitar o cancelamento, favor entrar em contato com um de nossos canais de
+atendimento, informados na página inicial do Serviço de Atendimento ao Cliente (SAC -tel.:
+0800 200 1202) ou pela página de CONTATO.
+</p>
+
+<p>5) Como trocar o seu produto:</p>
+
+<p>Consulte a Política de Troca e Devolução e faça sua solicitação.</p>
+
+<p>É necessário informar</p>
+
+<ul>
+    <li>- Número do pedido ou CPF do comprador;</li>
+    <li>- Código do produto - conforme consta na nota fiscal, ao lado da descrição do produto;</li>
+    <li>- Motivo da troca</li>
+</ul>
+
+<p>
+    Nossa Política de Troca e Devolução está de acordo com o código de Defesa do Consumidor,
+preservando todos os seus direitos.
+</p>
+
+<p>6) Ressarcimento de valores de pedidos cancelados:</p>
+
+<p>
+    A Água de Cheiro restitui os valores pagos utilizando a mesma forma de pagamento escolhida
+no processo de compras:
+</p>
+
+<ul>
+    <li>- CARTÃO DE CRÉDITO - a administradora de cartões será notificada e o estorno ocorrerá em
+        até duas faturas subsequentes;</li>
+
+        <li>
+            - BOLETO BANCÁRIO e TRANSFERENCIA BANCÁRIA - a restituição será efetuada por meio de
+DOC na conta corrente indicada pelo consumidor, em até 10 dias úteis. É necessário que o CPF
+do titular da conta corrente seja o mesmo que efetuou o pedido (CPF do cliente);
+        </li>
+
+        <li>
+            - Você sempre pode requisitar o ressarcimento em Vale-Trocas no mesmo valor pago. Ele pode
+ser utilizado na compra de qualquer produto na loja virtual, em até 90 dias.
+        </li>
+</ul>
+
+<p>
+    IMPORTANTE: em caso de devolução, a restituição dos valores será processada somente após
+o recebimento e análise das condições do(s) produto(s) em nosso Centro de distribuição.
+</p>
+
+
+<p>
+    O reembolso será realizado no valor total do(s) produto(s)devolvido(s)/cancelado(s), somando-
+se o valor do frete.
+</p>
+
+<p>7) Solicitação de Ressarcimento:</p>
+
+<ul>
+    <li>- Para optar por uma das alternativas de reembolso: Entre em contato com o Serviço de
+        Atendimento ao Cliente (SAC - tel.: 0800 200 1202) ou pela página de CONTATO e informe:
+        </li>
+
+        <li>- CPF do titular da compra;</li>
+        <li>
+            - O motivo pelo qual está solicitando o ressarcimento.</li>
+            <li>
+                - Forma de pagamento realizada.
+            </li>
+</ul>
+
+
+
+
