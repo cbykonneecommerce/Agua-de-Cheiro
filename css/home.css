@@ -42,7 +42,9 @@
 }
 
 
-
+.fullbanner .owl-controls .owl-buttons > div.owl-prev, .fullbanner .owl-controls .owl-buttons > div.owl-next {
+    display: none;
+}
 
 @media screen and (max-width: 800px) {
     #sobre p, #sobre h3 {
