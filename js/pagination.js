@@ -1,6 +1,6 @@
 $(document).ready(function() {
-    $(".pages li.previous", "body").html("<img src='/arquivos/seta-esquerda.png'/>")
-    $(".pages li.next", "body").html("<img src='/arquivos/seta-direita.png'/>")
+    $(".pages li.previous", "body").html("<img src='/arquivos/seta-esquerda.png' style='width: 15px'/>")
+    $(".pages li.next", "body").html("<img src='/arquivos/seta-direita.png' style='width: 15px'/>")
 
 
     //FILTRO MOBILE
@@ -14,19 +14,23 @@ $(document).ready(function() {
             $( ".navigation-tabs" ).toggle( "slow" )
         })
     } */
+
+    const quantity= $(".searchResultsTime");
+    $(".sub").append($(quantity));
+    $(".searchResultsTime:nth-of-type(2)").remove()
     
 });
 
 $(window).on('hashchange', function(e){
-    $(".pages li.previous", "body").html("<img src='/arquivos/seta-esquerda.png'/>")
-    $(".pages li.next", "body").html("<img src='/arquivos/seta-direita.png'/>")
+    $(".pages li.previous", "body").html("<img src='/arquivos/seta-esquerda.png' style='width: 15px'/>")
+    $(".pages li.next", "body").html("<img src='/arquivos/seta-direita.png' style='width: 15px'/>")
    });
-   $(".pages li.previous", "body").html("<img src='/arquivos/seta-esquerda.png'/>")
-   $(".pages li.next", "body").html("<img src='/arquivos/seta-direita.png'/>")
+   $(".pages li.previous", "body").html("<img src='/arquivos/seta-esquerda.png' style='width: 15px'/>")
+   $(".pages li.next", "body").html("<img src='/arquivos/seta-direita.png' style='width: 15px'/>")
 
    setInterval(()=>{
-    $(".pages li.previous", "body").html("<img src='/arquivos/seta-esquerda.png'/>");
-    $(".pages li.next", "body").html("<img src='/arquivos/seta-direita.png'/>");
+    $(".pages li.previous", "body").html("<img src='/arquivos/seta-esquerda.png' style='width: 15px'/>");
+    $(".pages li.next", "body").html("<img src='/arquivos/seta-direita.png' style='width: 15px'/>");
    }, 1000)
 
 
