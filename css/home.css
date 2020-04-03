@@ -67,3 +67,13 @@
    
 }
 }
+
+
+
+@media screen and (max-width: 411px) {
+    .fullbanner .box-banner img {
+        height: auto ! important;
+        width: 411px! important;
+    }
+}
+

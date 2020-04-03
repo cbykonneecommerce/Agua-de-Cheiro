@@ -6,7 +6,7 @@
 
 .prateleira .box-item {
     background-color: white !important;
-    height: 34em;
+    height: 28em;
     position: relative;
     text-transform: uppercase;
     text-align: center;
@@ -133,7 +133,7 @@ select, fieldset {
         margin-top: 1em;
     }
     .prateleira .box-item {
-        height: 23em;
+        height: 22em;
     }
 
     .product-name .sku-list {
