@@ -9,34 +9,39 @@ $( document ).ready(function() {
       
 
         response.forEach(element => {
-            $(".deptos ul").append( `<li class="depto-${element.name}"><a href="${element.url}">${element.name}</a></li>`);
+            let divtext =  element.name;
+            element.name = element.name.replace(/\s+/g, '-');
+            $(".deptos ul").append( `<li class="depto-${element.name}"><a href="${element.url}">${divtext}</a></li>`);
             console.log("adding main")
             if(element.hasChildren) {
             $("#top-menu .container #deptos-list").append(`<div class="deptonav depto-${element.name}" id="${element.name}" style="display: none">
 
             <div class="row">
-                 <div class="col-sm-3">
+                 <div class="col-sm-2">
                      <ul class="">
                          
 
                      </ul>
                  </div>
-                 <div class="col-sm-3">
+                 <div class="col-sm-2">
                      <ul>
                      
 
                      </ul>
                  </div>
-                 <div class="col-sm-3">
+                 <div class="col-sm-2">
                     <ul></ul>
                  </div>
-                 <div class="col-sm-3">
-                 <a><img src="/arquivos/menu_${element.name}.jpg" /></a>
+                 <div class="col-sm-2">
+                    <ul></ul>
+                 </div>
+                 <div class="col-sm-4">
+                 <a><img src="/arquivos/generico-menu.png" /></a>
                  </div>
              </div>
             </div>`);
 
-            $(".sidenav").append(`<button class="dropdown-btn" id="${element.name}">${element.name}<i class="fa fa-angle-down"></i></button>
+            $(".sidenav").append(`<button class="dropdown-btn" id="${element.name}">${divtext}<i class="fa fa-angle-down"></i></button>
             <div class="dropdown-container" id="${element.name}"></div>`)
 
 
@@ -66,12 +71,14 @@ $( document ).ready(function() {
 
             element.children.forEach((subs, index) => {
                 console.log("adding children")
-                if( index < 4) {
-                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(1) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
-                } else if (index < 8) {
-                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(2) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
+                if( index < 5) {
+                    $(`.depto-${element.name} .row .col-sm-2:nth-of-type(1) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
+                } else if (index < 10) {
+                    $(`.depto-${element.name} .row .col-sm-2:nth-of-type(2) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
+                } else if (index < 15){
+                    $(`.depto-${element.name} .row .col-sm-2:nth-of-type(3) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
                 } else {
-                    $(`.depto-${element.name} .row .col-sm-3:nth-of-type(3) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
+                    $(`.depto-${element.name} .row .col-sm-2:nth-of-type(4) ul`).append( `<li><a href="${subs.url}">${subs.name}</a></li>`);
                 }
 
                 $(`.dropdown-container#${element.name}`).append(`<a href="${subs.url}">${subs.name}</a>`)
@@ -90,8 +97,36 @@ $( document ).ready(function() {
        
     })
 
+    setTimeout(()=>{
+        if(dataLayer[2].visitorLoginState || dataLayer[3].visitorLoginState) {
+            $("#usuario-login span").html(`<a href="/account" style="display: inline;padding: 0 !important;color: #444;text-decoration: underline">Minha conta</a>`);
+            $(".sing-in .navbar-nav").css({"float": "right"})
+        }
+        
+    
+    
+        $(".quickView a").text("COMPRA RÁPIDA")
+    },1200)
 
 
-
+    
 
 });
+
+
+
+function scrollFunction() {
+    if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+      $(".link-logo img").css({"max-width": "55px"})
+    } else {
+      $(".link-logo img").css({"max-width": "119px"})
+    }
+  }
+
+const mq = window.matchMedia("(min-width: 1200px)");
+    if (mq.matches) {
+        window.onscroll = function() {scrollFunction()};
+    }
+
+
+

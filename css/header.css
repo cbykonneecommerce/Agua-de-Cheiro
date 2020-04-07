@@ -32,8 +32,14 @@
 }
 #top-menu {
     position: sticky;
-    top: 10%;
+    top: 11.2%;
     z-index: 10000000;
+}
+
+#TB_overlay {
+    background-color: #007DA5;
+    width: 100%;
+    opacity: 0.8;
 }
 
 .container-fluid {
@@ -48,6 +54,7 @@
 
 .link-logo img {
     max-width: 119px;
+    transition: 0.2s;
 }
 
 .fulltext-search-box {
@@ -59,6 +66,23 @@
     border-radius: 0px !important;
     outline-style: none;
     box-shadow: none;
+}
+
+
+
+#TB_iframeContent {
+    width: 1189px !important;
+    height: 574px !important;
+    margin-left: -275px;
+
+
+}
+
+#TB_closeWindowButton {
+    background-color: white;
+    font-size: 19px;
+    padding: 5px;
+    color: #444 !important;
 }
 
 .btn-buscar {
@@ -102,10 +126,11 @@
 }
 
 #mini-cart-admake {
-    width: 386px !important;
+    width: 412px !important;
     border-radius: 0 !important;
     box-shadow: none !important;
     border: none !important;
+    margin-top: -9px;
 }
 
 #drop-login li {
@@ -155,21 +180,26 @@
     text-transform: uppercase;
 }
 
-
+#vtexIdContainer{
+    z-index: 99999999999999 !important;
+}
 
 .deptonav {
-    background-color: #FCFCFC;
+    background-color: #007DA5;
     /*opacity: 0.92;*/
     z-index: 9999999999;
     padding-top: 2em;
     padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
     position: absolute;
     width: 100%;
 }
 
 #deptos-list a {
-    color: black !important;
+    color: white !important;
     font-size: 10px;
+    text-transform: uppercase;
 }
 
 #deptos-list ul li {
@@ -238,8 +268,8 @@
 
 #mini-cart-admake .mini-cart-item .nome-produto a {
     text-align: left;
-    font-size: 11px !important;
-    line-height: 13px !important;
+    font-size: 18px !important;
+    line-height: 22px !important;
     color: black !important;
 }
 
@@ -249,10 +279,11 @@
 }
 
 #mini-cart-admake .mini-cart-item .qtd-valor .preco {
-    color: black !important;
+    color: #007DA5 !important;
     font-weight: 400 !important;
     font-size: 15px !important;
-    line-height: 18px !important
+    line-height: 18px !important;
+    float: right
 }
 
 #mini-cart-admake .mini-cart-item {
@@ -260,25 +291,29 @@
 }
 
 #mini-cart-admake .mini-cart-footer .mini-cart-totais {
-    background-color: #F9F9F9;
+    
     padding: 10px;
 }
 
 #mini-cart-admake #mini-cart-admake-total, #mini-cart-admake .mini-cart-totais span {
     color: #000000;
-    font-size: 15px !important;
+    font-size: 18px !important;
     font-weight: 400 !important;
     line-height: 18px !important;
 }
 
+#mini-cart-admake .mini-cart-item .qtd-valor .qtd:before {
+    content: "Quantidade: "
+}
+
 #mini-cart-admake {
-    right: -25px !important;
+    right: -73px !important
 }
 
 #mini-cart-admake .mini-cart-botao .btn-finalizar-compra {
     padding: 10px;
     color: #fff;
-    background-color: #000 !important;
+    background-color: #007DA5 !important;
     font-weight: 200 !important;
     text-transform: uppercase;
     font-size: 16px !important;

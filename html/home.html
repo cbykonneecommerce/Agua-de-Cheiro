@@ -100,10 +100,14 @@
                     <vtex:contentPlaceHolder id="fleftcoltop" />
                    </div>
                    <div class="row">
-                       <div class="col-xs-6">
+                       <div class="col-xs-6" style="
+                       padding: 0px;
+                   ">
                         <vtex:contentPlaceHolder id="fleftcolbottom" />
                        </div>
-                       <div class="col-xs-6">
+                       <div class="col-xs-6" style="
+                       padding: 0px;
+                   ">
                         <vtex:contentPlaceHolder id="frightcolbottom" />
                        </div>
                    </div>
@@ -121,16 +125,21 @@
 <style>
     @media screen and (min-width: 1200px) {
    #fixer0 {
-    padding-right: 30px;
+   
    }
     #fixer1 {
-        margin-bottom: 53px;
+        margin-bottom: 15px;
+    padding-right: 7px;
     }
     #fixer2 {
-        padding-left: 30px;
+        padding-left: 22px;
     }
     #fixer3 {
-        margin-bottom: 30px;
+        margin-bottom: 15px;
+    }
+
+   .col-xs-6 .box-banner a img {
+    max-width: 96%;
     }
 
 }
@@ -178,15 +187,15 @@
                     <h3>@aguadecheirooficial</h3>
                 </div>
             </div>
+
+            <div class="instagramcarrossel">
+              
+            </div>
         </section><!-- #content -->
 
         <div class="container-fluid">
-            <!-- LightWidget WIDGET -->
-            <!--
-            <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe
-                src="https://cdn.lightwidget.com/widgets/7beb0a80075557e1951940fe71fb795d.html" scrolling="no"
-                allowtransparency="true" class="lightwidget-widget"
-                style="width:100%;border:0;overflow:hidden;"></iframe>-->
+            <!-- LightWidget WIDGET --><script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/04cd1d291e7f5f59b5f03e84fd57da54.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
+
 
         </div>
 
@@ -203,5 +212,10 @@
 
 </body>
 <vtex:template id="commonScripts" />
+
+<script>
+    $(".showcase-owl .owl-controls .owl-buttons > div.owl-prev", "body").html("<img src='/arquivos/seta-esquerda.png' style='width: 15px'/>");
+    $(".showcase-owl .owl-controls .owl-buttons > div.owl-next", "body").html("<img src='/arquivos/seta-direita.png' style='width: 15px'/>");
+</script>
 
 </html>

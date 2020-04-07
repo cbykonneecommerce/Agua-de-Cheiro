@@ -34,13 +34,19 @@
     max-width: 90%;
 }
 
-
+.prateleira .box-item {
+    height: 36em !important;
+}
 
 .box-banner a img {
     max-width: 100%;
     height: auto;
 }
 
+
+.prateleira h2 {
+    display: none !important;
+}
 
 .fullbanner .owl-controls .owl-buttons > div.owl-prev, .fullbanner .owl-controls .owl-buttons > div.owl-next {
     display: none;
@@ -70,10 +76,10 @@
 
 
 
-@media screen and (max-width: 411px) {
+@media screen and (max-width: 415px) {
     .fullbanner .box-banner img {
         height: auto ! important;
-        width: 411px! important;
+        width: 414px! important;
     }
 }
 

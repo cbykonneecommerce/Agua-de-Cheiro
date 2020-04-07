@@ -82,6 +82,11 @@
 
 }
 
+
+.pager.bottom .pages {
+    margin-top: 6em;
+}
+
 .resultado-busca-numero .label{
     color: black !important;
     font-weight: 400 !important;

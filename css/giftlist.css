@@ -15,7 +15,7 @@
 }
 
 #menu-giftlist ul li {
-    background-color: #000 !important;
+    background-color: #007DA5 !important;
     margin-top: 1em;
     margin-bottom: 1em;
     text-align: center;
@@ -93,6 +93,7 @@ input {
 }
 #giftlistsearchform .giftlistsearchul li select, #giftlistsearchform .giftlistsearchul li input, .giftlistform fieldset .giftlistul li select, .giftlistform fieldset .giftlistul li input, .giftlistform fieldset .giftlistul li textarea {
     width: 100%;
+    padding-left: 5px;
 }
 label {
     margin-right: 20px;
@@ -191,7 +192,7 @@ legend {
 }
 
 .page-number {
-    background-color: #000 !important;
+    background-color: #007DA5 !important;
 }
 #gift-manager {
     padding-left: 1em;
@@ -234,7 +235,7 @@ legend {
 }
 
 #giftlistsearchfind{
-    background-color: #000;
+    background-color: #007DA5;
     color: white !important;
     border: none;
     outline-style: none;
@@ -265,7 +266,7 @@ legend {
     margin-top: 0;
 }
   #glstc-10 {
-    background-color: #919fc2;
+    background-color: #007DA5;
     text-decoration: none;
     padding: 1em;
     margin-top: 2em;
@@ -331,7 +332,7 @@ legend {
   #giftlistv2save, #giftlistv2cancel {
     width: 89%;
     margin-top: 1em;
-    background-color: #000;
+    background-color: #007DA5;
     color: white;
   }
 
@@ -417,7 +418,7 @@ td{
 }
 
 .action-buy a, .button-send-to-cart, .giftlistinfo-actions .list-action li a{
-    background-color: #000;
+    background-color: #007DA5;
     border: 0 none;
     border-radius: 6px;
     line-height: 44px;

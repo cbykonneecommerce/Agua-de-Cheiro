@@ -17,12 +17,43 @@
     visibility:hidden;
     margin-top: 15px;
 }
+.quickView  {
+    visibility:hidden;
+
+}
+
+.quickView a {
+    color: black !important;
+    border: solid 1px #EBEBEB;
+    padding: 4px;
+
+}
+.box-item:hover .quickView{
+    visibility: visible;
+}
 
 .box-item:hover .wrapper-buy-button-asynchronous{
     visibility: visible;
 }
 
+.prateleira .box-item .discount {
+  
+}
 
+.prateleira .box-item .discount p {
+    
+    font-size: 11px;
+    position: absolute;
+    background-color: #007DA5;
+    top: 14px;
+    z-index: 999;
+    color: white;
+    border-radius: 104px;
+    width: 44px;
+    padding: 11px;
+    padding-top: 9px;
+    left: 223px;
+}
 
 .prateleira .btn-add-buy-button-asynchronous {
   
@@ -75,6 +106,7 @@
     color: black !important;
     font-size: 15px !important;
     line-height: 17px !important;
+    text-transform: initial;
 }
 select, fieldset {
 
@@ -149,6 +181,21 @@ select, fieldset {
     }
     .n4colunas > ul > li {
         width: 24.3333% !important;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .quickView {
+        display: none;
+    }
+
+    .prateleira .box-item .discount p {
+         font-size: 9px !important;
+        width: 42px !important;
+        padding: 9px !important;
+        padding-top: 11px !important;
+        left: 82px !important;
+    
     }
 }
 

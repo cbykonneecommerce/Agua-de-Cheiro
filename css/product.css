@@ -58,6 +58,20 @@
 }
 
 
+.product-info .discount p {
+    font-size: 11px;
+    position: absolute;
+    background-color: #007DA5;
+    /* top: 14px; */
+    z-index: 999;
+    color: white;
+    border-radius: 104px;
+    width: 44px;
+    padding: 11px;
+    padding-top: 9px;
+    left: 87%;
+}
+
 .product-details .product-name {
    
     margin-bottom: 0;
@@ -599,5 +613,10 @@ label.combination_unavaliable:after {
     }
     .modal-body img {
         max-width: 100% !important;
+    }
+
+
+    .product-info .discount p {
+        top: 74px;
     }
 }
