@@ -36,7 +36,7 @@ $( document ).ready(function() {
                     <ul></ul>
                  </div>
                  <div class="col-sm-4">
-                 <a><img src="/arquivos/generico-menu.png" /></a>
+                 <a><img src="/arquivos/menu_${element.name}.jpg" /></a>
                  </div>
              </div>
             </div>`);
@@ -106,6 +106,10 @@ $( document ).ready(function() {
     
     
         $(".quickView a").text("COMPRA RÁPIDA")
+        
+$(".depto-Ofertas a").attr("href", "/busca?fq=H:137")
+
+$(".sidenav").append(`<span><a href="/busca?fq=H:137">OFERTAS</a></span>`)
     },1200)
 
 

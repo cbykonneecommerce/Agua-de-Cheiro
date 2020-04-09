@@ -63,7 +63,27 @@
     background-color: #EAECED !important;
 }
 
+.estado {
+    font-weight: bold;
+    color: #444;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
 
+
+th {
+    text-align: left;
+    border: solid 1px #007DA5;
+    padding: 6px;
+    background-color: #007DA5;
+    color: white;
+}
+
+td {
+    border-bottom: solid 1px #007DA5;
+    padding: 6px;
+    text-transform: uppercase;
+}
 
 
 @media screen and (min-width: 1100px) {

@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-12" style="text-align: center;padding-top: 2em;">
-                <h4 class="spacedtitle" style="margin-bottom: 23px;">ASSINE NOSSA NEWSLETTER E RECEBA NOSSOS PRODUTOS E OFERTAS EM PRIMEIRA MÃO</h4>
+                <h4 class="spacedtitle" style="margin-bottom: 23px;">DEIXE SEU EMAIL E RECEBA EM PRIMEIRÃO NOSSAS OFERTAS, NOVIDADES E DICAS DE BELEZA</h4>
 
                 <div id="newsletterwrapper">
                     <input type="text" placeholder="Nome" id="name-input" style="" />
@@ -46,13 +46,23 @@
                     imediato e, em 1980, a empresa já comandava uma rede de 45 lojas. Pioneira no mercado de franquias
                     de beleza e perfumaria, iniciou o processo de franchising e a marca se espalhou pelo Brasil,
                     ganhando força e visibilidade. Com mais de 40 anos no mercado, a empresa mineira Água de Cheiro é
-                    reconhecida pela qualidade de seus cosméticos e fragrâncias. Em 2016, a Marca Água de Cheiro passou
-                    a ser de propriedade da Beauty Franchising, empresa integrante da Holding Narsana. A Água de Cheiro
-                    desde 1976 reconhece e valoriza a sua origem como uma marca brasileira desenvolvendo produtos que
-                    atendam aos mais diversos perfis de consumidor, afinal ser Brasileiro é ser diferente, plural e
-                    multicultural. Percursora no mercado de franquias de beleza, liderou por mais de 15 anos o segmento
-                    sendo responsável pela criação de grandes clássicos da perfumaria brasileira.
+                    reconhecida pela qualidade de seus cosméticos e fragrâncias. <span id="revealer" style="text-decoration: underline;">... continue lendo</span> 
+                    <span id="hiddentxt" style="visibility:hidden;transition: 0.4s;">
+                        Em 2016, a Marca Água de Cheiro passou
+                        a ser de propriedade da Beauty Franchising, empresa integrante da Holding Narsana. A Água de Cheiro
+                        desde 1976 reconhece e valoriza a sua origem como uma marca brasileira desenvolvendo produtos que
+                        atendam aos mais diversos perfis de consumidor, afinal ser Brasileiro é ser diferente, plural e
+                        multicultural. Percursora no mercado de franquias de beleza, liderou por mais de 15 anos o segmento
+                        sendo responsável pela criação de grandes clássicos da perfumaria brasileira.
+                    </span> 
                 </p>
+
+                <script>
+                    $("#revealer").click(function(){
+                        $(this).hide();
+                        $("#hiddentxt").css({"visibility": "visible"})
+                    })
+                </script>
             </div>
 
             <div class="col-md-4">
