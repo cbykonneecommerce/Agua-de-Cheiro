@@ -185,7 +185,7 @@
 }
 
 .deptonav {
-    background-color: #007DA5;
+    background-color: #0065b1;
     /*opacity: 0.92;*/
     z-index: 9999999999;
     padding-top: 2em;
@@ -193,7 +193,8 @@
     padding-right: 2em;
     padding-bottom: 2em;
     position: absolute;
-    width: 100%;
+    margin-left: 1em;
+    width: 97.5%;
 }
 
 #deptos-list a {

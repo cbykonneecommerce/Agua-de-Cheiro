@@ -620,3 +620,13 @@ label.combination_unavaliable:after {
         top: 74px;
     }
 }
+
+
+@media (min-width: 992px) {
+
+.product-image .apresentacao .thumbs {
+    
+    left: -60px !important;
+}
+
+}

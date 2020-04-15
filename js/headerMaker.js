@@ -85,6 +85,8 @@ $( document ).ready(function() {
                 
             })
             
+            } else {
+                $(".sidenav").append(`<span class="depto-${element.name}"><a href="${element.url}">${divtext}</a></span>`)
             }
         });
 
@@ -107,9 +109,10 @@ $( document ).ready(function() {
     
         $(".quickView a").text("COMPRA RÁPIDA")
         
-$(".depto-Ofertas a").attr("href", "/busca?fq=H:137")
+$(".depto-Ofertas a").attr("href", "/busca?fq=H:137");
 
-$(".sidenav").append(`<span><a href="/busca?fq=H:137">OFERTAS</a></span>`)
+
+//$(".sidenav").append(`<span><a href="/busca?fq=H:137">OFERTAS</a></span>`)
     },1200)
 
 
@@ -120,7 +123,7 @@ $(".sidenav").append(`<span><a href="/busca?fq=H:137">OFERTAS</a></span>`)
 
 
 function scrollFunction() {
-    if (document.body.scrollTop > 70 || document.documentElement.scrollTop > 70) {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
       $(".link-logo img").css({"max-width": "55px"})
     } else {
       $(".link-logo img").css({"max-width": "119px"})
