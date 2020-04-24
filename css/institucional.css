@@ -60,7 +60,8 @@
     font-family: "Lato";
     outline: none;
     padding-left: 10px;
-    background-color: #EAECED !important;
+    border: solid 1px #EBEBEB;
+    box-shadow: none !important;
 }
 
 .estado {
