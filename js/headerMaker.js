@@ -41,6 +41,8 @@ $( document ).ready(function() {
              </div>
             </div>`);
 
+            
+
             $(".sidenav").append(`<button class="dropdown-btn" id="${element.name}">${divtext}<i class="fa fa-angle-down"></i></button>
             <div class="dropdown-container" id="${element.name}"></div>`)
 
