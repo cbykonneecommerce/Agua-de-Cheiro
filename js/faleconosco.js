@@ -133,7 +133,8 @@ function ClientCreate()
 		success: function(data, textStatus, xhr){
 			console.log(data);
 			if(xhr.status == "200" || xhr.status == "201"){
-				ContactCreate(storeName, dataEntity, data.Id);
+				ResetMessages()
+				$("#co_message_success").show();
 			}else if(xhr.status == "304"){
 				ContactCreateByEmail(storeName, dataEntity, cl_email);
 			}else{
