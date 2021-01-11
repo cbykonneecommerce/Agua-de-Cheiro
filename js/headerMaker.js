@@ -70,7 +70,7 @@ $( document ).ready(function() {
             $(`.dropdown-btn#${element.name} i`).attr('class', 'fa fa-angle-down');
         })
 
-
+        element.children.sort((a, b) => a.name.localeCompare(b.name, 'pt', { ignorePunctuation: true }));
             element.children.forEach((subs, index) => {
                 console.log("adding children")
                 if( index < 5) {
