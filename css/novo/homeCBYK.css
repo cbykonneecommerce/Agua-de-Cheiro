@@ -1,0 +1,39 @@
+.special-title {
+    margin: 3em 0em;
+}
+#homeCardsCarousel .box-banner a img {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px;
+}
+
+#homeCardsCarousel{
+    margin-top: 3em;
+}
+
+.fullbanner{
+    visibility: hidden;
+    }
+    
+    #gifloader{
+        position: absolute;
+        left: 31%;
+    }
+
+@media screen and (max-width: 700px) {
+    #homeCardsCarousel .box-banner a img {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0em;
+    }
+
+    .special-title svg{
+        width:  340px;
+    }
+}
+
+@media screen and (min-width: 1100px){
+    .prateleira .product-image img {
+    width: 182px !important;
+}
+}

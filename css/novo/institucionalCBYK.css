@@ -1,0 +1,59 @@
+.desk-sidenav ul li a {
+    color: #828282;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 30px;
+}
+
+.desk-sidenav ul li a:hover {
+    color: #084794;
+    font-weight: 600;
+}
+
+h3, h4{
+    color: #333;
+    font-weight: 600;
+}
+
+p{
+    color: #4F4F4F;
+    font-size: 16px;
+    line-height: 20px;
+}
+
+#fale-conosco{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+#fale-conosco fieldset:nth-child(3){
+    width: 100%;
+    margin: 5px;
+}
+#fale-conosco fieldset{
+    width: 48%;
+    margin: 5px;
+}
+
+textarea{
+    width: 98%;
+    min-height: 160px;
+}
+
+#fale-conosco input{
+    width: 100%;
+}
+
+#fale-conosco .btn-submit{
+    color: white;
+    background-color: #FE5000;
+    padding: 11px 41px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-left: 10px;
+    outline: none;
+    font-size: large;
+    border: none;
+}
