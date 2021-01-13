@@ -114,7 +114,51 @@ $(document).ready(function () {
     }, 1200)
 
 
+    $(".vtexIdUI .modal-header .close").click(function () {
+        window.location.href = '/';
+    })
 
+    //MUDAR TAMANHO DAS IMAGENS NA BARRA DE BUSCA
+
+
+
+
+    $(".btn-open-menu-xs").click(() => {
+        $("body").addClass("menu-ativo");
+        $("#menu-mobile").attr('class', 'show-menu');
+        $("#menu-mobile").show();
+
+    })
+
+    $("#menu-mobile .close-menu").click(() => {
+
+        $("#menu-mobile").attr('class', 'hide-menu');
+        setTimeout(() => { $("#menu-mobile").hide(); }, 480)
+
+        $("body").removeClass("menu-ativo");
+
+    })
+
+
+
+    $(".dropdown-container").hide();
+
+
+    $(".dropdown-btn#institucional").toggle(() => {
+        $(".dropdown-container#suporte").hide();
+        $(".dropdown-btn#institucional i").attr('class', 'fa fa-angle-up');
+        $(".dropdown-container#institucional").slideDown()
+    }, () => {
+        $(".dropdown-container#institucional").slideUp()
+        $(".dropdown-btn#institucional i").attr('class', 'fa fa-angle-down');
+    })
+
+
+    $(".deptonav").mouseleave(() => { $(".deptonav").hide();$("body").removeClass("menu-ativo") })
+    $("header").mouseleave(() => { $(".deptonav").hide();$("body").removeClass("menu-ativo") })
+    $(".header-container .header").mouseenter(() => { $(".deptonav").hide();$("body").removeClass("menu-ativo") })
+
+    
 
 });
 

@@ -20,9 +20,7 @@
     padding: 5px;
 }
 
-.page{
-    background-color: #F7F7F7;
-}
+
 
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
     border: none !important;
@@ -61,6 +59,19 @@ body.menu-ativo:before {
     height: 100%;
     z-index: 9999999;
   }
+
+  .section-title{
+    color: #007DA5;
+    text-align: center;
+  }
+  .section-title::after {
+    content: '';
+    display: block;
+    width: 55px;
+    height: 2px;
+    margin: 12px auto 0;
+    background: #007DA5
+}
 
 
 .btn-open-menu-xs svg path{
@@ -101,8 +112,8 @@ body.menu-ativo:before {
 
 
 .header .search .busca {
-    border: 1px solid #025EB9;
-    border-radius: 40px;
+    border: 1px solid #007DA5;
+    border-radius: 8px;
 }
 
 .fulltext-search-box {
@@ -204,10 +215,7 @@ body.menu-ativo:before {
 }
 
 .depto-nav-area {
-    background-color:#F7F7F7;
     margin-top: 0.4em;
-    border-top: solid 1px #E6E6E6;
-    border-bottom: solid 1px #E6E6E6;
 }
 
 .deptos ul {
@@ -219,29 +227,27 @@ body.menu-ativo:before {
 }
 
 .deptos ul li a {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 16px;
-    color: #333;
+    color: #828282;
     font-weight: 400;
     text-decoration: none;
-    text-transform: uppercase;
 }
 
 .deptos ul li a:hover{
-    color: #025EB9;
+    color: #007DA5;
     font-weight: 600;
 }
 
 
 .deptonav {
-   /* background-color: #000;*/
-   /* border-right: solid 10px #931A29;*/
-    /*opacity: 0.92;*/
+    background-color: #007DA5;
+ padding: 1em;
     z-index: 9999999999;
     
     position: absolute;
     width: 100%;
-   /* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);*/
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
 }
 
@@ -251,7 +257,7 @@ body.menu-ativo:before {
 }
 
 #deptos-list a {
-    color: #333!important;
+    color: white !important;
     font-size: 15px;
     font-weight: 400;
     text-decoration: none;
@@ -270,13 +276,8 @@ body.menu-ativo:before {
 }
 
 
-#deptos-list a i:hover{
-    color: #025EB9 !important;
-}
 
-#deptos-list ul li:hover a {
-    color: #025EB9 !important;
-}
+
 
 .firstLayer, .secondLayer {
    /* border-right: solid 5px #931A29;*/
@@ -652,7 +653,7 @@ body.menu-ativo:before {
     }
 
     #special-icon {
-        width: 19%;
+        width: 24%;
     }
 }
 
