@@ -60,11 +60,17 @@ body.menu-ativo:before {
     z-index: 9999999;
   }
 
+  .prateleira.vitrine h2 {
+    color: #007DA5;
+    text-align: center;
+    font-size: 24px !important;
+}
+
   .section-title{
     color: #007DA5;
     text-align: center;
   }
-  .section-title::after {
+  .section-title::after, .prateleira.vitrine h2::after {
     content: '';
     display: block;
     width: 55px;
@@ -322,6 +328,15 @@ body.menu-ativo:before {
 
 
 
+
+
+
+
+
+
+
+
+
 #deptos-list ul li:hover #deptos-list a, #deptos-list ul li:hover #deptos-list a i{
     color: white !important;
 }
@@ -458,11 +473,10 @@ body.menu-ativo:before {
 #mini-cart-admake .mini-cart-botao .btn-finalizar-compra {
     
     line-height: 26px !important;
-    border-radius: 5px !important;
     color: white !important;
     display: block;
     text-transform: uppercase;
-    background-color: #FE5000!important;
+    background-color: #007DA5!important;
     font-weight: 500!important;
     font-size: 18px !important;
     padding: 12px !important;
@@ -573,9 +587,7 @@ body.menu-ativo:before {
 }
 
 
-.prateleira.vitrine h2{
-    display: none;
-}
+
 
 
 .vtexIdUI .btn-success {

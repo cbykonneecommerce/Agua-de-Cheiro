@@ -74,8 +74,8 @@ $(document).ready(function() {
 
   $('#homeCardsCarousel').slick({
     infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 5,
+    slidesToShow: 3,
+    slidesToScroll: 3,
     autoplay: true,
   autoplaySpeed: 3000,
   arrows: false,
@@ -113,6 +113,27 @@ $(document).ready(function() {
     }]
 
   });
+
+  $('#homebrandsCarousel').slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 5,
+    autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true
+      }
+    }]
+
+  });
+
+  
 
   
   $('#novcategorias').slick({
