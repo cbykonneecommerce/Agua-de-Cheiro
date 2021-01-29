@@ -1,7 +1,7 @@
 .footer {
     margin-top: 0px !important;
     padding-top: 20px;
-    background-color:#E0E0E0 !important;
+    background-color:#007DA5 !important;
 }
 
 .footer ul li a, .footer ul li span {
@@ -16,8 +16,27 @@
     background-color: #084794  !important;
 }
 
+.inst ul {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    padding: 24px 0px;
+}
+
+.depto-menu-footer{
+    background-color: #007DA5;
+}
+
+.inst ul li a {
+    font-size: 20px;
+    color: white !important;
+}
+
+
 .social-icons li {
-    margin-right: 21px
+    margin-right: 6px
 }
 
 .pay-icons li {
@@ -34,9 +53,16 @@
    top: 55px !important;
 }
 
+.social-icons {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
 .social-icons li a img {
     max-height: 50px;
     margin-bottom: 12px;
+
   
 }
 

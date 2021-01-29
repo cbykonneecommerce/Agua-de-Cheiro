@@ -31,8 +31,8 @@ $(document).ready(function() {
 
   $('.product-carousel .prateleira.vitrine ul').slick({
     infinite: true,
-    slidesToShow: 5,
-    slidesToScroll: 1,
+    slidesToShow: 4,
+    slidesToScroll: 2,
     autoplay: true,
   autoplaySpeed: 3000,
   arrows: false,

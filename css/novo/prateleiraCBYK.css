@@ -13,7 +13,7 @@
 
 .prateleira .box-item {
     background-color: white !important;
-    height: 27em;
+    height: 32.5em;
     position: relative;
     margin: 4px;
 }
@@ -37,18 +37,44 @@
     /* float: right; */
     /* margin: 10px 2px; */
 }
+.buy-btns{
+    text-align: center;
+}
 
 .prateleira .btn-add-buy-button-asynchronous {
     color: white !important;
-    display: block;
+    display: inline-block !important;
     text-transform: uppercase;
     background-color: #007DA5 !important;
     font-weight: 500 !important;
     font-size: 18px !important;
-    width: 85% !important;
-    padding: 10px;
+    
+    padding: 14px !important;
     text-decoration: none;
     border-radius: 0px !important;
+}
+
+.prateleira .buy-btn-icon{
+    display: inline-block;
+    width: 22%;
+    top: 6px;
+    position: relative;
+}
+
+.prateleira .buy-btn-icon .btn-add-buy-button-asynchronous{
+    width: 100% !important;
+    padding: 6px !important;
+}
+
+
+.prateleira .buy-btn-icon .btn-add-buy-button-asynchronous{
+    background-color: white !important;
+    border: solid 2px #007DA5 !important;
+    padding: 4.5px;
+}
+
+.btover-active{
+    width: 75% !important;
 }
 
 .prateleira .price {
@@ -119,6 +145,7 @@
 
 .prateleira .product-name {
     min-height: 54px !important;
+    text-align: left;
 }
 
 select, fieldset {
@@ -162,7 +189,8 @@ select, fieldset {
 }
 
 .prateleira .wrapper-buy-button-asynchronous {
-    margin-top: 1.3em;
+    display: inline-block;
+    width: 88%;
 }
 
 .prateleira .hover-part .best-price-hover {
