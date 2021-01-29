@@ -43,9 +43,9 @@ $(document).ready(function () {
 
 
 
-                    $(".sidenav").append(`<button class="dropdown-btn" id="${element.name}">${divtext}<i class="fa fa-angle-down"></i></button>
-            <div class="dropdown-container" id="${element.name}"></div>`)
-
+               //mobile
+               $(".sidenav").append(`<div class="depto-box" style="display:block;border-top: solid 1px #333;"><span class="depto-${element.name}"><a href="${element.url}">${divtext}</a></span><button class="dropdown-btn" id="${element.name}"><i class="fa fa-angle-down"></i></button></div>
+               <div class="dropdown-container" id="${element.name}"></div>`);
 
                     //Desktop
                     $(`.depto-${element.name}`).mouseenter(function () {
@@ -61,7 +61,7 @@ $(document).ready(function () {
 
                     //Mobile
                     $(`.dropdown-btn#${element.name}`).toggle(() => {
-                        $(".dropdown-container").slideUp();
+                        // $(".dropdown-container").slideUp();
                         $(`.dropdown-btn i`).attr('class', 'fa fa-angle-down');
                         $(`.dropdown-btn#${element.name} i`).attr('class', 'fa fa-angle-up');
                         $(`.dropdown-container#${element.name}`).slideDown()
@@ -88,7 +88,7 @@ $(document).ready(function () {
                     })
 
                 } else {
-                    $(".sidenav").append(`<span class="depto-${element.name}"><a href="${element.url}">${divtext}</a></span>`)
+                    $(".sidenav").append(`<span class="depto-${element.name}"><a style="border-top: solid 1px #333;" href="${element.url}">${divtext}</a></span>`)
                 }
             });
 
@@ -141,16 +141,29 @@ $(document).ready(function () {
 
 
 
+     
     $(".dropdown-container").hide();
 
 
-    $(".dropdown-btn#institucional").toggle(() => {
-        $(".dropdown-container#suporte").hide();
-        $(".dropdown-btn#institucional i").attr('class', 'fa fa-angle-up');
-        $(".dropdown-container#institucional").slideDown()
+    $(".dropdown-btn#atendimento").toggle(() => {
+        $(".dropdown-container#politicas").hide();
+        $(".dropdown-btn#politicas i").attr('class', 'fa fa-angle-down');
+        $(".dropdown-btn#atendimento i").attr('class', 'fa fa-angle-up');
+        $(".dropdown-container#atendimento").slideDown()
     }, () => {
-        $(".dropdown-container#institucional").slideUp()
-        $(".dropdown-btn#institucional i").attr('class', 'fa fa-angle-down');
+        $(".dropdown-container#atendimento").slideUp()
+        $(".dropdown-btn#atendimento i").attr('class', 'fa fa-angle-down');
+    })
+
+
+    $(".dropdown-btn#politicas").toggle(() => {
+        $(".dropdown-container#atendimento").hide();
+        $(".dropdown-btn#atendimento i").attr('class', 'fa fa-angle-down');
+        $(".dropdown-btn#politicas i").attr('class', 'fa fa-angle-up');
+        $(".dropdown-container#politicas").slideDown()
+    }, () => {
+        $(".dropdown-container#politicas").slideUp()
+        $(".dropdown-btn#politicas i").attr('class', 'fa fa-angle-down');
     })
 
 

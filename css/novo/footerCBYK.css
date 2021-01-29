@@ -5,7 +5,7 @@
 }
 
 .footer ul li a, .footer ul li span {
-    color:#333 !important;
+    color:#fff !important;
 }
 
 .footer ul.footer-list li {
@@ -13,8 +13,79 @@
 }
 
  #newsletter {
-    background-color: #084794  !important;
+    background-color: #E0E0E0 !important
 }
+
+
+.dropbuttom .dropdown-btn#atendimento {
+    width: 100%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    color: #000 !important;
+    background-color: #E0E0E0 !important;
+    font-size: 20px;
+    text-align: left;
+    outline: none !important;
+    padding-left: 1em;
+    margin-top: -15px;
+}
+.dropdown-container#atendimento{
+    background-color: #fff  !important;
+}
+.dropdown-container#atendimento li {
+    margin-top: 1em;
+}
+
+.dropdown-container#atendimento li a {
+    font-size: 18px;
+    color: black !important;
+}
+
+#atendimento .fa-angle-down, #atendimento .fa-angle-up {
+    float: right;
+    padding-right: 8px;
+    color: #000;
+}
+
+#atendimento ul li{
+    margin-top: 15px;
+}
+
+
+
+.dropbuttom .dropdown-btn#politicas {
+    width: 100%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    color: #000 !important;
+    background-color: #E0E0E0  !important;
+    font-size: 20px;
+    text-align: left;
+    outline: none !important;
+    padding-left: 1em;
+    margin-top: -15px;
+}
+.dropdown-container#politicas{
+    background-color: #fff  !important;
+}
+.dropdown-container#politicas li {
+    margin-top: 1em;
+}
+.dropdown-container#politicas li a {
+    font-size: 18px;
+    color: black !important;
+}
+
+#politicas .fa-angle-down, #politicas .fa-angle-up {
+    float: right;
+    padding-right: 8px;
+    color: #000;
+}
+
+#politicas ul li{
+    margin-top: 15px;
+}
+
 
 .inst ul {
     display: flex;
@@ -36,7 +107,7 @@
 
 
 .social-icons li {
-    margin-right: 6px
+    margin-right: 16px
 }
 
 .pay-icons li {
@@ -59,9 +130,11 @@
     justify-content: space-between;
 }
 
+
 .social-icons li a img {
-    max-height: 50px;
+ 
     margin-bottom: 12px;
+    width: 88%;
 
   
 }
@@ -96,19 +169,19 @@
 .footer-title {
     margin-bottom: 22px;
     font-weight: bold;
-    margin-top: 2em
+    margin-top: 2em;
+    color: white !important;
 }
 
 #newsletterwrapper input {
-    height: 38px;
-    border-color: #FE5000;
+    height: 44px;
     font-size: 16px;
     color: #444;
-    width: 26%;
+    width: 14%;
     outline: none;
-    border-radius: 10px;
-    padding-left: 10px;
-    margin-right: 2em;
+    border-radius: 0px;
+    padding-left: 0px;
+    margin-right: 1em;
     text-align: center;
 }
 
@@ -121,15 +194,25 @@
 }
 
 #emailcatcher {
-    color: white;
-    background-color: #FE5000;
+    color: #007DA5;
+    background-color: white;
     padding: 11px 41px;
     text-decoration: none;
-    border-radius: 10px;
-    margin-left: 10px;
+    border-radius: 0px;
+    height: 44px;
     font-size: large;
+    border: solid 2px #007DA5;
 }
 
+#newsletterwrapper{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.copy{
+    color: white;
+}
 
 
 
@@ -188,6 +271,7 @@
 
     #makers {
         margin-top: 25px;
+        text-align: center !important;
     }
 
 
@@ -201,6 +285,27 @@
     }
     .devs.list-inline {
         margin-top: 3em;
+    }
+
+    .depto-menu-footer{
+        display: none;
+    }
+
+    #newsletterwrapper{
+        display: block;
+    }
+
+    #emailcatcher{
+        color: #fff;
+        background-color: black;
+        padding: 11px 41px;
+        text-decoration: none;
+        border-radius: 0px;
+        height: 44px;
+        font-size: large;
+        border: solid 2px #000;
+        width: 95%;
+        display: block;
     }
 }
 

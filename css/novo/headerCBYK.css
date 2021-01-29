@@ -78,9 +78,6 @@ body.menu-ativo:before {
     background: #007DA5
 }
 
-.btn-open-menu-xs svg path {
-    fill: black
-}
 
 .deptonav .secondLayer {
     display: none;
@@ -196,7 +193,6 @@ body.menu-ativo:before {
 
 .header .button-menu-xs .btn {
     outline: none;
-    margin-top: 10px;
 }
 
 .header .mini-cart .btn {
@@ -241,7 +237,7 @@ body.menu-ativo:before {
 }
 
 .deptonav {
-    background-color: #007DA5;
+    background-color: #fff;
     padding: 1em;
     z-index: 9999999999;
     position: absolute;
@@ -255,7 +251,7 @@ body.menu-ativo:before {
 }
 
 #deptos-list a {
-    color: white !important;
+    color: #333 !important;
     font-size: 15px;
     font-weight: 400;
     text-decoration: none;
@@ -263,7 +259,8 @@ body.menu-ativo:before {
 }
 
 #deptos-list a:hover {
-    color: #FFF !important;
+    color: #007DA5 !important;
+    font-weight: bold;
 }
 
 #deptos-list a i {
@@ -348,7 +345,7 @@ body.menu-ativo:before {
     outline: none;
 }
 
-.sidenav span {
+.sidenav .depto-box span {
     display: inline-block;
 }
 
@@ -634,7 +631,8 @@ body.menu-ativo:before {
         margin-top: 10px
     }
     .link-logo img {
-        max-width: 150px;
+        max-width: 172px;
+        margin-top: 8px;
     }
     .btn-buscar {
         max-width: 18px;
@@ -662,7 +660,7 @@ body.menu-ativo:before {
         text-align: center;
     }
     .header .mini-cart, .header .button-menu-xs {
-        margin-top: 4%;
+        margin-top: 2%;
     }
     #menu-mobile .header-menu-mobile {
         margin-top: 8%;

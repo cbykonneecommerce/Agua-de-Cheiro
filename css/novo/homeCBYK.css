@@ -29,6 +29,9 @@
     margin-top: 3em;
 }
 
+.faixadesk .box-banner, .faixamob .box-banner {
+    margin-top: 1em;
+}
 @media screen and (max-width: 700px) {
     #homeCardsCarousel .box-banner a img {
         margin-left: auto;
