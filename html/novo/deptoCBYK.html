@@ -34,11 +34,7 @@
          <div id="departament-extra-top"></div>
 
          <div class="container">
-            <div class="title-category">
-                <!--  Controle: Titulo -->
-                <vtex.cmc:searchTitle />
-                <!-- /Controle: Titulo -->
-            </div><!-- .title-category -->
+         
             <div id="box-bread-brumb">
                 <vtex.cmc:breadCrumb />
             </div>
@@ -61,7 +57,7 @@
  
                  <aside class="col-xs-3 sidebar"  id="mySidenavfiltros">
                      <div id="departament-navegador">
-                         <h3 class="section-filter-title">FILTROS</h3>
+                         <h3 class="section-filter-title">Filtros</h3>
                          <!--  Controle: navegador de departamento -->
                         <!-- <vtex.cmc:singleDepartmentNavigator keepCurrentPath="true" />-->
                         <vtex.cmc:searchNavigator />
@@ -86,7 +82,7 @@
                      <div id="collections">
                          
                          <div class="collection-wrap">
-                             <vtex.cmc:searchResult layout="ff139741-bd71-4409-97e5-1fe391d3b411" itemCount="12"     columnCount="4" />
+                             <vtex.cmc:searchResult layout="59cae138-ada3-44de-b9be-ad1313a21e98" itemCount="12"     columnCount="4" />
                          </div>
                          
  
@@ -99,6 +95,11 @@
                          </div>
  
                      </div><!-- #collections -->
+
+                     <div class="bottom-banners">
+                        <vtex:contentPlaceHolder id="Bottom-banner1" />
+                        <vtex:contentPlaceHolder id="Bottom-banner2" />
+                     </div>
                  
                  </article><!-- #main-content -->
  
@@ -117,7 +118,7 @@
  </body>
  <vtex:template id="CBYKcommonScripts" />
      <script src="/arquivos/pagination.js"></script>
- <script src="/arquivos/filters.js"></script>
+ <script src="/arquivos/filtersCBYK.js"></script>
      <script>
 
             $("#sidenavCTRfiltros #close").hide();
@@ -138,16 +139,5 @@
         </script>
 
 
-<script charset="utf-8" src="//cl.avis-verifies.com/br/cache/d/7/2/d726a728-f205-6ae4-7dd0-31bb2fe6e2c6/AWS/PRODUCT_API/tag.min.js"></script> 
-<link rel="stylesheet" type="text/css" href="/arquivos/infinityScroll.css" />
-<script type="text/javascript" src="/arquivos/QD-Infinity-Scroll.js"></script>
-<script>
-    $(".prateleira[id*=ResultItems]").QD_infinityScroll();
 
-    setTimeout(function(){
-
-      
-       $(".sidebar").append($("#admake-advanced-filter"));
-    }, 1000)
-    </script>
  </html>

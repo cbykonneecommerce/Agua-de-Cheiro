@@ -45,6 +45,34 @@
     box-shadow: 0 2px 3px rgba(142, 142, 142, .8);
 }
 
+#divCompreJunto td.plus, #divCompreJunto td.equal {
+    width: 2em;
+    text-align: center;
+    font-size: 40px;
+}
+
+#divCompreJunto td{
+    max-width: 281px;
+    width: 281px;
+}
+#divCompreJunto td a img{
+    width: 182px;
+    height: auto;
+}
+
+#divCompreJunto td h3{
+    min-height: 54px !important;
+    text-align: left;
+    font-weight: 400 !important;
+}
+
+#divCompreJunto td h3 a{
+    color: #000 !important;
+    font-size: 13px !important;
+    line-height: 18px !important;
+    font-weight: 400 !important;
+}
+
 .installmentslist ul li {
     color: #333;
     line-height: 18px;
@@ -220,7 +248,7 @@
 
 #comprar-flutuante .descricao-preco .valor-por strong, .product-details .price-box .descricao-preco .valor-por strong, #modalstuff .descricao-preco .valor-por strong {
     font-weight: 600;
-    color:#0088C3 !important;
+    color:#007DA5 !important;
     font-size: 25px !important;
     font-style: initial !important;
 }
@@ -244,10 +272,8 @@
 
 .product-description .buy-together-content td.buy .comprar-junto a, .buy-button.buy-button-ref {
     display: block;
-    width: 44%;
-    float: right;
-    margin-top: -10%;
-    background-color: #FE5000 !important;
+    width: 54%;
+    background-color: #007DA5 !important;
     font-weight: 400;
     color: #fff !important;
     text-transform: uppercase;
@@ -257,7 +283,7 @@
     height: 50px;
     padding: 12px;
     margin-right: 1em;
-    border-radius: 5px;
+    border-radius: 0px;
 }
 
 .product-details .seletor-sku .topic {
@@ -419,15 +445,14 @@ label.combination_unavaliable:after {
     color: black !important;
     background: white !important;
     border: 2px solid #0088C3 !important;
-    width: 30em;
-    border-radius: 5px 0px 0px 5px !important;
+    border-radius: 0px 0px 0px 0px !important;
 }
 
 .product-info .shipping-box .freight-btn {
     color: white !important;
-    background: #0088C3!important;
+    background: #0088C3 !important;
     border: 1px solid #0088C3 !important;
-    border-radius: 0px 5px 5px 0px !important;
+    border-radius: 0px 0px 0px 0px !important;
     margin-top: -4px;
     padding: 0px 18px;
     margin-left: -5px;
@@ -878,83 +903,6 @@ display: none;
 }
 
 
-.custom-text{
-    width: 100%;
-    margin: 10px 0;
-    padding: 14px;
-    font-size: 14px;
-    text-transform: uppercase;
-    height: 80px;
-}
-
-.list.pictograma{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px 0;
-    padding: 5px;
-    max-height: 200px;
-    overflow-y: auto;
-    border: 1px solid #8e8e8e;
-}
-
-.list.pictograma .list-item input[checked="checked"]+label{
-    border: 2px solid #004168;
-}
-.list.pictograma .list-item input[checked="checked"]+label:before{
-    content: "";
-    width: 32px;
-    height: 32px;
-    display: block;
-    right: -16px;
-    top: -16px;
-    position: absolute;
-    background-color: #004168;
-    transform: rotate(45deg);
-}
-
-.list.pictograma .list-item{
-    border-width: 1px 0 1px 1px;
-    padding: 5px;
-    width: 25%;
-}
-
-.list.pictograma .list-item input{
-    display: none;
-}
-
-.list.pictograma .list-item input+label{
-    display: flex;
-    width: 100%;
-    position: relative;
-    border: 2px solid #d9d9d9;
-    padding: 5px;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
-
-.content-product-custom-render{
-    position: absolute;
-    width: 78%;
-    top: 211px;
-    left: 10%;
-    z-index: 99999999;
-    height: 15%;
-    display: flex;
-    align-items: center;
-}
-
-.product-custom-name{
-    overflow: hidden;
-    font-weight: 600;
-    word-break: break-word;
-    text-align: center;
-    text-transform: uppercase;
-    max-width: 100%;
-    width: 100%;
-    font-family: "Helvetica LT Std";
-}
-
 #select-pictograma, #select-pictograma option,  .custom-text{
     color:#333
 }
@@ -975,22 +923,8 @@ display: none;
     order: 3;
 }
 
-.content-product-custom-render.has-pictograma .product-custom-name{
-    max-width: 60%;
-    width: 60%;
-}
 
-.content-product-custom-render.has-pictograma .product-custom-pictograma{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40%;
-    padding: 5%;
-}
 
-.product-custom-pictograma{
-  display: none;
-}
 
 
 
@@ -1016,13 +950,7 @@ display: none;
     }
 
   
-.product-info{
-    border: solid 1px #808080;
-    padding-bottom: 2em !important;
-    border-radius: 10px;
-    border-top: solid 10px #0088C3;
-    padding-left: 2em !important;
-}
+
 
 .prateleira .product-image img{
     width: 182px !important;
@@ -1253,6 +1181,11 @@ display: none;
         color: rgb(51, 51, 51) !important;
     }
 
+    #divCompreJunto td a img{
+        max-width: 136px !important;
+        height: auto;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -1268,7 +1201,7 @@ display: none;
     }
 
     .product-info .buy-button-box{
-        padding-left: 26px;
+        padding-left: 16px;
     }
 
 }

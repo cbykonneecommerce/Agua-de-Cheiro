@@ -938,9 +938,7 @@
          .product-info .seletor-sku .select label.sku-picked{
            border-color: #D0021B;
          }
-   .product-info .buy-button-box{
-     margin-top: 15px;
-   }
+  
    .buy-button-box:after{
      display: block;
      clear: both;
@@ -992,7 +990,7 @@
            background-color: #F6F6F6;
          }
          .buy-button-box .box-qtd .btn.btn-mais{
-           border-bottom: 1px solid #ccc;
+          
          }
      .product-description .buy-together-content td.buy .comprar-junto a,
      .buy-button.buy-button-ref{

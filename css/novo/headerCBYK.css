@@ -93,6 +93,16 @@ body.menu-ativo:before {
     z-index: 10000000;
 }
 
+
+#box-bread-brumb li:before{
+    color: #007EA8 !important;
+}
+
+#box-bread-brumb li.last a{
+    color: #007EA8 !important;
+    font-weight: bold;
+}
+
 .container-fluid {
     padding-left: 0 !important;
     padding-right: 0 !important;

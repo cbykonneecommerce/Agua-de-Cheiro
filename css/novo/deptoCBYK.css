@@ -26,6 +26,45 @@
 }
 
 
+#departament-banner{
+    margin-bottom: 2em;
+}
+
+.pages li.page-number{
+border: solid 2px #007EA8 !important;
+border-radius: 5px;
+margin: 4px;
+}
+
+.pages li.first, .pages li.last {
+display: none !important;
+}
+.pages .pgCurrent{
+    background-color: #007EA8 !important;
+    border-radius: 5px;
+}
+
+
+#mySidenavfiltros{
+    position: sticky;
+    top: 100px;
+    background-color: white !important;
+    margin-bottom: 2em;
+    margin-top: -16px;
+}
+
+.prateleira.vitrine > ul > li, .n1colunas > ul > li, .n2colunas > ul > li, .n3colunas > ul > li, .n4colunas > ul > li, .n5colunas > ul > li{
+    padding: 2px !important;
+}
+
+.prateleira .box-item{
+    padding: 10px 8px !important;
+}
+
+.prateleira .box-item{
+    height: 29.5em !important;
+}
+
 
 .search-multiple-navigator {
     display: block !important;
@@ -47,7 +86,21 @@ fieldset.refino div label {
     padding-left: 2px;
 }
 
+fieldset.refino-marca div label {
+    display: block;
+    line-height: 20px;
+    margin-top: 14px;
+    font-weight: 300 !important;
+    padding-left: 2px;
+}
+
 fieldset.refino div label input {
+    margin-top: -2px;
+    margin-right: 8px;
+    display: none;
+}
+
+fieldset.refino-marca div label input {
     margin-top: -2px;
     margin-right: 8px;
     display: none;
@@ -92,10 +145,52 @@ fieldset.refino > h5 svg{
     transition: 0.6s;
 }
 
+fieldset.refino > div{
+    overflow: scroll;
+    height: 25em;
+}
+
+
+fieldset.refino-marca {
+    border-bottom: solid 1px #C8C8C8;
+}
+
+fieldset.refino-marca h5 {
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+fieldset.refino-marca.active > div{
+    animation: todownmenu 1.0s linear both;
+    display: block;
+}
+
+fieldset.refino-marca > div{
+    animation: todownmenu 1.0s linear both;
+    display: none;
+}
+
+fieldset.refino-marca.active > h5 svg{
+   
+    transform: rotate(180deg);
+    transition: 0.6s;
+}
+
+fieldset.refino-marca > h5 svg{
+    transform: rotate(360deg);
+    transition: 0.6s;
+}
+
+fieldset.refino-marca > div{
+    overflow: scroll;
+    height: 25em;
+}
+
 
 
 .navigation-tabs {
-    border: 1px solid rgb(189, 189, 189);
+    border: 1px solid #E0E0E0;
     padding: 20px;
     border-top: none;
     background: none !important;
@@ -103,18 +198,16 @@ fieldset.refino > h5 svg{
 }
 
 .section-filter-title {
-    color: white;
+    color: #828282;
     text-align: center;
-    background-color: #0088C3;
+    background-color: #E0E0E0;
     padding: 8px;
-    font-size: 18px;
+    font-size: 15px;
+    text-transform: capitalize;
     border-radius: 5px 5px 0 0;
-    font-weight: 300;
+    font-weight: 600;
 }
 
-.pages .pgCurrent {
-    background-color: black !important;
-}
 
 .resultado-busca-filtro .compare {
     display: none;
@@ -175,9 +268,13 @@ fieldset.refino > h5 svg{
 }
 
 .resultado-busca-filtro>fieldset select {
-    border: 1px solid white !important;
+    border: 1px solid #F2F2F2 !important;
     border-radius: 0 !important;
-    color: black !important;
+    color: #007DA5 !important;
+    background-color: #F2F2F2;
+}
+.resultado-busca-filtro > fieldset.orderBy label, .resultado-busca-filtro > fieldset.filterBy{
+    display: none;
 }
 
 #admake-advanced-filter {
@@ -248,7 +345,7 @@ fieldset.refino > h5 svg{
 }
 
 .fa-check-square-o{
-    color: #0088C3 !important;
+    color: #007EA8 !important;
 }
 .bt-refinar.search-filter-button.even,.ver-filtros{
  
@@ -322,6 +419,10 @@ fieldset.refino > h5 svg{
     }
     #admake-advanced-filter {
         display: none !important;
+    }
+
+    .prateleira .box-item{
+        height: 23.5em !important;
     }
 }
 

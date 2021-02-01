@@ -195,6 +195,45 @@ $(document).ready(function() {
 
 
 
+  $('.brand-carousel').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 2,
+    autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        arrows: false
+      }
+    }]
+
+  });
+
+
+  $('.bottom-banners').slick({
+    infinite: true,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    autoplay: true,
+  autoplaySpeed: 3000,
+  arrows: false,
+  responsive: [
+    {
+      breakpoint: 760,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false
+      }
+    }]
+
+  });
+
   
   
 
