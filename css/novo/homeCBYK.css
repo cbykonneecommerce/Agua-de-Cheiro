@@ -5,7 +5,11 @@
 #homeCardsCarousel .box-banner a img {
     margin-left: auto;
     margin-right: auto;
-    padding: 4px;
+    padding: 10px;
+}
+
+#homebrandsCarousel .box-banner a img{
+    padding: 9px;
 }
 
 #homeCardsCarousel {

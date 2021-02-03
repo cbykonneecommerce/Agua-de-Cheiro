@@ -248,7 +248,7 @@
     }
     #newsletterwrapper input {
         display: block;
-        width: 95%;
+        width: 100%;
         margin-bottom: 20px;
     }
     #emailcatcher {
@@ -304,7 +304,7 @@
         height: 44px;
         font-size: large;
         border: solid 2px #000;
-        width: 95%;
+        width: 100%;
         display: block;
     }
 }

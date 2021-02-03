@@ -8,6 +8,8 @@
     line-height: 36px;
 }
 
+
+
 .sku-notifyme-form.notifyme-form input {
     background-color: #fff;
     height: 38px;
@@ -328,7 +330,7 @@
     /* border: solid 2px #931A29 !important; */
     border-radius: 15px !important;
     margin-right: 7px;
-    margin-top: -6px;
+    margin-top: -8px;
     margin-left: 7px;
     border:none !important;
     display: inline-block;
@@ -337,10 +339,11 @@
 
 .buy-button-box .box-qtd::before {
     content: "Quantidade:";
-    font-size: 17px;
+    font-size: 16px;
+    margin-right: 1em;
     position: relative;
-    top: 15px;
-    color: rgb(79, 79, 79) !important;
+    top: 11px;
+    color: #4F4F4F !important;
 }
 
 .under-img div {
@@ -453,7 +456,7 @@ label.combination_unavaliable:after {
     background: #0088C3 !important;
     border: 1px solid #0088C3 !important;
     border-radius: 0px 0px 0px 0px !important;
-    margin-top: -4px;
+    margin-top: -3px;
     padding: 0px 18px;
     margin-left: -5px;
 }
@@ -946,14 +949,17 @@ display: none;
         margin-left: 15%
     }
     .share-btns {
-        margin-top: 36em !important
+        margin-top: 34em !important
     }
 
   
 
 
-.prateleira .product-image img{
-    width: 182px !important;
+
+.product-image .apresentacao .thumbs a{
+    border: solid 1px #007DA5;
+    border-radius: 5px;
+    padding: 7px;
 }
 
     
@@ -967,7 +973,7 @@ display: none;
 
 @media screen and (max-width: 800px) {
     .product-info .shipping-box .freight-btn{
-        margin-top: 0 !important;
+        margin-top: -2px !important;
     }
 
     .product-info .buy-button-box{
@@ -997,7 +1003,7 @@ display: none;
         margin-top: 1%;
     }
     .buy-button-box .box-qtd {
-        margin-left: 19%;
+        margin-left: 0%;
     }
     .product-details .seletor-sku .topic{
         width: 100%;
@@ -1010,7 +1016,7 @@ display: none;
     }
     .product-description .buy-together-content td.buy .comprar-junto a, .buy-button.buy-button-ref {
         margin-top: 0px;
-        width: 88%;
+        width: 100%;
     }
     .sku-selector-container ul li.select {
         text-align: center;
@@ -1186,6 +1192,26 @@ display: none;
         height: auto;
     }
 
+
+    .product-details .codigo-produto, #price-data {
+        padding: 0;
+    }
+
+    .product-info .shipping-box{
+        padding-left: 0;
+    padding-right: 0;
+    }
+
+    .product-info .shipping-box label{
+        width: 70%;
+    }
+
+    .product-details .product-name .productName{
+        position: relative;
+        width: 109%;
+        left: -17px;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -1267,4 +1293,11 @@ display: none;
 
    
 
+}
+
+
+@media screen and  (max-width: 365px){
+    .product-info .shipping-box label{
+        width: 65%;
+    }
 }

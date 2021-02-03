@@ -64,13 +64,15 @@ setTimeout(()=>{
 
     if (mq.matches) {
 
+      //  $("#txtCep").attr("placeholder", "Calcule o Frete")
+
         let aa = $(".product-image .apresentacao .thumbs").contents()
 
         const imgsLength = $(".product-image .apresentacao .thumbs a img").length;
 
         for (let i = 0; i < imgsLength; i++) {
             let imgProduct = $($(".product-image .apresentacao .thumbs a img")[i]).attr("src");
-            imgProduct = imgProduct.replace(/-90-90/g, '-500-500');
+            imgProduct = imgProduct.replace(/-55-55/g, '-500-500');
             $($(".product-image .apresentacao .thumbs a img")[i]).attr("src", imgProduct);
         }
 
@@ -80,7 +82,7 @@ setTimeout(()=>{
             slidesToShow: 1,
             slidesToScroll: 1,
             autoplay: false,
-            arrows: true,
+            arrows: false,
             responsive: [
                 {
                   breakpoint: 1024,
@@ -161,9 +163,10 @@ setTimeout(()=>{
     //redes sociais
 
     $(".share-btns #fbshare").attr("href", `https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`);
+    $(".share-btns #twshare").attr("href", `https://twitter.com/share?url=${window.location.href}`);
   
-
-   
+    
+    
    
   
     

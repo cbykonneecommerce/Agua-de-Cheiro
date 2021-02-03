@@ -16,6 +16,8 @@
     height: 32.5em;
     position: relative;
     margin: 4px;
+    border: solid 1px #CECECE;
+    border-radius: 5px;
 }
 
 .discount {
@@ -257,6 +259,18 @@ select, fieldset {
     .prateleira.vitrine>ul>li, .n1colunas>ul>li, .n2colunas>ul>li, .n3colunas>ul>li, .n4colunas>ul>li, .n5colunas>ul>li {
         padding: 3px 2px !important;
     }
+    .prateleira .buy-btn-icon .btn-add-buy-button-asynchronous{
+        padding: 2px !important;
+    }
+
+    .prateleira .buy-btn-icon .btn-add-buy-button-asynchronous svg{
+        width:60%
+     }
+
+     .prateleira .btn-add-buy-button-asynchronous{
+        font-size: 15px !important;
+        padding: 11px !important;
+     }
 }
 
 @media (max-width: 1150px) {

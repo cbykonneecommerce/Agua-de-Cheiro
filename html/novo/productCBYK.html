@@ -33,7 +33,7 @@
 
         <section id="product-content" class="container">
 
-            <div id="box-bread-brumb" class="hidden-xs">
+            <div id="box-bread-brumb">
                 <vtex.cmc:breadCrumb />
             </div>
 
@@ -41,37 +41,31 @@
 
             <div class="row product-details">
 
-                <div class="product-name visible-xs">
-                    <h1 style="padding-left: 20px;">
-                        <vtex.cmc:productName />
-                    </h1>
-
-                </div>
 
                 <div class="product-image col-xs-12 col-sm-6 col-lg-6 text-center">
                     <!--  Component: Product Images -->
                     <vtex.cmc:ProductImage zoom="on" />
 
-                    <div class="share-btns visible-lg">
+                    <div class="share-btns">
                         <span style="display: inline-block;">COMPARTILHE: </span>
                         <ul style="display: inline-block;margin-left: 14px;">
                            
                             <li style="display: inline-block;"><a href="" id="fbshare" target="_blank"><img
-                                        src="/arquivos/fb-black.svg" alt="Facebook" style="width: 35px;" /></a>
+                                        src="/arquivos/fb-black.svg" alt="Facebook" style="height: 29px;
+                                        margin: 5px;" /></a>
                             </li>
                             <li style="display: inline-block;"><a href="" id="twshare" target="_blank"><img
-                                        src="/arquivos/tw-black.svg" alt="Twitter" style="width: 35px;" /></a>
+                                        src="/arquivos/tw-black.svg" alt="Twitter" style="height: 29px;
+                                        margin: 5px;" /></a>
                             </li>
-                            <li style="display: inline-block;"><a href="" id="igshare" target="_blank"><img
-                                src="/arquivos/ig-black.svg" alt="Instagram" style="width: 35px;" /></a>
-                    </li>
+                           
                         </ul>
                     </div>
                 </div><!-- .product-image -->
 
                 <div class="product-info col-xs-12 col-sm-6 col-lg-6">
 
-                    <div class="product-name hidden-xs">
+                    <div class="product-name ">
                         <h1>
                             <vtex.cmc:productName />
                         </h1>
@@ -93,7 +87,7 @@
                     </div>
 
                     <div class="row">
-                        <div class="col-sm-6">
+                        <div class="col-sm-6" id="price-data">
                             <div class="price-box">
                                 <!--  Component: Sellers -->
                                 <vtex.cmc:SellerOptions />
@@ -222,56 +216,7 @@
 
 
 
-    <!-- Modal -->
-    <div class="modal fade" id="areYousure" role="dialog" data-backdrop="static" data-keyboard="false">
-        <div class="modal-dialog">
-
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-
-                    <h3><i class="icon-check"></i><b>Confira </b><span>o Produto adicionado ao carrinho de
-                            compras</span></h3>
-                    <button type="button" class="close" data-dismiss="modal">X</button>
-
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-sm-5">
-                            <img src="/arquivos/sem-foto.gif" id="foto-confirmation" alt="" />
-                        </div>
-                        <div class="col-sm-7">
-                            <h3 style="    text-align: left;">
-                                <vtex.cmc:productName />
-                            </h3>
-                            <div id="modalstuff" style="    text-align: left;">
-                                <vtex.cmc:skuPrice />
-                            </div>
-
-                            <div class="skuInfo" style="    text-align: left;    margin-top: 1em;">
-                                <div class="selectedQuantity">
-                                    <span class="label">Quantidade</span>
-                                    <span class="value"></span>
-                                </div>
-                            </div>
-
-
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-12">
-                            <div class="myoptions">
-                                <a data-dismiss="modal">Escolher mais Produtos</a>
-                                <a href="/checkout">Finalizar Compra</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-    </div>
+   
 
 
 

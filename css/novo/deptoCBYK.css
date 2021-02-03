@@ -62,7 +62,7 @@ display: none !important;
 }
 
 .prateleira .box-item{
-    height: 29.5em !important;
+    height: 28em !important;
 }
 
 
@@ -223,9 +223,6 @@ fieldset.refino-marca > div{
     color: #333 !important;
 }
 
-.bread-crumb {
-    margin-top: 35px;
-}
 
 .depto-text p {
     text-align: center;

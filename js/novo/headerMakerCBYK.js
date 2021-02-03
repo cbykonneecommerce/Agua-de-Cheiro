@@ -14,9 +14,10 @@ $(document).ready(function () {
                 $(".deptos ul").append(`<li class="depto-${element.name}"><a href="${element.url}">${divtext}</a></li>`);
                 console.log("adding main")
                 if (element.hasChildren) {
-                    $("#top-menu .container #deptos-list").append(`<div class="deptonav depto-${element.name}" id="${element.name}" style="display: none">
+                    $("#top-menu .container-fluid #deptos-list").append(`<div class="deptonav depto-${element.name}" id="${element.name}" style="display: none">
 
-            <div class="row">
+            <div class="row" style="width: 1180px;
+            margin: auto;">
                  <div class="col-sm-2">
                      <ul class="">
                          

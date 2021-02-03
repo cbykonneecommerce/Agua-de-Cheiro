@@ -48,6 +48,13 @@
          <a  onclick="closeNavfiltro()" id="close"><img src="/arquivos/filtro.svg" style="max-width: 50px;"/></a>
      </div>
  
+     <section class="container-fluid visible-xs visible-sm">
+        <div id="departament-banner ">
+            <!--  placeholder -->
+            <vtex:contentPlaceHolder id="Banner-PrincipalMOB" />
+            <!-- /placeholder -->
+        </div><!-- #departament-banner -->
+     </section>
          <section id="content" class="container">
  
                      
@@ -68,16 +75,22 @@
                  </aside><!-- .sidebar -->
         
                  <article id="main-content" class="col-xs-12 col-md-9">
-                                                                     
-                    <div id="departament-banner">
-                        <!--  placeholder -->
-                        <vtex:contentPlaceHolder id="Banner-Principal" />
-                        <!-- /placeholder -->
-                    </div><!-- #departament-banner -->
-                    
-                    <div class="brand-carousel">
-                        <vtex:contentPlaceHolder id="Marca-banner" />
+                           
+                    <div class="hidden-xs hidden-sm">
+                        <div id="departament-banner">
+                            <!--  placeholder -->
+                            <vtex:contentPlaceHolder id="Banner-Principal" />
+                            <!-- /placeholder -->
+                        </div><!-- #departament-banner -->
                     </div>
+                    
+
+                    <div class="hidden-xs">
+                        <div class="brand-carousel">
+                            <vtex:contentPlaceHolder id="Marca-banner" />
+                        </div>
+                    </div>
+                    
                          
                      <div id="collections">
                          

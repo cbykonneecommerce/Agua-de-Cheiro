@@ -2004,7 +2004,7 @@
    }
  
  @media ( max-width: 768px ){
-   body.produto{ padding-bottom: 80px; }
+   
    #comprar-flutuante{
     display: block ! important
    }

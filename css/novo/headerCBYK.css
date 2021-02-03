@@ -64,12 +64,13 @@ body.menu-ativo:before {
     margin-bottom: 1.3em;
 }
 
-.section-title {
+.section-title, h4#divTitulo {
     color: #007DA5;
     text-align: center;
+    font-size: 24px;
 }
 
-.section-title::after, .prateleira.vitrine h2::after {
+.section-title::after, .prateleira.vitrine h2::after, h4#divTitulo::after {
     content: '';
     display: block;
     width: 55px;
@@ -620,7 +621,7 @@ body.menu-ativo:before {
         margin-bottom: 8px;
     }
     .header-container {
-        padding-top: 16px;
+        padding-top: 32px;
     }
     .slick-prev {
         left: -15px !important;
@@ -694,6 +695,14 @@ body.menu-ativo:before {
     }
     .mini-cart-xs {
         margin-left: -10px;
+    }
+
+    .section-title, h4#divTitulo, .prateleira.vitrine h2{
+        text-align: left;
+    }
+
+    .section-title::after, .prateleira.vitrine h2::after, h4#divTitulo::after{
+        margin: 12px 0;
     }
 }
 

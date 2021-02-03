@@ -145,73 +145,15 @@ c-0.8,7.6-7.2,13.4-14.8,13.4H48.7c-7.6,0-14.1-5.7-14.8-13.4l-7.5-75.7h78.1L97,10
 			}
 			console.log(item)
 			if (!item.id) {
-				alert("Selecione um atributo. (Ex: Tamanho)")
+				alert("Selecione um atributo.")
 			} else {
-
-
-				let quant = $(".buy-button-box .box-qtd .qtd").val();
-				//$(".skuInfo .selectedQuantity .value").text(quant);
-				$(".skuInfo").text("")
-				$(".skuInfo").append(`
-				<div class="selectedspecification">
-					<div class="row">
-						<div class="col-md-5">
-							<span class="label">Quantidade</span>
-						</div>
-						<div class="col-md-7 selectedspecification-value">
-							<span class="value">${quant}</span>
-						</div>
-					</div>  
-				</div>
-				
-				`);
-			
-				for(let i = 0; i < $(".product-info .seletor-sku .select .sku-selector").length; i++){
-					let myname = $($(".product-info .seletor-sku .select .sku-selector")[i]).attr("data-dimension");
-					let value =	$($(".product-info .seletor-sku .select .sku-selector")[i]).val();
-					//console.log(`${myname} : ${value}`)
-					
-					$(".skuInfo").append(`
-					<div class="selectedspecification">
-						<div class="row">
-							<div class="col-md-5">
-								<span class="label">${myname}</span>
-							</div>
-							<div class="col-md-7 selectedspecification-value">
-								<span class="value">${value}</span>
-							</div>
-						</div>       
-					</div>
-					
-					`);
-				}
-
-
-				$('#areYousure').modal('show');
-
-				
-			
+				insertProductOnCart(item);
 			}
 
 
 		});
 
-		$(".myoptions a").click(function(e){
-			
-			var $this = $(".buy-button.buy-button-ref");
-			var url = $this.attr('href');
-			if (url.indexOf('qty=1') > 0) {
-				$this.attr('href', url.replace('qty=1', 'qty=' + parseInt($('.buy-button-box .box-qtd .qtd').val())));
-			}
-
-			let item = {
-				id: parseInt(param("sku")),
-				quantity: parseInt($('.buy-button-box .box-qtd .qtd').val()),
-				seller: param("seller")
-			}
-			insertProductOnCart(item);
-
-		})
+		
 
 
 		var $recebeQtyForm = $btnComprarProduto.parents('.buy-button-box');
