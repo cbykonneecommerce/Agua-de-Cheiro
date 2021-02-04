@@ -374,6 +374,10 @@ fieldset.refino-marca > div{
     margin-top: 1em;
 }
 
+.bottom-banners{
+    margin-bottom: 2em;
+}
+
 @media screen and (max-width: 1900px) {
     .box-banner a img {
         height: 100%;
@@ -443,6 +447,10 @@ fieldset.refino-marca > div{
     }
     .carregar-prox-pg {
         margin-left: 12em;
+    }
+
+    .bottom-banners .box-banner{
+        padding: 0.8em;
     }
 }
 

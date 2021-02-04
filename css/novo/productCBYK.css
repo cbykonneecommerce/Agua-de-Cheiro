@@ -70,10 +70,36 @@
 
 #divCompreJunto td h3 a{
     color: #000 !important;
-    font-size: 13px !important;
+    font-size: 15px !important;
     line-height: 18px !important;
     font-weight: 400 !important;
 }
+
+
+#divCompreJunto td.buy{
+    font-size: 18px
+}
+
+#divCompreJunto td.buy strong, #divCompreJunto td.buy .more a{
+   color: #007DA5
+}
+
+
+#divCompreJunto td.buy .comprar-junto a{
+    display: block;
+    width: 70%;
+    background-color: #007DA5 !important;
+    font-weight: 400;
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 12px;
+    margin-right: 1em;
+    border-radius: 0px;
+    margin-top: 13px;
+ }
 
 .installmentslist ul li {
     color: #333;
@@ -1210,6 +1236,35 @@ display: none;
         position: relative;
         width: 109%;
         left: -17px;
+    }
+
+    #divCompreJunto tr{
+        margin-bottom: 2em;
+    display: block;
+    }
+
+    #divCompreJunto td{
+        width: 100%;
+        max-width: inherit;
+    display: block;
+    border: solid 1px #CECECE;
+    border-radius: 5px;
+    }
+    #divCompreJunto td a:first-of-type{
+        display: inline-block;
+    }
+
+    #divCompreJunto td h3{
+        display: inline-block;
+        width: 63%;
+    }
+    #divCompreJunto td.buy{
+        border: none;
+    }
+
+    #divCompreJunto td.plus, #divCompreJunto td.equal{
+        margin: auto;
+        border: none;
     }
 
 }
