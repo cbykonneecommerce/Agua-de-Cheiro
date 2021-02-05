@@ -238,56 +238,58 @@ setInterval(() => {
 
 
 
+$("#wishlist-btn").click(() => {
+    vtexjs.session.getSession().done(e => {
+        console.log(e);
+        if (e.namespaces.profile.isAuthenticated.value == "true") {
+            var jsonSaveDadosUser = {
+                "emailCliente": e.namespaces.profile.email.value,
+                "ativo": true,
+                "idProduto": skuJson.productId,
+                "prodlink" : window.location.pathname
+
+            };
+            var urlSaveDadosUser = '/api/dataentities/WL/documents/';
+
+            $.ajax({
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                data: JSON.stringify(jsonSaveDadosUser),
+                type: 'PATCH',
+                url: urlSaveDadosUser,
+                success: function (data) {
+                    console.log(data);
+                    // $("#wishlist-btn img").attr('src', "/arquivos/coracaocheio.svg");
+                    // $("#wishlist-btn").attr('id', "wishlist-btn-deactivated")
+                    $("#wishlist-btn").hide();
+                    $("#wishlist-btn-deactivated").show()
+
+
+                },
+                error: function (data) {
+                    console.log(data);
+                    alert("Não foi possível realizar essa ação no momento, tente mais tarde :(")
+
+                }
+            });
+        } else {
+            alert("Você precisa realizar login na sua conta ou criar uma conta para adicionar produtos à sua lista de desejos!");
+        }
 
 
 
-
-
-
-/*
-$(".product-description-box #description").fadeIn()
-$(".desk-info-nav a").click((e) => {
-    $(".desk-info-nav a").css({ "color": "#BEBEBE" });
-    $(e.target).css({ "color": "#000" });
-    if ($(e.target).attr("id") == "first") {
-        $(".product-description-box #specification").fadeOut()
-        $(".product-description-box #description").fadeIn()
-    } else if ($(e.target).attr("id") == "last") {
-        $(".product-description-box #description").fadeOut()
-        $(".product-description-box #specification").fadeIn()
     }
 
+    )
+
+
+
 })
 
 
-$(".dropdown-container").hide();
-$(".dropdown-btn#descricao").toggle(() => {
-
-    $(".dropdown-btn#descricao i").attr('class', 'fa fa-minus');
-    $(".dropdown-container#descricao").slideDown()
-}, () => {
-    $(".dropdown-container#descricao").slideUp()
-    $(".dropdown-btn#descricao i").attr('class', 'fa fa-plus');
-})
 
 
-$(".dropdown-btn#especificacao").toggle(() => {
-    $(".dropdown-btn#especificacao i").attr('class', 'fa fa-minus');
-    $(".dropdown-container#especificacao").slideDown()
-}, () => {
-    $(".dropdown-container#especificacao").slideUp()
-    $(".dropdown-btn#especificacao i").attr('class', 'fa fa-plus');
-})
-
-$(".dropdown-btn#avaliacao").toggle(() => {
-    $(".dropdown-btn#avaliacao i").attr('class', 'fa fa-minus');
-    $(".dropdown-container#avaliacao").slideDown()
-}, () => {
-    $(".dropdown-container#avaliacao").slideUp()
-    $(".dropdown-btn#avaliacao i").attr('class', 'fa fa-plus');
-})
-
-*/
 
 
 

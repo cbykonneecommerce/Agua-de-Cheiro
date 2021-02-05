@@ -17,7 +17,6 @@
     margin: auto;
 }
 
-
 .ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
     border: none !important;
     background: none !important;
@@ -79,7 +78,6 @@ body.menu-ativo:before {
     background: #007DA5
 }
 
-
 .deptonav .secondLayer {
     display: none;
 }
@@ -94,12 +92,11 @@ body.menu-ativo:before {
     z-index: 10000000;
 }
 
-
-#box-bread-brumb li:before{
+#box-bread-brumb li:before {
     color: #007EA8 !important;
 }
 
-#box-bread-brumb li.last a{
+#box-bread-brumb li.last a {
     color: #007EA8 !important;
     font-weight: bold;
 }
@@ -223,7 +220,7 @@ body.menu-ativo:before {
 }
 
 .depto-nav-area {
-    margin-top: 0.4em;
+    margin-top: 1.4em;
 }
 
 .deptos ul {
@@ -231,7 +228,7 @@ body.menu-ativo:before {
     align-items: stretch;
     justify-content: space-between;
     margin-top: 12px;
-    margin-bottom: 12px;
+    margin-bottom: -8px;
 }
 
 .deptos ul li a {
@@ -632,6 +629,15 @@ body.menu-ativo:before {
     #special-icon {
         width: 24%;
     }
+    .depto-Ofertas {
+        background-color: #007DA5;
+        top: -8px;
+        position: relative;
+        padding: 10px 16px;
+    }
+    .depto-Ofertas a {
+        color: white !important;
+    }
 }
 
 @media screen and (max-width: 1200px) {
@@ -696,12 +702,10 @@ body.menu-ativo:before {
     .mini-cart-xs {
         margin-left: -10px;
     }
-
-    .section-title, h4#divTitulo, .prateleira.vitrine h2{
+    .section-title, h4#divTitulo, .prateleira.vitrine h2 {
         text-align: left;
     }
-
-    .section-title::after, .prateleira.vitrine h2::after, h4#divTitulo::after{
+    .section-title::after, .prateleira.vitrine h2::after, h4#divTitulo::after {
         margin: 12px 0;
     }
 }

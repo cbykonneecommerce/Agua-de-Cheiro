@@ -25,6 +25,16 @@
     margin-top: 10px;
 }
 
+#wishlist-btn-deactivated{
+    display: none;
+}
+
+#wishlist-btn, #wishlist-btn-deactivated{
+    position: relative;
+    left: 90%;
+    cursor: pointer
+}
+
 .sku-notifyme-form.notifyme-form input.btn-ok {
     color: white;
     background-color: #000;
