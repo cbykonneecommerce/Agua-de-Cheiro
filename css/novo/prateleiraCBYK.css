@@ -213,6 +213,10 @@ select, fieldset {
     /*  border-bottom: none;*/
 }
 
+.prateleira .product-image{
+    margin-top: 5px;
+}
+
 .prateleira .product-image::after {
     content: none !important;
     background: none !important;

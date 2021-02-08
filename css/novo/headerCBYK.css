@@ -36,7 +36,8 @@
 .header-container {
     position: sticky;
     top: 0px;
-    z-index: 10000000;
+   /* z-index: 10000000;*/
+    z-index: 999999999;
     background-color: white !important;
     padding-top: 8px;
 }
@@ -670,6 +671,8 @@ body.menu-ativo:before {
     #menu-mobile ul li a {
         color: #333 !important
     }
+
+    
 }
 
 @media screen and (max-width: 600px) {
