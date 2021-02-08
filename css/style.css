@@ -1604,10 +1604,10 @@
            margin: 5px 5px 0 0;
          }
            #reviews .resenhas .opiniao-ajudou .bts li a{
-             color: #D0021B;
-             font-size: 15px;
-             font-weight: 400;
-             line-height: 18px;
+            color: #007DA5;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 18px;
            }
  
    #publishUserReview{

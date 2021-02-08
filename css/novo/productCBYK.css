@@ -8,6 +8,11 @@
     line-height: 36px;
 }
 
+#opiniao_de_usuario{
+    display: block !important;
+}
+
+
 
 
 .sku-notifyme-form.notifyme-form input {
@@ -223,15 +228,22 @@
 }
 
 .user-review h4 {
-    color: black;
-    font-size: 15px !important;
-    line-height: 18px !important;
-    font-weight: 400 !important;
-    padding-left: 1em !important;
+    color: #007DA5 !important;
+    text-align: center;
+    font-size: 24px !important;
+}
+
+.user-review h4::after{
+    content: '';
+    display: block;
+    width: 55px;
+    height: 2px;
+    margin: 12px auto 0;
+    background: #007DA5;
 }
 
 #reviews #formUserReview .avaliar a, #reviews #lnkPubliqueResenha {
-    background-color: #8D7573!important;
+    background-color: #007DA5!important;
     text-transform: uppercase;
     border-radius: 0px;
 }
@@ -406,7 +418,7 @@
 }
 
 .rating-produto:before, .rating-demonstrativo:before, .rating-wrapper .rating:before, .rating-avalie .ratingStar.emptyRatingStar:before, .rating-avalie .ratingStar.filledRatingStar:before {
-    color: #886F3E!important
+    color: #007DA5!important
 }
 
 span#spnRatingProdutoTop {
