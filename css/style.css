@@ -1618,11 +1618,11 @@
        border-radius: 4px;
        padding: 10px 20px;
        position: fixed;
-       top: 30px;
+       top: 112px;
        left: 50%;
        margin-left: -250px;
        box-shadow: 0 0 10px #ccc;
-       z-index: 99999;
+       z-index: 999999999;
      }
        #publishUserReview #formUserReview .header{
          padding: 0;

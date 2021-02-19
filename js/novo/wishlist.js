@@ -96,6 +96,7 @@ $(document).ready(function (){
             console.log(e);
             if (e.namespaces.profile.isAuthenticated.value) {
                 getWishlistProducts(e.namespaces.profile.email.value);
+                
             }
           
 
@@ -110,11 +111,16 @@ $(document).ready(function (){
 
 
 
+
+
+})
+
+setTimeout(function(){
     $(".remove-me", "body").click(async function(e){
         
         console.log(($(e.target).children())[0].innerText);
         let myId= ($(e.target).children())[0].innerText;
-
+    
     let results = await fetch(`/api/dataentities/WL/documents/${myId}`, {
         method: "DELETE",
         headers: {
@@ -124,12 +130,10 @@ $(document).ready(function (){
         
     console.log(results);
     console.log($(e.target).parent().parent());
-     $($(e.target).parent().parent()).remove()
-
-
+     $($(e.target).parent()).remove();
     })
+}, 5000)
 
-})
 
 
  
