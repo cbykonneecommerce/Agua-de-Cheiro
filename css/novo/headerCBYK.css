@@ -229,7 +229,6 @@ body.menu-ativo:before {
     align-items: stretch;
     justify-content: space-between;
     margin-top: 12px;
-    margin-bottom: -8px;
 }
 
 .deptos ul li a {
