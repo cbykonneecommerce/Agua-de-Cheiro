@@ -1,0 +1,22 @@
+span.f4 > span {
+    font-size: 0px;
+}
+
+span.f4 > span:after {
+    content: 'Obrigado por comprar com a Água de Cheiro.';
+    font-size: 20px;
+}
+
+.fl > p > span:first-child:after{
+    content: 'Obrigado por comprar com a Água de Cheiro.';
+    font-size: 20px;
+}
+
+.fl > p > span:first-child{
+    font-size: 0px;
+}
+
+.fl > p > span:first-child:after{
+    content: 'Seu pedido foi efetuado com sucesso. Em breve você receberá um e-mail de confirmação em';
+    font-size: 14px;
+}
