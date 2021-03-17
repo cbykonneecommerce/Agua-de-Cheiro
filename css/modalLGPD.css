@@ -1,0 +1,83 @@
+.footer-lgpd {
+    top: 80% !important;
+    background-color: transparent;
+    overflow: unset;
+    border: none;
+    box-shadow: none;
+    left: 23%;
+}
+
+#footer-lgpd {
+    width: 1580px;
+}
+
+.modal-body {
+    padding: 25px;
+}
+
+.modal-dialog {
+    width: 1580px;
+}
+
+#btnlgpd {
+    background-color: #007DA5;
+    opacity: 1;
+    color: white;
+    outline: none;
+    text-align: center;
+    font-weight: 400;
+    text-shadow: none;
+    border-radius: 5px !important;
+    height: 56px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 15px
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1500px) {
+    #footer-lgpd {
+        width: 90%;
+    }
+    .footer-lgpd {
+        left: 23%;
+    }
+    #btnlgpd {
+        margin-top: 1em
+    }
+    .modal-dialog {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 200px) and (max-width: 1199px) {
+    #footer-lgpd {
+        width: 90%;
+    }
+    .footer-lgpd {
+        margin: auto;
+        left: -5%;
+        top:60% !important
+    }
+    #btnlgpd {
+      
+        font-size: 14px !important
+    }
+    .modal-dialog {
+        width: 100%;
+    }
+    #intro-modal-text h3{
+        font-size: 13px
+    }
+
+    #intro-modal-text .col-sm-3{
+        display: flex;
+    justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 760px) and (max-width: 1050px) {
+    .footer-lgpd {
+        top: 80% !important;
+    }
+}
