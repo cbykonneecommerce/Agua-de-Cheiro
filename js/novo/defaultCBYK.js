@@ -127,31 +127,31 @@ c-0.8,7.6-7.2,13.4-14.8,13.4H48.7c-7.6,0-14.1-5.7-14.8-13.4l-7.5-75.7h78.1L97,10
 							$('#foto-confirmation').attr('src', imageConfirm);
 
 
-		$btnComprarProduto.html('Comprar <i class="fa fa-lock"></i>');
+		///$btnComprarProduto.html('Comprar <i class="fa fa-lock"></i>');
 
-		$btnComprarProduto.click(function (e) {
-			e.preventDefault();
+		// $btnComprarProduto.click(function (e) {
+		// 	e.preventDefault();
 
-			var $this = $(this);
-			var url = $this.attr('href');
-			if (url.indexOf('qty=1') > 0) {
-				$this.attr('href', url.replace('qty=1', 'qty=' + parseInt($('.buy-button-box .box-qtd .qtd').val())));
-			}
+		// 	var $this = $(this);
+		// 	var url = $this.attr('href');
+		// 	if (url.indexOf('qty=1') > 0) {
+		// 		$this.attr('href', url.replace('qty=1', 'qty=' + parseInt($('.buy-button-box .box-qtd .qtd').val())));
+		// 	}
 
-			let item = {
-				id: parseInt(param("sku")),
-				quantity: parseInt($('.buy-button-box .box-qtd .qtd').val()),
-				seller: param("seller")
-			}
-			console.log(item)
-			if (!item.id) {
-				alert("Selecione um atributo.")
-			} else {
-				insertProductOnCart(item);
-			}
+		// 	let item = {
+		// 		id: parseInt(param("sku")),
+		// 		quantity: parseInt($('.buy-button-box .box-qtd .qtd').val()),
+		// 		seller: param("seller")
+		// 	}
+		// 	console.log(item)
+		// 	if (!item.id) {
+		// 		alert("Selecione um atributo.")
+		// 	} else {
+		// 		insertProductOnCart(item);
+		// 	}
 
 
-		});
+		// });
 
 		
 
