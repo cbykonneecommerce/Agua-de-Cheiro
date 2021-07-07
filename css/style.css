@@ -536,6 +536,7 @@
   justify-content: center;
   bottom: 0;
   position: absolute;
+  margin-bottom: 20px;
 }
 
 .fullbanner .slick-dots li button{
