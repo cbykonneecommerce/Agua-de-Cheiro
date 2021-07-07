@@ -522,15 +522,27 @@
  .fullbanner{
    display: block;
  }
-   .fullbanner .box-banner a{
-     display: block;
-   }
-     .fullbanner .box-banner img{
-       height: auto ! important;
-       width: auto ! important;
-     }
- 
- 
+.fullbanner .box-banner a{
+  display: block;
+}
+.fullbanner .box-banner img{
+  height: auto ! important;
+  width: 100% ! important;
+}
+
+.fullbanner .slick-dots{
+  width: 100%;
+  display: flex!important;
+  justify-content: center;
+  bottom: 0;
+  position: absolute;
+}
+
+.fullbanner .slick-dots li button{
+  background: #000;
+  border-radius: 50%;
+  border: 1px solid #fff;
+}
  /** ************************************************************************************ **/
  /** *********** PRATELEIRA - SHOWCASE **/
  /** ************************************************************************************ **/
