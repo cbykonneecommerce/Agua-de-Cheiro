@@ -540,7 +540,9 @@
 }
 
 .fullbanner .slick-dots li button{
-  background: #000;
+  background: #dadada;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
   border: .5px solid #fff;
 }
