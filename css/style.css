@@ -542,7 +542,7 @@
 .fullbanner .slick-dots li button{
   background: #000;
   border-radius: 50%;
-  border: 1px solid #fff;
+  border: .5px solid #fff;
 }
  /** ************************************************************************************ **/
  /** *********** PRATELEIRA - SHOWCASE **/
