@@ -168,6 +168,7 @@
 
     opacity: .25;
     color: #dadada;
+    font-size: 0;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
