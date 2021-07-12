@@ -162,8 +162,7 @@
 
     width: 10px;
     height: 10px;
-
-    content: '•';
+    
     text-align: center;
 
     opacity: .25;
@@ -173,8 +172,10 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.slick-dots li.slick-active button:before
-{
-    opacity: .75;
+.slick-dots li.slick-active button:before{
+    color: #706f6f;
+}
+
+.slick-dots li.slick-active button{
     color: #706f6f;
 }
