@@ -162,7 +162,7 @@
 
     width: 10px;
     height: 10px;
-    
+
     text-align: center;
 
     opacity: .25;
@@ -174,8 +174,10 @@
 }
 .slick-dots li.slick-active button:before{
     color: #706f6f;
+    background: #706f6f;
 }
 
 .slick-dots li.slick-active button{
     color: #706f6f;
+    background: #706f6f;;
 }

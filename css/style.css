@@ -549,10 +549,12 @@
 
 .fullbanner .slick-dots li.slick-active button:before{
   color: #706f6f;
+  background: #706f6f;
 }
 
 .fullbanner .slick-dots li.slick-active button{
   color: #706f6f;
+  background : #706f6f;
 }
  /** ************************************************************************************ **/
  /** *********** PRATELEIRA - SHOWCASE **/
