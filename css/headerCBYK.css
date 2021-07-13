@@ -209,14 +209,15 @@ body.menu-ativo:before {
 }
 
 #menu-mobile ul li {
-    border-top: solid 1px #333;
+    border-top: 0px solid #efefef;
     padding: 10px 8px 10px 16px;
 }
 
 #menu-mobile ul li a {
-    color: #fff !important;
-    font-size: 12px !important;
+    color: #007DA5 !important;
+    font-size: 17px !important;
     line-height: 30px !important;
+    margin-left: -1em;
     font-weight: 400 !important;
 }
 
@@ -340,11 +341,11 @@ body.menu-ativo:before {
     {
     padding: 17px 8px 17px 0px;
     text-decoration: none;
-    font-size: 13px;
-    color: #025EB9 !important;
+    font-size: 17px;
+    color: #007DA5!important;
     font-weight: 500;
     display: block;
-    text-transform: uppercase;
+    text-transform: capitalize !important;
     border: none;
     background: none;
     width: 100%;
@@ -356,7 +357,12 @@ body.menu-ativo:before {
 .sidenav .depto-box span {
     display: inline-block;
 }
-
+.sidenav .depto-box{
+    border-top: 1px solid #efefef !important;
+}
+.sidenav span a{
+    border-top: 1px solid #efefef !important;
+}
 .dropdown-btn {
     padding: 0;
     text-decoration: none;
@@ -390,11 +396,18 @@ body.menu-ativo:before {
 }
 
 /* Optional: Style the caret down icon */
-
+.link-login p{
+    color: #007DA5 !important;
+    font-size: 14px !important;
+    line-height: 30px !important;
+    margin-left: -16px;
+    font-weight: 400 !important;
+    margin-bottom: -19px;
+}
 .fa-angle-down, .fa-angle-up {
     float: right;
     padding-right: 8px;
-    color: #025EB9;
+    color: #CCCCCC;
     font-size: 25px
 }
 
@@ -667,9 +680,7 @@ body.menu-ativo:before {
     #mini-cart-admake .mini-cart-botao .btn-finalizar-compra {
         width: 62%;
     }
-    #menu-mobile ul li a {
-        color: #333 !important
-    }
+   
 
     
 }

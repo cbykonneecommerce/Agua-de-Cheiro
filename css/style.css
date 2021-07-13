@@ -359,7 +359,7 @@
    @media ( max-width: 767px) {
      #menu-mobile{
        position: fixed;
-       width: 75%;
+       width:90%;
        left: 0;
        top: 0;
        bottom: 0;
@@ -423,12 +423,22 @@
          clear: both;
          content: "";
        }
+       #menu-mobile .close-menu::after{
+        content: "×";
+        position: absolute;
+        font-size:50px;
+        margin-left:10px;
+        color:#000;
+        margin-top:8px;
+       }
          #menu-mobile .close-menu{
-           color: #ccc;
-           font-size: 30px;
-           line-height: 30px;
-           -webkit-transition: 0.3s all;
-           transition: 0.3s all;
+          background: #ebebeb;
+          border-radius: 50%;
+          height: 50px;
+          width: 50px;
+          line-height: 30px;
+          -webkit-transition: 0.3s all;
+          transition: 0.3s all;
          }
          #menu-mobile .close-menu:hover,
          #menu-mobile .close-menu:active,
@@ -436,6 +446,7 @@
            color: #000;
          }
          #menu-mobile .icone-menu{
+           display: none;
            color: #ccc;
            font-size: 30px;
            line-height: 30px;
