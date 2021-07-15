@@ -7,7 +7,7 @@ function insertProductOnCart(item) {
 		.done(function (orderForm) {
 			//alert('Item adicionado!');
 			console.log("adicionando ao cart");
-			const position = [orderForm.items.length - 1]
+			let position = [orderForm.items.length - 1]
 			while (orderForm.items[position].sellingPrice == 0) {
 				position = position - 1;
 			}
