@@ -5,11 +5,17 @@
  
  #if ($product.IsInStock)
  <span class="box-item text-center">
+ 
+
  #else
  <span class="box-item text-center product-off">
  #end
-
+<div class="shelf-heart" style="position:absolute;z-index:99999999"><img style="width:64% !important" src="/arquivos/coracaovazio.svg" alt=""/>
+            <span style="display:none" class="myid">$product.Id</span>
+            <span style="display:none" class="myurl">$uri</span>
+       </div>
      <a class="product-image" title="$escapedName" href="$uri">
+    
         <div class="discount">$product.DiscountHightLight</div>
             <div class="principal">$product.GetImageTag(2)</div>
          
@@ -21,6 +27,8 @@
          <a title="$escapedName" href="$uri">$product.Name</a>
      </b>
      
+     
+      
      
      #if ($product.IsInStock)
          <span class="price">
@@ -47,13 +55,16 @@
      #if ($product.NumbersOfInstallment > 1)
      <span class="installment">
         ou ${product.NumbersOfInstallment}x de $product.InstallmentValue SEM JUROS
-    </span>          
+    </span> 
+    
+    #else
+    <span style="height: 9px;display: block;"></span>
      #end
      <div class="buy-btns">
      
         <!-- $product.BottomBuyAsynchronous-->
-        <a href="$uri" class="btn-add-buy-button-asynchronous  asynchronousBuyButton actionActivated .btover-active" style="margin-top: 0.5em;text-decoration:none">COMPRAR</a>
-        $product.BottomBuyAsynchronous
+        <a href="$uri" class="btn-add-buy-button-asynchronous btn-dinamico  asynchronousBuyButton actionActivated btover-active" style="margin-top: 0.5em;text-decoration:none">COMPRAR</a>
+       <div class="buy-btn-icon">$product.BottomBuyAsynchronous</div>
      </div>
      
     
