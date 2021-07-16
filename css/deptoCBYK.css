@@ -269,6 +269,7 @@ fieldset.refino-marca > div{
     border-radius: 0 !important;
     color: #007DA5 !important;
     background-color: #F2F2F2;
+    width: 100%;
 }
 .resultado-busca-filtro > fieldset.orderBy label, .resultado-busca-filtro > fieldset.filterBy{
     display: none;
@@ -424,6 +425,15 @@ fieldset.refino-marca > div{
 
     .prateleira .box-item{
         height: 23.5em !important;
+    }
+
+
+    .resultado-busca-filtro>fieldset select{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        padding-top: 2px;
+    padding-left: 29%;
     }
 }
 

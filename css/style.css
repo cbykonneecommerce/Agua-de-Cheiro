@@ -1374,10 +1374,11 @@
      display: inline-block;
      vertical-align: top;
      color: #333;
+     width: 48%;
      font-size: 13px;
      font-weight: 300;
      line-height: 30px;
-     margin-right: 30px;
+     margin-right: 16px;
    }
      .resultado-busca-filtro > fieldset select{
        border: 1px solid #ccc;

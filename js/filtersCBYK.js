@@ -75,3 +75,28 @@ setTimeout(function(){
     setInterval(() => {
         $(".bt-refinar.search-filter-button.even").text("Aplicar Filtros");
     }, 1000);
+
+
+
+
+
+    const mq = window.matchMedia("(max-width: 800px)");
+
+    if (mq.matches) {
+      $(".resultado-busca-filtro").append(`
+    
+      <span onclick="openNavfiltro()" style="
+      border: 1px solid #F2F2F2 !important;
+      border-radius: 0 !important;
+      color: #007DA5 !important;
+      background-color: #F2F2F2;
+      padding: 3px;
+      padding-left: 10px;
+      width: 46%;
+      position: absolute;
+      text-align: center;
+  ">Filtros <img src="/arquivos/filtro.svg" style="max-width: 25px;margin-left: 10px;"></span>
+      `)
+    }
+ 
+   
