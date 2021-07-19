@@ -642,15 +642,16 @@ body.menu-ativo:before {
     #special-icon {
         width: 24%;
     }
-    .depto-Ofertas {
+    .depto-Cheiro-de-Promo{
         background-color: #007DA5;
         top: -8px;
         position: relative;
         padding: 10px 16px;
     }
-    .depto-Ofertas a {
+    .depto-Cheiro-de-Promo a{
         color: white !important;
     }
+  
 }
 
 @media screen and (max-width: 1200px) {
