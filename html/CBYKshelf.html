@@ -51,15 +51,11 @@
              
                
          </span>
-   
+         <span class="installment">
      #if ($product.NumbersOfInstallment > 1)
-     <span class="installment">
         ou ${product.NumbersOfInstallment}x de $product.InstallmentValue SEM JUROS
-    </span> 
-    
-    #else
-    <span style="height: 9px;display: block;"></span>
      #end
+    </span> 
      <div class="buy-btns">
      
         <!-- $product.BottomBuyAsynchronous-->
