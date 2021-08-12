@@ -469,7 +469,7 @@ body.menu-ativo:before {
     color: white !important;
     display: block;
     text-transform: uppercase;
-    background-color: #007DA5!important;
+    background-color: #69D201!important;
     font-weight: 500!important;
     font-size: 18px !important;
     padding: 12px !important;
@@ -513,7 +513,7 @@ body.menu-ativo:before {
 }
 
 .vtexIdUI {
-    top: 22% !important;
+    top: 30% !important;
 }
 
 .vtexIdUI .modal-header .close {

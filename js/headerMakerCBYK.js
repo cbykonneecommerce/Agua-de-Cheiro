@@ -192,6 +192,12 @@ setInterval(() => {
         $($(".ui-autocomplete .ui-menu-item img")[i]).attr("src", imgProduct);
     }
 
+    $('.close.vtexIdUI-close.ng-hide').click(function(){
+        window.location.href = '/';
+    })
+
+   
+
 
 }, 1000)
 

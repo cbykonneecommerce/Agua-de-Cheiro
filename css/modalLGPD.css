@@ -1,5 +1,5 @@
 .footer-lgpd {
-    top: 80% !important;
+    top: 75% !important;
     background-color: transparent;
     overflow: unset;
     border: none;
@@ -15,7 +15,7 @@
 }
 
 .modal-body {
-    padding: 0px 25px;
+    padding: 20px 25px;
 }
 
 .modal-dialog {
