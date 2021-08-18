@@ -687,7 +687,7 @@
            color: #777;
            font-size: 12px;
            font-weight: 300;
-           line-height: 18px;
+           line-height: 0px;
            text-decoration: line-through;
          }
          .prateleira .price .best-price{

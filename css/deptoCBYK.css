@@ -46,7 +46,7 @@ display: none !important;
 
 
 #mySidenavfiltros{
-    position: sticky;
+    position: static;
     top: 100px;
     background-color: white !important;
     margin-bottom: 2em;
@@ -131,7 +131,7 @@ fieldset.refino.active > div{
 
 fieldset.refino > div{
     animation: todownmenu 1.0s linear both;
-    display: none;
+    display: block !important;
 }
 
 fieldset.refino.active > h5 svg{
@@ -147,7 +147,7 @@ fieldset.refino > h5 svg{
 
 fieldset.refino > div{
     overflow: scroll;
-    height: 25em;
+    height: auto;
 }
 
 
@@ -168,23 +168,22 @@ fieldset.refino-marca.active > div{
 
 fieldset.refino-marca > div{
     animation: todownmenu 1.0s linear both;
-    display: none;
+    display: block !important;
 }
 
 fieldset.refino-marca.active > h5 svg{
    
-    transform: rotate(180deg);
     transition: 0.6s;
 }
 
 fieldset.refino-marca > h5 svg{
-    transform: rotate(360deg);
+   
     transition: 0.6s;
 }
 
 fieldset.refino-marca > div{
     overflow: scroll;
-    height: 25em;
+    height: auto !important;
 }
 
 

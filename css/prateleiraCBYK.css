@@ -82,7 +82,7 @@
 
 .prateleira .price {
     margin-bottom: 4px;
-    text-align: left;
+    text-align: center;
 }
 
 .prateleira .price .best-price {
@@ -208,7 +208,7 @@ select, fieldset {
     height: 12px;
     font-size: 12px !important;
     color: black !important;
-    text-align: left;
+    text-align: center;
 }
 
 .title-category {
