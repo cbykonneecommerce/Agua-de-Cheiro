@@ -626,6 +626,7 @@
        display: block;
        margin-bottom: 10px;
        position: relative;
+       outline: none;
      }
      .prateleira .product-image:after{
        background-color: #fff;
@@ -681,6 +682,7 @@
        .prateleira .price a{
          display: block;
          text-decoration: none;
+         outline: none;
        }
          .prateleira .price .old-price{
            display: block;
