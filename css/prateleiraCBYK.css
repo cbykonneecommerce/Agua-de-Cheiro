@@ -11,6 +11,9 @@
     display: none;
 }*/
 
+.prateleira .box-item:hover .btn-add-buy-button-asynchronous{
+    background-color: #69D201!important;
+}
 .prateleira .box-item {
     background-color: white !important;
     height: 32.5em;
@@ -237,7 +240,7 @@ select, fieldset {
 }
 
 .prateleira .box-item:hover {
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 2px 6px 1px;
+
     transition: 0.3s;
 }
 
