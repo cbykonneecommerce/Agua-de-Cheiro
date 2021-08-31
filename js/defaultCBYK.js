@@ -72,6 +72,16 @@ c-0.8,7.6-7.2,13.4-14.8,13.4H48.7c-7.6,0-14.1-5.7-14.8-13.4l-7.5-75.7h78.1L97,10
 			
 				</div>
 			`);
+			if ($('.mini-cart-itens').html() == ''){
+				$(".continue-comprando").css('display', 'flex !important');
+				$(".mini-cart-footer").css('display', 'none');
+			  
+				console.log('teste1')
+			  }else {
+				$(".continue-comprando").css('display', 'flex !important');
+				$(".mini-cart-footer").css('display', 'block !important');
+				console.log('teste2')
+			  }
 			$("#mini-cart-admake-total").text("R$ " + formatReal(orderForm.value));
 			$(".mini-cart-qty-admake").text(orderForm.items.length);
 
