@@ -251,7 +251,7 @@ body.menu-ativo:before {
     z-index: 9999999999;
     position: absolute;
     width: 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 15px 0 rgb(0 0 0 / 20%);
     transition: 0.3s;
 }
 
@@ -546,6 +546,7 @@ body.menu-ativo:before {
     overflow-y: auto;
     padding-top: 20px;
     height: 100%;
+    box-shadow: 0 30px 30px 0 rgb(0 0 0 / 35%);
     position: fixed;
     width: 485px;
     transition: 0.5s;
