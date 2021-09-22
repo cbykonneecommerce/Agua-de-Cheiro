@@ -58,6 +58,16 @@ body {
 .faixamob .box-banner {
     margin-top: 1em;
 }
+#banner-galery {
+    display: none;
+}
+#banner-galery.slick-initialized{
+    padding: 20px 0;
+    display: block;
+}
+#banner-galery .box-banner img{
+    padding: 0 10px;
+}
 
 @media screen and (max-width: 700px) {
     #homeCardsCarousel .box-banner a img {

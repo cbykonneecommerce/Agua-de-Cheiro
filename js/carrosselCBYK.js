@@ -131,8 +131,7 @@ $(document).ready(function () {
 
   });
 
-
-
+  //verifica a qnt e o tamanho da tela antes de executar
 
   $('#novcategorias').slick({
     infinite: true,
