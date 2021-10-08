@@ -1,0 +1,150 @@
+@font-face {
+    font-family: "Avenir Next LT Pro";
+    src: url("/arquivos/AvenirNext_Variable.ttf.css");
+    font-weight: 600;
+    font-style: normal;
+}
+
+.page-theme {
+    text-align: center;
+}
+
+.estreia {
+    text-align: center;
+}
+
+.submit {
+    padding-bottom: 10px;
+    margin-top: 35px;
+}
+
+.product-carousel {
+    padding-bottom: 50px;
+    padding-top: 30px;
+}
+
+.prateleira .box-item {
+    height: 35.5em !important;
+}
+
+.formulario {
+    background-color: #400303;
+    border-radius: 45px;
+    margin-top: 30px;
+    text-align: center;
+    padding: 30px;
+}
+
+.cb-landing-form input {
+    height: 38px;
+    border-color: transparent;
+    font-size: 16px;
+    color: #747474;
+    outline: none;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Avenir Next LT Pro';
+    padding: 20px 80px;
+}
+
+.cb-landing-form {
+    padding-top: 10px;
+}
+
+#btn-enviar {
+    background-color: #400303;
+    padding: 11px 41px;
+    text-decoration: none;
+    border-radius: 20px;
+    font-family: 'Avenir Next LT Pro';
+    font-size: 16px;
+    color: #E19950;
+    border-color: #E19950;
+    border: 3px solid;
+}
+
+.background {
+    background-image: url("//aguadecheiro.vteximg.com.br/arquivos/background-absinto.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h2 {
+    font-family: 'Avenir Next LT Pro' !important;
+    font-size: 35px !important;
+    color: #E19950 !important;
+}
+
+p {
+    font-family: 'Avenir Next LT Pro';
+    font-weight: normal;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 30px;
+}
+
+.product-banner {
+    max-width: 100%;
+}
+
+.slick-prev {
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+}
+
+.slick-prev::after {
+    content: url("//aguadecheiro.vteximg.com.br/arquivos/golden-arrow-prev.png");
+}
+
+.slick-next {
+    z-index: 999;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+}
+
+.slick-next::after {
+    content: url("//aguadecheiro.vteximg.com.br/arquivos/golden-arrow-next.png");
+}
+
+.countdown {
+    border-color: #E19950;
+    border-radius: 30px;
+    color: #E19950;
+    border: 3px solid;
+    text-align: center;
+}
+
+#timer {
+    font-family: 'Avenir Next LT Pro';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 35px;
+    line-height: 60px;
+}
+
+.main-banner {
+    padding-top: 40px;
+}
+
+.main-banner .box-banner img {
+    max-width: 100%;
+}
+
+.product-carousel .prateleira h2 {
+    display: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .slick-prev {
+        left: 5px;
+    }
+    .slick-next {
+        right: 5px;
+    }
+    .cb-landing-form input {
+        padding: 20px 50px;
+    }
+}
