@@ -2,8 +2,9 @@ $("#btn-enviar").click(() => {
     event.preventDefault();
     //console.log($("#cl_email").val())
     let dados = {
-        name: $("#nome").val(),
         email: $("#email").val(),
+        name: $("#name").val(),
+
     }
 
     fetch("/api/dataentities/AB/documents", {
@@ -28,7 +29,7 @@ $("#btn-enviar").on("click", function() {
 
     var email = $('#email').val();
 
-    var name = $('#nome').val();
+    var name = $('#name').val();
 
     if (email != "") {
 
