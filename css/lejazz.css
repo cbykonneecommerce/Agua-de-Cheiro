@@ -15,7 +15,6 @@
 
 .submit {
     padding-bottom: 10px;
-    margin-top: 35px;
 }
 
 .product-carousel {
@@ -28,8 +27,6 @@
 }
 
 .formulario {
-    background-color: #400303;
-    border-radius: 45px;
     margin-top: 30px;
     text-align: center;
     padding: 30px;
