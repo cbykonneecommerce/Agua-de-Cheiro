@@ -58,18 +58,28 @@ body {
 .faixamob .box-banner {
     margin-top: 1em;
 }
+
 #banner-galery {
     display: none;
 }
-#banner-galery.slick-initialized{
+
+#banner-galery.slick-initialized {
     padding: 20px 0;
     display: block;
 }
-#banner-galery .box-banner img{
+
+#banner-galery .box-banner img {
     padding: 0 10px;
 }
 
+#banner-galery .slick-arrow {
+    width: 80px;
+}
+
 @media screen and (max-width: 700px) {
+    #banner-galery .slick-arrow {
+        display: none !important;
+    }
     #homeCardsCarousel .box-banner a img {
         margin-left: auto;
         margin-right: auto;

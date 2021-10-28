@@ -11,7 +11,7 @@ $(document).ready(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         arrows: true,
         dots: true,
         responsive: [{
@@ -28,7 +28,7 @@ $(document).ready(function() {
         slidesToShow: 4,
         slidesToScroll: 2,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         arrows: false,
         responsive: [{
             breakpoint: 768,
@@ -45,7 +45,7 @@ $(document).ready(function() {
     //     slidesToShow: 4,
     //     slidesToScroll: 2,
     //     autoplay: true,
-    //     autoplaySpeed: 3000,
+    //     autoplaySpeed: 6000,
     //     arrows: true,
     //     responsive: [{
     //         breakpoint: 768,
@@ -63,7 +63,7 @@ $(document).ready(function() {
     //     slidesToShow: 4,
     //     slidesToScroll: 1,
     //     autoplay: true,
-    //     autoplaySpeed: 3000,
+    //     autoplaySpeed: 6000,
     //     arrows: false,
     //     responsive: [{
     //         breakpoint: 768,
@@ -87,7 +87,7 @@ $(document).ready(function() {
         slidesToScroll: 3,
         autoplay: true,
         variableWidth: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         arrows: false,
         responsive: [{
             breakpoint: 768,
@@ -109,7 +109,7 @@ $(document).ready(function() {
         slidesToShow: 4,
         slidesToScroll: 4,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         arrows: true,
         responsive: [{
             breakpoint: 768,
@@ -127,7 +127,7 @@ $(document).ready(function() {
         slidesToShow: 5,
         slidesToScroll: 5,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         arrows: false,
         responsive: [{
             breakpoint: 768,
@@ -147,7 +147,7 @@ $(document).ready(function() {
         slidesToShow: 5,
         slidesToScroll: 5,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         arrows: false,
         responsive: [{
             breakpoint: 768,
@@ -165,7 +165,7 @@ $(document).ready(function() {
         slidesToShow: 4,
         slidesToScroll: 4,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         arrows: true,
         responsive: [{
             breakpoint: 768,
@@ -182,7 +182,7 @@ $(document).ready(function() {
         slidesToShow: 3,
         slidesToScroll: 3,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         arrows: true,
         responsive: [{
             breakpoint: 768,
@@ -220,7 +220,7 @@ $(document).ready(function() {
         slidesToShow: 4,
         slidesToScroll: 2,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         arrows: false,
         responsive: [{
             breakpoint: 768,
@@ -239,7 +239,7 @@ $(document).ready(function() {
         slidesToShow: 2,
         slidesToScroll: 2,
         autoplay: true,
-        autoplaySpeed: 3000,
+        autoplaySpeed: 6000,
         arrows: false,
         responsive: [{
             breakpoint: 760,
@@ -255,13 +255,13 @@ $(document).ready(function() {
 
 
 
-    $(".slick-prev.slick-arrow").html(`
+    $(".fullbanner .slick-prev.slick-arrow").html(`
 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 39.523 50.523">
   <path fill="none" stroke="rgb(0,0,0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="5" d="M27.76157527 11.76157527l-16 14 16 13"/>
 </svg>
 
 `);
-    $(".slick-next.slick-arrow").html(`
+    $(".fullbanner .slick-next.slick-arrow").html(`
 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 39.523 50.523">
   <path fill="none" stroke="rgb(0,0,0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="5" d="M11.7615601 38.76156629l16.00001574-13.99998203-15.9999854-13.00001797"/>
 </svg>
