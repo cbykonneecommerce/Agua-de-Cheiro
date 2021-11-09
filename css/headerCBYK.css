@@ -363,6 +363,10 @@ body.menu-ativo:before {
 .sidenav span a{
     border-top: 1px solid #efefef !important;
 }
+
+.sidenav span.depto-Blue-Friday a{
+    border: none !important;
+}
 .dropdown-btn {
     padding: 0;
     text-decoration: none;
