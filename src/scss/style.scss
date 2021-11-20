@@ -377,24 +377,7 @@ textarea {
 }
 .header .search .busca {
 }
-.header .search .fulltext-search-box {
-  color: #999999;
-  background-color: #fff;
-  display: inline-block;
-  padding: 6px 12px;
-  margin-bottom: 0;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1.42857143;
-  white-space: nowrap;
-  vertical-align: middle;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 79%;
-  min-height: 34px;
-  margin-right: 1%;
-}
+
 .header .search .btn-buscar {
   color: #333;
   background-color: #fff;
@@ -581,19 +564,6 @@ textarea {
     }
   }
 
-  body.menu-ativo:before {
-    content: "";
-    display: block;
-    background-color: rgba(0, 0, 0, 0.4);
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-  }
   #menu-mobile .header-menu-mobile {
     display: block;
     margin-bottom: 20px;
@@ -2277,9 +2247,7 @@ textarea {
   .header .search {
     margin-top: 0;
   }
-  .header .search .fulltext-search-box {
-    width: 73%;
-  }
+
   .header .search .btn-buscar {
     width: 25%;
   }
@@ -2346,9 +2314,6 @@ textarea {
 @media (min-width: 1200px) {
   .product-details .avaliacoes {
     text-align: right;
-  }
-  .header .search .fulltext-search-box {
-    width: 83%;
   }
   .header .search .btn-buscar {
     width: 15%;
