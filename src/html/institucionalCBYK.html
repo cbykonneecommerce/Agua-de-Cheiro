@@ -12,13 +12,14 @@
 </head>
 
 <body id="institucional-page">
+    <!--  SubTemplate: Header -->
 
-    <div class="page">
+    <vtex:template id="CBYK-header" />
+    <!-- /SubTemplate: Header -->
 
-        <!--  SubTemplate: Header -->
-      
-        <vtex:template id="CBYK-header" />
-        <!-- /SubTemplate: Header -->
+    <main class="page">
+
+
 
         <div id="institucional-extra-top"></div>
 
@@ -118,11 +119,13 @@
 
 
 
-        <!--  SubTemplate: Footer -->
-        <vtex:template id="CBYKFooter" />
-        <!-- /SubTemplate: Footer -->
 
-    </div><!-- .container-fluid -->
+    </main><!-- .container-fluid -->
+
+    
+    <!--  SubTemplate: Footer -->
+    <vtex:template id="CBYKFooter" />
+    <!-- /SubTemplate: Footer -->
 
 </body>
 <vtex:template id="CBYKcommonScripts" />

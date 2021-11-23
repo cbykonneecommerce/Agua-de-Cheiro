@@ -47,7 +47,7 @@
     top: 0px;
     z-index: 999999999;
     background-color: #007da5;
-    @media screen and (max-width:1024px){
+    @media screen and (max-width: 1024px) {
         padding: 15px 0;
     }
     fieldset.busca {
@@ -72,23 +72,22 @@
         }
         input.btn-buscar {
             position: absolute;
-            right: 0;
+            right: 15px;
             top: 0;
             height: 100%;
         }
     }
 
     .btn-menu-xs {
-        @media screen and (max-width:1024px){
-
+        @media screen and (max-width: 1024px) {
             margin-top: 10px;
         }
         svg g path {
             fill: white;
         }
     }
-    .mini-cart .btn{
-        @media screen and (max-width:1024px){
+    .mini-cart .btn {
+        @media screen and (max-width: 1024px) {
             margin-top: 5px;
         }
     }
@@ -97,7 +96,7 @@
         display: none;
     }
     .navbar-nav {
-        @media screen and (max-width:1024px) {
+        @media screen and (max-width: 1024px) {
             display: none;
         }
         li {
@@ -145,7 +144,7 @@
                             font-size: 18px;
                             font-weight: 700;
                             line-height: 22px;
-                            padding:20px;
+                            padding: 20px;
                             padding-bottom: 10px;
                             text-decoration: none;
                         }
@@ -299,7 +298,6 @@ h4#divTitulo::after {
     font-size: 10px;
 }
 
-
 .header .sing-in a {
     color: #000;
     font-weight: 600;
@@ -311,7 +309,6 @@ h4#divTitulo::after {
     box-shadow: none !important;
     border: none !important;
 }
-
 
 #top-menu {
     margin-bottom: 0px !important;
@@ -362,8 +359,8 @@ h4#divTitulo::after {
     z-index: 9999999999;
     position: absolute;
     width: 100%;
-
     transition: 0.3s;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10);
 }
 
 .firstLayer,
@@ -869,5 +866,16 @@ h4#divTitulo::after {
     .ui-autocomplete {
         width: 358px !important;
         left: 32% !important;
+    }
+}
+
+html body div#smarthint-search-result {
+    top: 200px !important ;
+    z-index: 2 !important;
+}
+
+@media screen and (max-width: 640px) {
+    html body div#smarthint-search-result {
+        top: 144px !important ;
     }
 }
