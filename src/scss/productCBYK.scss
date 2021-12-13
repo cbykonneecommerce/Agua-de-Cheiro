@@ -763,14 +763,14 @@ label.item_unavaliable:after {
     display: none;
 }
 
-.modal {
-    background-color: transparent !important;
-    z-index: 99999 !important;
-    top: 16% !important;
-    border: none !important;
-    box-shadow: none !important;
-    width: 60%;
-}
+// .modal {
+//     background-color: transparent !important;
+//     z-index: 99999 !important;
+//     top: 16% !important;
+//     border: none !important;
+//     box-shadow: none !important;
+//     width: 60%;
+// }
 
 .modal-content {
     border-radius: 0px !important;
@@ -1306,9 +1306,9 @@ display: none;
         left: -99px !important;
         top: -7px;
     }
-    .modal-dialog{
-        width: 560px;
-    }
+    // .modal-dialog{
+    //     width: 560px;
+    // }
     .under-img{
         margin-left: 79px;
     }
