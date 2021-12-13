@@ -42,6 +42,36 @@
     height: 50px !important;
 }
 
+#extra-header-top{
+    position: relative;
+    .top-area{
+        .button-area{
+            position: absolute;
+            top: 0;
+            right: 10px;
+            display: flex;
+            height: 100%;
+            align-items: center;
+            a.button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 150px;
+                height: 30px;
+                background-color: #4F4F4F;
+                border: 1px solid #FFF;
+                color: white;
+                font-size: 12px;
+                &:last-of-type{
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+    
+
+}
+
 .header-container {
     position: sticky;
     top: 0px;
