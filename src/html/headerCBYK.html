@@ -16,7 +16,6 @@
 
 <header class="header-container">
 
-
     <div class="header" style="margin-bottom: -6px;padding: 0;margin-top: -10px;">
         <div class="container">
             <div class="row" id="headerrow">
@@ -94,7 +93,7 @@
                 </div>
                 <!-- .logo -->
                 <div class="mini-cart mini-cart-xs text-right col-xs-3 visible-xs">
-                    <a title="Carrinho de Compras" onclick="openNav()" class="btn btn-default">
+                    <button title="Carrinho de Compras" class="btn btn-default js-open-minicart">
                         <svg xmlns="http://www.w3.org/2000/svg" width="19.461" height="27.559"
                             viewBox="0 0 19.461 27.559">
                             <path fill="#fff" fill-rule="evenodd"
@@ -102,7 +101,7 @@
                         </svg>
 
                         <span class="badge bg-danger mini-cart-qty-admake">0</span>
-                    </a>
+                    </button>
 
                 </div><!-- .mini-cart-xs -->
 
@@ -157,8 +156,7 @@
 
                         <li id="usuario-cart">
                             <div class="mini-cart col-mini-cart">
-                                <a title="Carrinho de Compras" onclick="openNav()"
-                                    class="btn btn-default btn-block btn-mini-cart ">
+                                <button class="btn btn-default btn-block btn-mini-cart js-open-minicart">
                                     <svg xmlns=" http://www.w3.org/2000/svg" width="19.461" height="27.559"
                                         viewBox="0 0 19.461 27.559">
                                         <path fill="rgb(0,125,165)" fill-rule="evenodd"
@@ -169,58 +167,56 @@
                                         <span>Meu Carrinho</span>
                                     </span>
                                     <span class="badge bg-danger mini-cart-qty-admake">0</span>
-                                </a>
+                                </button>
 
 
 
                                 <div id="mySidenav" class="sidenavcart">
 
-                                    <div class="cart-top">
-                                        <span>SEU CARRINHO</span>
-                                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="15.355" height="27.738"
-                                                viewBox="0 0 15.355 27.738" style="width: 30px;
-                                                height: 30px;margin-left: -5px;">
-                                                <text font-size="0" style="white-space:pre">
-                                                    <tspan x="5.35" y="23" fill="black" font-family="Arial"
-                                                        font-size="20" font-weight="600"
-                                                        style="white-space:pre;text-transform:none">X</tspan>
-                                                </text>
-                                            </svg>
-                                        </a>
+                                    <div class="cart__top">
+                                        <span>Minha Sacola </span>
+                                        <button class="cart__close js-close-minicart">
+                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M0.64052 17H2.73352L7.88552 10.077L13.0375 17H15.1995L9.01252 8.766L14.9695 0.899999H12.8535L7.95452 7.478L3.00952 0.899999H0.87052L6.82752 8.789L0.64052 17Z" fill="#4F4F4F"/>
+                                            </svg>                                                
+                                        </button>
                                     </div>
-
-                                    <div id="mini-cart-admake-aux">
-                                        <vtex.cmc:miniCart />
-                                        <vtex.cmc:AmountItemsInCart />
-                                    </div><!-- #mini-cart-admake-aux -->
-                                    <div id="mini-cart-admake">
-                                        <div class="mini-cart-header"></div>
-                                        <div class="mini-cart-itens">
-                                            <!-- recebe itens -->
-                                        </div>
-                                        <div class="continue-comprando">
-                                            <a href="" onclick="closeNav()"
-                                                style="margin: 1em;font-size: 15px;">Continuar comprando</a>
-                                        </div>
-                                        <div class="mini-cart-footer">
-                                            <div class="mini-cart-totais">
-                                                <strong id="mini-cart-admake-total" class="pull-right">
-                                                    <!-- recebe valor total -->
-                                                </strong>
-                                                <span>TOTAL</span>
+                                    <div class="cart__main">
+                                        <div class="cart__empty">
+                                            <i class="icon">
+                                                <svg width="108" height="107" viewBox="0 0 108 107" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M101.503 28.2356C86.9035 28.2356 20.0979 28.2356 5.49867 28.2356C2.46197 28.2356 0 30.6976 0 33.7343C0 45.8757 0 93.0304 0 93.0304C0 100.74 6.25958 107 13.9696 107H93.0319C100.742 107 107.001 100.74 107.001 93.0304C107.001 93.0304 107.001 45.8757 107.001 33.7343C107.001 30.6976 104.54 28.2356 101.503 28.2356ZM101.503 33.5858C101.585 33.5858 101.651 33.6523 101.651 33.7343C101.651 45.8757 101.651 93.0304 101.651 93.0304C101.651 97.7877 97.7892 101.65 93.0319 101.65H13.9696C9.21231 101.65 5.34998 97.7877 5.34998 93.0304V33.7343C5.34998 33.6523 5.4165 33.5858 5.49867 33.5858H101.503Z" fill="#007DA5"/>
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M22.2924 47.8525V36.5472C22.2924 28.2733 25.5795 20.3381 31.4302 14.4873C37.281 8.63655 45.2162 5.34998 53.4904 5.34998C53.4978 5.34998 53.5053 5.34998 53.5125 5.34998C70.7422 5.35024 84.7095 19.3178 84.7095 36.5472C84.7095 43.0354 84.7095 47.8525 84.7095 47.8525C84.7095 49.3288 85.908 50.5273 87.3843 50.5273C88.8607 50.5273 90.0594 49.3288 90.0594 47.8525C90.0594 47.8525 90.0594 43.0354 90.0594 36.5472C90.0594 16.363 73.697 0.000256816 53.5127 1.28445e-08C53.5053 1.28445e-08 53.4978 1.28445e-08 53.4904 1.28445e-08C43.7973 -0.000256791 34.5011 3.85025 27.647 10.7041C20.7929 17.5582 16.9424 26.8542 16.9424 36.5472C16.9424 43.0354 16.9424 47.8525 16.9424 47.8525C16.9424 49.3288 18.1411 50.5273 19.6175 50.5273C21.0939 50.5273 22.2924 49.3288 22.2924 47.8525Z" fill="#007DA5"/>
+                                                    <path d="M19.6176 53.5C22.7365 53.5 25.2649 50.9716 25.2649 47.8527C25.2649 44.7337 22.7365 42.2053 19.6176 42.2053C16.4986 42.2053 13.9702 44.7337 13.9702 47.8527C13.9702 50.9716 16.4986 53.5 19.6176 53.5Z" fill="#007DA5"/>
+                                                    <path d="M87.3847 53.5C90.5036 53.5 93.032 50.9716 93.032 47.8527C93.032 44.7337 90.5036 42.2053 87.3847 42.2053C84.2657 42.2053 81.7373 44.7337 81.7373 47.8527C81.7373 50.9716 84.2657 53.5 87.3847 53.5Z" fill="#007DA5"/>
+                                                    </svg>                                                    
+                                            </i>
+                                            <div class="cart__empty-text">
+                                                <p>Sua sacola está vazia</p>
+                                                <a href="/novidades">Conheça nossas ofertas</a>
                                             </div>
-                                            <div class="mini-cart-botao">
-                                                <a href="/checkout/#/cart"
-                                                    class="btn btn-block btn-verde btn-finalizar-compra">Fechar
-                                                    Pedido</a>
-                                            </div>
+                                            
+                                        </div>
+                                        <div class="cart__products">
+                                            <div class="cart__product-list"></div>
+                                            <div class="cart__gifts">
+                                                <span>Brindes</span>
+                                                <div class="cart__gifts-list"></div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="cart__footer">
+                                        <div class="cart__totals">
+                                            <span>Subtotal: <strong class="js-total"></strong></span>
+                                        </div>
+                                        <div class="cart__buttons">
+                                            <a href="/checkout/#/cart" class="cart__button cart__button--primary">FINALIZAR COMPRA</a>
+                                            <a href="/checkout/#/cart" class="cart__button">IR PARA O CARRINHO</a>
+                                            <button class="cart__button">CONTINUAR COMPRANDO</button>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!--<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>-->
-
+                                <div class="cart__overlay js-close-minicart">  </div>
                             </div>
                         </li>
 
@@ -264,3 +260,4 @@
 
 
 <div id="extra-banner-regua"></div>
+
