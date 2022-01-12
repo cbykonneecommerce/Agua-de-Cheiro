@@ -1,275 +1,169 @@
+const formatMoney = function (n, c = 2, d = ',', t = '.') {
+  c = isNaN((c = Math.abs(c))) ? 2 : c;
+  var s = n < 0 ? '-' : '';
+  var i = parseInt((n = Math.abs(+n || 0).toFixed(c))) + '';
+  var j = (j = i.length) > 3 ? j % 3 : 0;
+  return (
+    s +
+    (j ? i.substr(0, j) + t : '') +
+    i.substr(j).replace(/(\d{3})(?=\d)/g, '$1' + t) +
+    (c
+      ? d +
+      Math.abs(n - i)
+        .toFixed(c)
+        .slice(2)
+      : '')
+  );
+};
 
-
-function openNav() {
-
-  const mq = window.matchMedia("(max-width: 600px)");
-  $("body").addClass("menu-ativo");
-  if (mq.matches) {
-    // document.getElementById("mySidenav").style.width = `${document.documentElement.clientWidth}px`;
-    document.getElementById("mySidenav").style.right = "0px";
+const openMinicart = (open = true) => {
+  if (open) {
+    $("body").addClass("minicart-is-open");
   } else {
-    //document.getElementById("mySidenav").style.width = "485px";
-    document.getElementById("mySidenav").style.right = "0px";
+    $("body").removeClass("minicart-is-open");
   }
 }
 
-
-function closeNav() {
-  $("body").removeClass("menu-ativo");
-  document.getElementById("mySidenav").style.right = "-880px";
-}
-
-
-
-function formatReal(int) {
-  var tmp = int + '';
-  tmp = tmp.replace(/([0-9]{2})$/g, ",$1");
-  if (tmp.length > 6)
-    tmp = tmp.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
-
-  return tmp;
-}
-
-setTimeout(() => {
-  $("#mini-cart-admake .mini-cart-item .detalhes").append(`
-    <button class="btn btn-menos-check" style="background-color: transparent;outline-style: none;
-        box-shadow: none;"><i class="fa fa-minus"></i></button>
-            <input type = "number" class="qtd-field" value = "1" style = "width: 50px;
-            margin: 11px;
-            padding-left: 11px;
-            font-size: 18px !important;
-            color: #000 !important;"/>
-            <button class="btn btn-mais-check" style = "background-color: transparent;outline-style: none;
-        box-shadow: none;"><i class="fa fa-plus"></i></button>
-
-        <span class="product-remover">
-									
-									
-									
-									<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 130.9 134.6" style="enable-background:new 0 0 130.9 134.6;float: right;    width: 24px;
-   margin-top: 14px;" xml:space="preserve">
-<title>trash, delete, remove</title>
-<g style="
-fill: #025EB9;
-">
-	<path d="M52.6,57.4c-2.7,0.2-4.7,2.6-4.5,5.3l2.6,29.7C50.8,95,53,97,55.6,97H56c2.7-0.2,4.7-2.6,4.5-5.4c0,0,0,0,0,0l-2.6-29.7
-		C57.7,59.2,55.3,57.2,52.6,57.4z"/>
-	<path d="M73,62l-2.6,29.7c-0.2,2.7,1.8,5,4.5,5.2h0.4c2.6,0,4.7-1.9,4.9-4.5l2.6-29.7c0.2-2.7-1.8-5.1-4.5-5.4
-		C75.6,57.2,73.2,59.2,73,62L73,62z"/>
-	<path d="M119.9,22.8H85.2v-4.9C85.2,9.6,78.6,3,70.4,3h-9.9c-8.2,0-14.8,6.6-14.8,14.8v4.9H11.1c-2.7,0-4.9,2.2-4.9,4.9
-		s2.2,4.9,4.9,4.9h5.4l7.7,76.7c1.3,12.7,12,22.3,24.7,22.3h33.4c12.7,0.1,23.5-9.6,24.7-22.3l7.5-76.7h5.4c2.7,0,4.9-2.2,4.9-4.9
-		S122.6,22.8,119.9,22.8z M55.6,17.8c0-2.7,2.2-4.9,4.9-4.9h9.9c2.7,0,4.9,2.2,4.9,4.9v4.9H55.6V17.8z M97,108.3
-		c-0.8,7.6-7.2,13.4-14.8,13.4H48.7c-7.6,0-14.1-5.7-14.8-13.4l-7.5-75.7h78.1L97,108.3z"/>
-</g>
-</svg>
-									</span>
-
-        <div class="prod-total"><span style="float: left;
-        font-weight: 500;
-    ">Valor</span><span class="price" style="float: right;font-weight: bolder;"></span></div>
-        
+const addProductsMinicart = (products) => {
+  console.log(products, 'products')
+  $('.sidenavcart').addClass('has-product');
+  const renderProduct = (divProduct, product, index) =>{
+    $(divProduct).append(`
+      <div class="mini-cart-item item-${index}">
+        <div class="cart__product">
+            <div class="cart__image">
+                <a class="sku-imagem" href="${product.detailUrl}" title="${product.name}">
+                    <img alt="${product.name}" src="${product.imageUrl}" />
+                </a> 
+            </div>
+            <div class="cart__box">
+                <a class="cart__product-name" href="${product.detailUrl}" title="${product.name}">
+                    ${product.name}
+                </a>
+                <div class="cart__content">
+                    <span class="price">
+                        R$${formatMoney(product.sellingPrice / 100)}
+                    </span>
+                    <div class="cb-mini-cart-quantity">
+                        <button class="btn btn-menos-check">-</button>
+                        <input type="number" class="qtd-field" value="${product.quantity}" disabled="">
+                        <button class="btn btn-mais-check">+</button>
+                    </div>
+                    <button class="product-remover">
+                        <i class="icon">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1184 2.64H19.4633C20.3407 2.64 21.0587 3.26526 21.0321 4.00632V4.9558C21.0321 5.72 20.3141 6.34526 19.4366 6.34526H19.1973L18.0539 19.9621C17.9741 21.0968 16.8572 22 15.5543 22H5.68913C4.38618 22 3.29595 21.0968 3.18966 19.9621L2.04622 6.36842H1.80683C0.92945 6.36842 0.211426 5.74316 0.211426 4.97894V4.02948C0.211426 3.26526 0.92945 2.64 1.80683 2.64H7.12503L7.52392 1.11157C7.71009 0.463165 8.37476 0 9.146 0L12.1241 0.0231628C12.8953 0.0231628 13.5867 0.509476 13.7462 1.1579L14.1184 2.64ZM9.14586 1.13474C8.98622 1.13474 8.82672 1.22737 8.80019 1.36632L8.48105 2.64H12.8153L12.4963 1.38947C12.4431 1.25052 12.3101 1.1579 12.1506 1.1579L9.14586 1.13474ZM19.4631 5.21053C19.5961 5.21053 19.7291 5.1179 19.7291 4.97894V4.02948C19.7291 3.91368 19.6226 3.7979 19.4631 3.7979H1.80683C1.67387 3.7979 1.54091 3.89053 1.54091 4.02948V4.97894C1.54091 5.09474 1.64733 5.21053 1.80683 5.21053H19.4631ZM16.7775 19.8926C16.7243 20.4484 16.1924 20.8653 15.581 20.8653H5.71566C5.07753 20.8653 4.57236 20.4484 4.51915 19.8926L3.3757 6.36842H17.8943L16.7775 19.8926Z" fill="#007DA5"/>
+                                </svg>
+                                
+                        </i>
+                    </button>
+                </div>
+            </div>
+        </div>
+      </div>
     `);
+  }
+  products.forEach((item, index) => {
+    if(item.isGift){
+      renderProduct('.cart__gifts', item, index)
+      $('.cart__gifts').show();
+    }else{
+      renderProduct('.cart__product-list', item, index)
+    }
+  });
+}
+
+const updateQtd = (value, rowindex) =>{
+  vtexjs.checkout.getOrderForm()
+  .then(function (orderForm) {
+    var itemIndex = 0;
+    var item = orderForm.items[rowindex];
+    var updateItem = {
+      index: rowindex,
+      quantity: value
+    };
+    return vtexjs.checkout.updateItems([updateItem], null, false);
+  })
+  .done(function (orderForm) {
+    updateTotal(orderForm.value)
+  });
+
+}
+
+const updateTotal = (value) =>{
+  $(".js-total").text(`R$${formatMoney(value / 100)}`);
+}
+
+function initialMinicart() {
 
   $(".qtd-field").prop("disabled", true);
-  $("#mini-cart-admake .mini-cart-itens").html("")
+
+  $("#mini-cart-admake .cb-mini-cart-itens").html("")
   vtexjs.checkout.getOrderForm()
-    .then(function (orderForm) {
+  .then(function (orderForm) {
+      console.log(orderForm, 'orderForm')
+      const productList = orderForm.items
+      if (productList.length <= 0) return
+      addProductsMinicart(productList)
+      updateTotal(orderForm.value)
 
-
-      orderForm.items.forEach((element, index) => {
-        $("#mini-cart-admake .mini-cart-itens").append(`
-							
-								
-    <div class="mini-cart-item item-${index}">
-      <span class="imagem">
-  
-        <a class="sku-imagem" href="${element.detailUrl}">
-          <img height="90" width="90" alt="${element.name}" src="${element.imageUrl}">
-        </a> </span>
-      <span class="detalhes">
-        <p class="nome-produto">
-          <a href="${element.detailUrl}">${element.name}</a>
-        </p>
-        
-  
-        <button class="btn btn-menos-check" style="background-color: transparent;outline-style: none;
-      box-shadow: none;"><i class="fa fa-minus"></i></button>
-      <input type="number" class="qtd-field" value="${element.quantity}" style="width: 50px;
-      margin: 11px;
-      padding-left: 11px;
-      font-size: 18px !important;
-      color: #000 !important;" disabled="">
-      <button class="btn btn-mais-check" style="background-color: transparent;outline-style: none;
-      box-shadow: none;"><i class="fa fa-plus"></i></button>
-      <span class="product-remover">
-      
-      
-      
-      <?xml version="1.0" encoding="utf-8"?>
-  <!-- Generator: Adobe Illustrator 24.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-  <svg version="1.1" id="Camada_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-  viewBox="0 0 130.9 134.6" style="enable-background:new 0 0 130.9 134.6;float: right;    width: 24px;
-  margin-top: 14px;" xml:space="preserve">
-  <title>trash, delete, remove</title>
-  <g>
-  <path d="M52.6,57.4c-2.7,0.2-4.7,2.6-4.5,5.3l2.6,29.7C50.8,95,53,97,55.6,97H56c2.7-0.2,4.7-2.6,4.5-5.4c0,0,0,0,0,0l-2.6-29.7
-  C57.7,59.2,55.3,57.2,52.6,57.4z"/>
-  <path d="M73,62l-2.6,29.7c-0.2,2.7,1.8,5,4.5,5.2h0.4c2.6,0,4.7-1.9,4.9-4.5l2.6-29.7c0.2-2.7-1.8-5.1-4.5-5.4
-  C75.6,57.2,73.2,59.2,73,62L73,62z"/>
-  <path d="M119.9,22.8H85.2v-4.9C85.2,9.6,78.6,3,70.4,3h-9.9c-8.2,0-14.8,6.6-14.8,14.8v4.9H11.1c-2.7,0-4.9,2.2-4.9,4.9
-  s2.2,4.9,4.9,4.9h5.4l7.7,76.7c1.3,12.7,12,22.3,24.7,22.3h33.4c12.7,0.1,23.5-9.6,24.7-22.3l7.5-76.7h5.4c2.7,0,4.9-2.2,4.9-4.9
-  S122.6,22.8,119.9,22.8z M55.6,17.8c0-2.7,2.2-4.9,4.9-4.9h9.9c2.7,0,4.9,2.2,4.9,4.9v4.9H55.6V17.8z M97,108.3
-  c-0.8,7.6-7.2,13.4-14.8,13.4H48.7c-7.6,0-14.1-5.7-14.8-13.4l-7.5-75.7h78.1L97,108.3z"/>
-  </g>
-  </svg>
-  
-      
-      
-      
-      
-      
-      </span>
-      </span>
-      <div class="prod-total"><span class="price" style="float: right;font-weight: bolder;">Valor ${element.formattedPrice}</span></div>
-  
-    </div>
-  `);
-
-
-      });
-
-
-
-   
-
-      $("#mini-cart-admake-total").text("R$ " + formatReal(orderForm.value));
-
-
-
-
-
-
-
-
-
-      let miniNumber = 0
-      for (let i = 0; i < orderForm.items.length; i++) {
-        $($(".qtd-field")[i]).val(orderForm.items[i].quantity)
-        miniNumber += orderForm.items[i].quantity
-      }
-      $(".mini-cart-qty-admake").text(`${miniNumber}`)
-
-      $("#mini-cart-admake-total").text("R$ " + formatReal(orderForm.value));
-      //formatReal(orderForm.value)
     });
+}
 
+function bindEvents() {
 
-}, 2500);
-
-
-
-
-$(document).on('click', ".btn-mais-check", function (event) {
-  var rowindex = $(this).closest('.mini-cart-item').index();
-  console.log('rowindex', rowindex);
-  let me = $(".qtd-field")[rowindex];
-  let value = parseInt($($(".qtd-field")[rowindex]).val())
-  console.log(me, value);
-
-
-  value += 1;
-  console.log(value)
-  $($("#mini-cart-admake .mini-cart-item .qtd-valor .qtd")[rowindex]).text(`${value} X`)
-  // $(me).val(value)
-  $($(".qtd-field")[rowindex]).val(value)
-
-  vtexjs.checkout.getOrderForm()
-    .then(function (orderForm) {
-      var itemIndex = 0;
-      var item = orderForm.items[rowindex];
-      var updateItem = {
-        index: rowindex,
-        quantity: value
-      };
-      return vtexjs.checkout.updateItems([updateItem], null, false);
-    })
-    .done(function (orderForm) {
-      //alert('Items atualizados!');
-      console.log(orderForm);
-      $("#mini-cart-admake-total").text("R$ " + formatReal(orderForm.value));
-    });
-
-});
-
-$(document).on('click', ".btn-menos-check", function (event) {
-  var rowindex = $(this).closest('.mini-cart-item').index();
-  console.log('rowindex', rowindex);
-  let me = $(".qtd-field")[rowindex];
-  let value = parseInt($($(".qtd-field")[rowindex]).val())
-  console.log(me, value);
-
-  if (value > 1) {
-    console.log("entrei")
-    value -= 1;
-    console.log(value)
-    $($("#mini-cart-admake .mini-cart-item .qtd-valor .qtd")[rowindex]).text(`${value} X`)
-
-    // $(me).val(value)
+  $('body').on('click', ".btn-mais-check", function (event) {
+    let rowindex = $(this).closest('.mini-cart-item').index();
+    let me = $(".qtd-field")[rowindex];
+    let value = parseInt($($(".qtd-field")[rowindex]).val())
+    value += 1;
     $($(".qtd-field")[rowindex]).val(value)
 
-    vtexjs.checkout.getOrderForm()
-      .then(function (orderForm) {
-        var itemIndex = 0;
-        var item = orderForm.items[rowindex];
-        var updateItem = {
-          index: rowindex,
-          quantity: value
-        };
-        return vtexjs.checkout.updateItems([updateItem], null, false);
-      })
-      .done(function (orderForm) {
-        //alert('Items atualizados!');
-        console.log(orderForm);
-        $("#mini-cart-admake-total").text("R$ " + formatReal(orderForm.value));
-      });
-  }
-});
-
-
-$(document).on('click', ".product-remover", function (event) {
-  var rowindex = $(this).closest('.mini-cart-item').index();
-  let itemsToRemove = [{
-    "index": rowindex,
-    "quantity": 0
-  }]
-  vtexjs.checkout.removeItems(itemsToRemove).then(res => {
-    console.log("removido");
-
-    $($(".mini-cart-item")[rowindex]).remove();
-    $("#mini-cart-admake-total").text("R$ " + formatReal(res.value));
-
+    updateQtd(value, rowindex)
+    
   });
+
+  $('body').on('click', ".btn-menos-check", function (event) {
+    let rowindex = $(this).closest('.mini-cart-item').index();
+    let me = $(".qtd-field")[rowindex];
+    let value = parseInt($($(".qtd-field")[rowindex]).val())
+
+    if (value > 1) {
+      value -= 1;
+      $($(".qtd-field")[rowindex]).val(value)
+      updateQtd(value, rowindex)
+    }
+  });
+
+  $('body').on('click', ".product-remover", function () {
+    var rowindex = $(this).closest('.mini-cart-item').index();
+    let itemsToRemove = [{
+      "index": rowindex,
+      "quantity": 0
+    }]
+    vtexjs.checkout.removeItems(itemsToRemove).then(orderForm => {
+      $($(".mini-cart-item")[rowindex]).fadeOut()
+      updateTotal(orderForm.value)
+      setTimeout(function (){
+        $($(".mini-cart-item")[rowindex]).remove();
+        if(orderForm.items == 0 ){
+          $('.sidenavcart ').removeClass('has-product')
+        }
+      }, 500)
+  
+    });
+  })
+
+  $('body').on('click', '.js-close-minicart', function () {
+    openMinicart(false);
+  })
+  $('body').on('click', '.js-open-minicart', function () {
+    openMinicart(true);
+  })
+
+}
+
+$(document).ready(function () {
+  initialMinicart();
+  bindEvents();
 })
-
-// //JQuery(document).ready(function () {
-
-//   //esta é uma alternativa mas pode falhar quando existem espaços em branco dentro da tag
-//   var test = jQuery("#mini-cart-itens").html();
-//   if ($('.mini-cart-item').contents().length == 0) {
-//     $(".continue-comprando").css('display', 'flex');
-//     $(".mini-cart-botao").css('display', 'none');
-//     $(".mini-cart-totais").css('display', 'none');
-//      //elemento vazio.. faça algo
-//       alert("vazio");
-//   } else {
-//     $(".continue-comprando").css('display', 'none');
-//     $(".mini-cart-botao").css('display', 'block');
-//     $(".mini-cart-totais").css('display', 'block');
-//      //element possui html dentro...
-//       alert("não vazio");
-//   }
-
-// });
