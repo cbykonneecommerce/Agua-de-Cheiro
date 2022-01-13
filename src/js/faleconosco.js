@@ -76,7 +76,7 @@
 // function ContactCreateByEmail(storeName, dataEntity, cl_email)
 // {
 // 	/*var cl_url = "/api/dataentities/CL/search/?email=" + cl_email + "&_fields=id";
-	
+
 // 	$.ajax({
 // 		headers: {
 // 			"Accept": "application/vnd.vtex.ds.v10+json",
@@ -111,7 +111,7 @@
 // 	var cl_home_phone 	= $("#cl_home_phone").val();
 //     var cl_description  = $("#co_description").val();
 //     var cl_cpf          = $("#cl_cpf").val();
-	
+
 // 	var cl_json = 	{
 // 					"firstName": cl_first_name,
 // 					"email": cl_email,
@@ -184,12 +184,12 @@
 // 		isFormValidate = false;
 // 		$("#cl_home_phone").focus();
 // 	}
-	
+
 // 	if((isFormValidate) && ($("#co_description").val() == "")){
 // 		isFormValidate = false;
 // 		$("#co_description").focus();
 // 	}
-	
+
 // 	if(isFormValidate){
 // 		ResetMessages()
 // 		$("#co_message_loading").show();
@@ -203,31 +203,59 @@
 // }
 
 
-$("#commit").on('click', ()=>{
+$("#commit").on('click', () => {
 
-    event.preventDefault(); 
+    event.preventDefault();
     //console.log($("#cl_email").val())
     let dados = {
         firstName: $("#cl_first_name").val(),
         email: $("#cl_email").val(),
         homePhone: $("#ctTel").val(),
         cpf: $("#cl_cpf").val(),
-		description: $("#co_description").val()
+        description: $("#co_description").val()
     }
-  
+
     fetch("/api/dataentities/CO/documents", {
-        method: 'PATCH',
-               headers: {
+            method: 'PATCH',
+            headers: {
                 "Content-Type": "application/json"
-                  },
-        body: JSON.stringify(dados)
-    })
-    .then((res) => {return res})
-    .then(result =>{
-        console.log(result);
-        alert("Formulario enviado");
+            },
+            body: JSON.stringify(dados)
+        })
+        .then((res) => { return res })
+        .then(result => {
+            console.log(result);
+            alert("Formulario enviado");
+        })
+        .catch(err => console.log(err))
+})
+
+
+fetch("/api/dataentities/LS/search?_fields=state,city,neighborhood,address,contact", {
+    method: 'GET',
+    headers: {
+        "REST-Range": "resources=0-999",
+        "Accept": "application/vnd.vtex.masterdata.v10+json",
+        "Content-Type": "application/vnd.vtex.masterdata.v10+json"
+    },
+    // body: JSON.stringify(dados)
+})
+
+.then((res) => { return res.json() })
+
+.then((result) => {
+        var arr = result.map((item) => {
+            return item.state
+        }).filter((item, index, array) => {
+            return array.indexOf(item) === index
+        })
+        renderStates(arr)
     })
     .catch(err => console.log(err))
-  })
 
- 
+function renderStates(arr) {
+    var arrLength = arr.length;
+    for (var i = 0; i < arrLength; i++) {
+        $(".estados").append(`<h4>${arr[i]}</h4>`)
+    }
+}
