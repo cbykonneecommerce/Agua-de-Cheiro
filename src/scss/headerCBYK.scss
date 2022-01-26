@@ -130,9 +130,7 @@ body {
         display: none;
     }
     .navbar-nav {
-        @media screen and (max-width: 1024px) {
-            display: none;
-        }
+
         li {
             &.header__user {
                 .dropdown-toggle {
@@ -196,6 +194,9 @@ body {
                         }
                     }
                 }
+                @media screen and (max-width: 1024px) {
+                  display: none;
+                }
             }
             &#usuario-cart {
                 .btn-mini-cart {
@@ -215,6 +216,19 @@ body {
                         border: none;
                         box-shadow: none;
                         outline: none;
+                    }
+                    @media screen and(max-width:1024px) {
+                      margin: 0;
+                      svg{
+                        margin-right: 0;
+                      }
+                      .text-wrap{
+                        display: none;
+                      }
+                      .mini-cart-qty-admake{
+                        right: -5px;
+                        top: -5px;
+                      }
                     }
                 }
             }
@@ -291,7 +305,7 @@ body {
                     max-width: 100px;
                 }
 
-            } 
+            }
         }
 
         &__empty-text {
@@ -428,7 +442,16 @@ body {
                 }
             }
         }
-        
+
+    }
+
+    @media screen and(max-width:1024px) {
+
+      .sing-in {
+        position: absolute;
+        right: 10px;
+        top: 5px;
+      }
     }
 }
 
@@ -899,11 +922,15 @@ h4#divTitulo::after {
     right: 0;
     height: 100%;
     position: fixed;
-    width: 485px;
+    width: 100%;
+    max-width: 485px;
     transition: 0.5s;
     background-color: white;
     transform: translateX(200%);
     padding: 20px;
+    @media screen and(max-width:600px) {
+      max-width: 90%;
+    }
     .minicart-is-open & {
         transform: initial;
     }
@@ -1067,9 +1094,6 @@ h4#divTitulo::after {
     }
     .btn-buscar {
         background-size: 18px 18px;
-    }
-    .sidenavcart {
-        width: 100%;
     }
     .mini-cart-xs {
         margin-left: -10px;
