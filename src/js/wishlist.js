@@ -1,4 +1,4 @@
-accentsTidy = function (s) {
+accentsTidy = function(s) {
     var r = s
 
     r = r.replace(new RegExp("[àáâãäå]", 'g'), "a");
@@ -23,11 +23,12 @@ accentsTidy = function (s) {
 
 async function getWishlistProducts(clientEmail) {
     let results = await fetch(`/api/dataentities/WL/search?_fields=emailCliente,idProduto,id,prodlink&emailCliente=*${clientEmail}*`, {
-        method: "GET",
-        headers: {
-            'Content-Type': 'application/json', "Accept": "application/vnd.vtex.ds.v10+json"
-        }
-    })
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+                "Accept": "application/vnd.vtex.ds.v10+json"
+            }
+        })
         .then(response => {
             return response.json();
         });
@@ -35,10 +36,10 @@ async function getWishlistProducts(clientEmail) {
 
     results.forEach(element => {
 
-        
+
 
         let producData = "";
-        vtexjs.catalog.getProductWithVariations(element.idProduto).done(function (content) {
+        vtexjs.catalog.getProductWithVariations(element.idProduto).done(function(content) {
             $("#loadergif").hide()
             console.log(content);
             let productLink = accentsTidy(content.name.replace(/[\s./,&]+/g, '-'));
@@ -73,12 +74,12 @@ async function getWishlistProducts(clientEmail) {
             $(".your-products ul").append(producData);
             console.log(producData)
         });
-        
-   
-    
+
+
+
     });
 
-   
+
 
 
 
@@ -88,26 +89,26 @@ async function getWishlistProducts(clientEmail) {
 }
 
 
-$(document).ready(function (){
+$(document).ready(function() {
 
     setTimeout(() => {
 
         vtexjs.session.getSession().done(e => {
-            console.log(e);
-            if (e.namespaces.profile.isAuthenticated.value) {
-                getWishlistProducts(e.namespaces.profile.email.value);
-                
+                console.log(e);
+                if (e.namespaces.profile.isAuthenticated.value) {
+                    getWishlistProducts(e.namespaces.profile.email.value);
+
+                }
+
+
+
             }
-          
-
-
-        }
 
         )
 
     }, 2000)
 
-  
+
 
 
 
@@ -115,25 +116,22 @@ $(document).ready(function (){
 
 })
 
-setTimeout(function(){
-    $(".remove-me", "body").click(async function(e){
-        
-        console.log(($(e.target).children())[0].innerText);
-        let myId= ($(e.target).children())[0].innerText;
-    
-    let results = await fetch(`/api/dataentities/WL/documents/${myId}`, {
-        method: "DELETE",
-        headers: {
-            'Content-Type': 'application/json', "Accept": "application/vnd.vtex.ds.v10+json"
-        }
-    })
-        
-    console.log(results);
-    console.log($(e.target).parent().parent());
-     $($(e.target).parent()).remove();
+setTimeout(function() {
+    $(".remove-me", "body").click(async function() {
+
+        console.log(($(".remove-me").children())[0].innerText);
+        let myId = ($(".remove-me").children())[0].innerText;
+
+        let results = await fetch(`/api/dataentities/WL/documents/${myId}`, {
+            method: "DELETE",
+            headers: {
+                'Content-Type': 'application/json',
+                "Accept": "application/vnd.vtex.ds.v10+json"
+            }
+        })
+
+        console.log(results);
+        console.log($(".remove-me").parent().parent());
+        $($(".remove-me").parent()).remove();
     })
 }, 5000)
-
-
-
- 
