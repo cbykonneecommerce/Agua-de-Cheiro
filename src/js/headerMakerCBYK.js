@@ -1,10 +1,10 @@
 function userModal() {
-    $('body').on('click', '.header__user .dropdown-toggle', function(event) {
+    $('body').on('click', '.header__user .dropdown-toggle', function (event) {
         event.preventDefault();
         $('.header__user').addClass('is-open')
     })
 
-    $('.header__user').mouseleave(function() {
+    $('.header__user').mouseleave(function () {
         $('.header__user').removeClass('is-open')
     })
 }
@@ -37,7 +37,7 @@ function verifyUserIsLogged() {
         })
 }
 
-$(document).ready(function() {
+$(document).ready(function () {
 
     verifyUserIsLogged();
 
@@ -89,13 +89,13 @@ $(document).ready(function() {
                <div class="dropdown-container" id="${element.name}"></div>`);
 
                     //Desktop
-                    $(`.depto-${element.name}`).mouseenter(function() {
+                    $(`.depto-${element.name}`).mouseenter(function () {
                         $(".deptonav").hide();
                         $(`#deptos-list .depto-${element.name}#${element.name}`).show()
                     });
 
 
-                    $(`#deptos-list .depto-${element.name}#${element.name}`).mouseleave(function() {
+                    $(`#deptos-list .depto-${element.name}#${element.name}`).mouseleave(function () {
                         $(`#deptos-list .depto-${element.name}#${element.name}`).hide()
                     });
 
@@ -148,14 +148,14 @@ $(document).ready(function() {
 
 
 
-        $(".depto-Ofertas a").attr("href", "https://www.aguadecheiro.com.br/ofertas");
+        $(".depto-Ofertas a").attr("href", "/busca?fq=H:137");
 
 
         //$(".sidenav").append(`<span><a href="/busca?fq=H:137">OFERTAS</a></span>`)
     }, 1200)
 
 
-    $(".vtexIdUI .modal-header .close").click(function() {
+    $(".vtexIdUI .modal-header .close").click(function () {
         window.location.href = '/';
     })
 
@@ -208,12 +208,9 @@ $(document).ready(function() {
     })
 
 
-    $(".deptonav").mouseleave(() => { $(".deptonav").hide();
-        $("body").removeClass("menu-ativo") })
-    $("header").mouseleave(() => { $(".deptonav").hide();
-        $("body").removeClass("menu-ativo") })
-    $(".header-container .header").mouseenter(() => { $(".deptonav").hide();
-        $("body").removeClass("menu-ativo") })
+    $(".deptonav").mouseleave(() => { $(".deptonav").hide(); $("body").removeClass("menu-ativo") })
+    $("header").mouseleave(() => { $(".deptonav").hide(); $("body").removeClass("menu-ativo") })
+    $(".header-container .header").mouseenter(() => { $(".deptonav").hide(); $("body").removeClass("menu-ativo") })
 
 
 
@@ -232,7 +229,7 @@ setInterval(() => {
         $($(".ui-autocomplete .ui-menu-item img")[i]).attr("src", imgProduct);
     }
 
-    $('.close.vtexIdUI-close.ng-hide').click(function() {
+    $('.close.vtexIdUI-close.ng-hide').click(function () {
         window.location.href = '/';
     })
 
@@ -265,3 +262,6 @@ setInterval(() => {
 
 `)
 }, 1000)
+
+
+
