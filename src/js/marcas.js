@@ -1,0 +1,60 @@
+(function () {
+
+  const getBrands = () => {
+    const options = {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' }
+    };
+
+    fetch('/api/catalog_system/pvt/brand/list', options)
+      .then(response => response.json())
+      .then(brandList => mountListBrands(brandList))
+      .catch(err => console.error(err));
+  }
+
+  const mountListBrands = (brandList) => {
+    const $brands = brandList.map((brand, index) => {
+      if (!brand.isActive) return
+      return (
+        brandItem(brand.imageUrl, brand.name)
+      )
+    })
+
+    $('.brand__content').append(`
+        <ul class="brand__list">
+          ${$brands.join('')}
+        </ul>
+      `
+    )
+
+  }
+
+  const brandItem = (imageUrl, brandName) => {
+    function createImageName(brandName) {
+      brandName = brandName.split(' ').join('-').normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase()
+      return brandName
+    }
+    const image = imageUrl === null ? `/arquivos/${createImageName(brandName)}.png?v=5` : imageUrl
+    return (
+      `
+      <li class="brand__item">
+        <img class="brand__background" src="/arquivos/bg-${createImageName(brandName)}.png?v=5" alt="${brandName}" />
+        <div class="brand__box-content">
+          <div class="brand__logo brand__logo--${createImageName(brandName)}">
+            <img src="${image}" alt="${brandName}" />
+          </div>
+          <h3 class="brand__name">${brandName}</h3>
+        </div>
+      </li>
+    `
+    )
+
+  }
+
+
+  const init = () => {
+    getBrands()
+  }
+
+  init();
+})();

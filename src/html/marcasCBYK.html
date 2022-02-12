@@ -1,67 +1,39 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
-    xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
 
 <head>
-    <title>Departamento</title>
-    <vtex:metaTags />
+  <title>Marcas</title>
+  <vtex:metaTags />
 
-    <link href="/arquivos/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
-    <link href="/arquivos/ion.rangeSlider.skinHTML5.css" rel="stylesheet" type="text/css" />
-    <script src="/arquivos/ion.rangeSlider.min.js"></script>
-
-    <vtex:template id="CBYKcommonStyles" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/arquivos/deptoCBYK.css" rel="stylesheet" type="text/css" />
+  <vtex:template id="CBYKcommonStyles" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/arquivos/marcas.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body id="departament-page">
-    <!--  SubTemplate: Header -->
-    <vtex:template id="CBYK-header" />
-    <!-- /SubTemplate: Header -->
+<body class="marcas">
+  <!--  SubTemplate: Header -->
+  <vtex:template id="CBYK-header" />
+  <!-- /SubTemplate: Header -->
 
-    <main class="page">
-        <div id="box-bread-brumb">
-            <div class="container">
-                <vtex.cmc:breadCrumb />
-            </div>
-        </div>
-        <div class="brands__banner">
-            <div class="container">
-                <vtex:contentPlaceHolder id="Banner-Principal" />
-            </div>
-        </div>
-        <div class="bands__content">
-            <ul class="bands__list">
-                <li class="bands__item">
-                    
-                </li>
-                <li class="bands__item">
-                    
-                </li>
-                <li class="bands__item">
+  <main class="page container">
+    <nav id="box-bread-brumb" aria-label="Breadcrumb">
+      <ul>
+        <li> <a href="/" title="Agua de Cheiro"> Home </a> </li>
+        <li class="active"> Marcas</li>
+      </ul>
+    </nav>
+    <section class="brand__banner ">
+      <vtex:contentPlaceHolder id="Banner-Principal" />
+    </section>
+    <section class="brand__content"></section>
 
-                </li>
-                <li class="bands__item">
-
-                </li>
-                <li class="bands__item">
-
-                </li>
-                <li class="bands__item">
-
-                </li>
-                <li class="bands__item">
-
-                </li>
-            </ul>
-        </div>
-
-    </main>
-    <!--  SubTemplate: Footer -->
-    <vtex:template id="CBYKFooter" />
-    <!-- /SubTemplate: Footer -->
+  </main>
+  <!--  SubTemplate: Footer -->
+  <vtex:template id="CBYKFooter" />
+  <!-- /SubTemplate: Footer -->
 </body>
 <vtex:template id="CBYKcommonScripts" />
+<script src="/arquivos/marcas.js"></script>
 
 </html>
