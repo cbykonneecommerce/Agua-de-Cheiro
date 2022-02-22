@@ -38,10 +38,10 @@
     return (
       `
       <li class="brand__item">
-        <img class="brand__background" src="/arquivos/bg-${createImageName(brandName)}.png?v=5" alt="${brandName}" />
+        <img class="brand__background" src="/arquivos/bg-${createImageName(brandName)}.png?v=5" alt="${brandName}" onerror="this.parentNode.style.display='none'" />
         <div class="brand__box-content">
           <div class="brand__logo brand__logo--${createImageName(brandName)}">
-            <img src="${image}" alt="${brandName}" />
+            <img src="${image}" onerror="this.parentNode.parentNode.parentNode.style.display='none'" alt="${brandName}" />
           </div>
           <h3 class="brand__name">${brandName}</h3>
         </div>
@@ -51,9 +51,15 @@
 
   }
 
+  const hideElement = (classCss) => {
+    if (!classCss) return
+    $(`.brand__item--${classCss}`).hide();
+  }
+
 
   const init = () => {
     getBrands()
+    hideElement()
   }
 
   init();
