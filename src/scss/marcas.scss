@@ -103,5 +103,8 @@
       color: #007da5;
       text-decoration: none;
     }
+    @media screen and (min-width:1024px) {
+      right: 30px;
+    }
   }
 }

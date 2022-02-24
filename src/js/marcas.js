@@ -3,7 +3,12 @@
   const getBrands = () => {
     const options = {
       method: 'GET',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' }
+      headers: {
+        Accept: 'application/vnd.vtex.ds.v10+json',
+        'Content-Type': 'application/json',
+        'X-VTEX-API-AppKey': 'vtexappkey-aguadecheiro-OTELYJ',
+        'X-VTEX-API-AppToken': 'XPXDEXBBBZYZENXUTHUWXTBIMMTVHDCMOTRAFCRIGWIOMUECFZVGTNTEOOQRDFUXXLKLWWORQMQBKMWSIRQHHVTBANMQLZEABLRAJSGJKEQGXSTCSXJMPMPBSJLJJYGQ'
+      },
     };
 
     fetch('/api/catalog_system/pvt/brand/list', options)
@@ -31,7 +36,7 @@
 
   const brandItem = (imageUrl, brandName) => {
     function createImageName(brandName) {
-      brandName = brandName.split(' ').join('-').normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase()
+      brandName = brandName.split(' ').join('-')
       return brandName
     }
     const image = imageUrl === null ? `/arquivos/${createImageName(brandName)}.png?v=5` : imageUrl
