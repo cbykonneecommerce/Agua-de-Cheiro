@@ -36,35 +36,29 @@
 
   const brandItem = (imageUrl, brandName) => {
     function createImageName(brandName) {
-      brandName = brandName.split(' ').join('-')
+      brandName = brandName.split(' ').join('-').normalize('NFD').replace(/[\u0300-\u036f]/g, "").toLowerCase()
       return brandName
     }
     const image = imageUrl === null ? `/arquivos/${createImageName(brandName)}.png?v=5` : imageUrl
     return (
       `
       <li class="brand__item">
-        <img class="brand__background" src="/arquivos/bg-${createImageName(brandName)}.png?v=5" alt="${brandName}" onerror="this.parentNode.style.display='none'" />
-        <div class="brand__box-content">
-          <div class="brand__logo brand__logo--${createImageName(brandName)}">
-            <img src="${image}" onerror="this.parentNode.parentNode.parentNode.style.display='none'" alt="${brandName}" />
+        <a href="/${createImageName(brandName)}" title="${brandName}" class="d-block">
+          <img class="brand__background" src="/arquivos/bg-${createImageName(brandName)}.png?v=5" alt="${brandName}" onerror="this.parentNode.parentNode.style.display='none'" />
+          <div class="brand__box-content">
+            <div class="brand__logo brand__logo--${createImageName(brandName)}">
+              <img src="${image}" onerror="this.parentNode.parentNode.parentNode.parentNode.style.display='none'" alt="${brandName}" />
+            </div>
+            <h3 class="brand__name">${brandName}</h3>
           </div>
-          <h3 class="brand__name">${brandName}</h3>
-        </div>
+        </a>
       </li>
     `
     )
-
   }
-
-  const hideElement = (classCss) => {
-    if (!classCss) return
-    $(`.brand__item--${classCss}`).hide();
-  }
-
 
   const init = () => {
     getBrands()
-    hideElement()
   }
 
   init();
