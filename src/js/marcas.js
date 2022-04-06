@@ -3,7 +3,12 @@
   const getBrands = () => {
     const options = {
       method: 'GET',
-      headers: { 'Content-Type': 'application/json', Accept: 'application/json' }
+      headers: {
+        Accept: 'application/vnd.vtex.ds.v10+json',
+        'Content-Type': 'application/json',
+        'X-VTEX-API-AppKey': 'vtexappkey-aguadecheiro-OTELYJ',
+        'X-VTEX-API-AppToken': 'XPXDEXBBBZYZENXUTHUWXTBIMMTVHDCMOTRAFCRIGWIOMUECFZVGTNTEOOQRDFUXXLKLWWORQMQBKMWSIRQHHVTBANMQLZEABLRAJSGJKEQGXSTCSXJMPMPBSJLJJYGQ'
+      },
     };
 
     fetch('/api/catalog_system/pvt/brand/list', options)
@@ -38,28 +43,22 @@
     return (
       `
       <li class="brand__item">
-        <img class="brand__background" src="/arquivos/bg-${createImageName(brandName)}.png?v=5" alt="${brandName}" onerror="this.parentNode.style.display='none'" />
-        <div class="brand__box-content">
-          <div class="brand__logo brand__logo--${createImageName(brandName)}">
-            <img src="${image}" onerror="this.parentNode.parentNode.parentNode.style.display='none'" alt="${brandName}" />
+        <a href="/${createImageName(brandName)}" title="${brandName}" class="d-block">
+          <img class="brand__background" src="/arquivos/bg-${createImageName(brandName)}.png?v=5" alt="${brandName}" onerror="this.parentNode.parentNode.style.display='none'" />
+          <div class="brand__box-content">
+            <div class="brand__logo brand__logo--${createImageName(brandName)}">
+              <img src="${image}" onerror="this.parentNode.parentNode.parentNode.parentNode.style.display='none'" alt="${brandName}" />
+            </div>
+            <h3 class="brand__name">${brandName}</h3>
           </div>
-          <h3 class="brand__name">${brandName}</h3>
-        </div>
+        </a>
       </li>
     `
     )
-
   }
-
-  const hideElement = (classCss) => {
-    if (!classCss) return
-    $(`.brand__item--${classCss}`).hide();
-  }
-
 
   const init = () => {
     getBrands()
-    hideElement()
   }
 
   init();
