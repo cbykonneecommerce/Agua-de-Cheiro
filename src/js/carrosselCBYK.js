@@ -1,5 +1,10 @@
 $(document).ready(function() {
 
+    const iconArrow = `<svg width="20" height="27" viewBox="0 0 20 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M2 2L16 13.5L2 25" stroke="#007DA5" stroke-width="5"/>
+    </svg>
+    `
+
     //$(".helperComplement").remove();
 
 
@@ -25,11 +30,14 @@ $(document).ready(function() {
 
     $('.product-carousel .prateleira.vitrine ul').slick({
         infinite: true,
-        slidesToShow: 4,
-        slidesToScroll: 2,
-        autoplay: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        autoplay: false,
         autoplaySpeed: 6000,
-        arrows: false,
+        arrows: true,
+        dots: true,
+        prevArrow: `<button class="slick-prev"><i>${iconArrow}</i></button>`,
+        nextArrow: `<button class="slick-next"><i>${iconArrow}</i></button>`,
         responsive: [{
             breakpoint: 768,
             settings: {
@@ -85,7 +93,7 @@ $(document).ready(function() {
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
-        autoplay: true,
+        autoplay: false,
         variableWidth: true,
         autoplaySpeed: 6000,
         arrows: false,
@@ -108,7 +116,7 @@ $(document).ready(function() {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 6000,
         arrows: true,
         responsive: [{
@@ -164,7 +172,7 @@ $(document).ready(function() {
         infinite: true,
         slidesToShow: 4,
         slidesToScroll: 4,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 6000,
         arrows: true,
         responsive: [{

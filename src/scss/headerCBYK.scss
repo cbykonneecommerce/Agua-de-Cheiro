@@ -455,13 +455,7 @@ body {
     }
 }
 
-.prateleira.vitrine h2 {
-    color: #007da5;
-    text-align: center;
-    font-size: 24px !important;
-    margin-top: 2em;
-    margin-bottom: 1.3em;
-}
+
 
 .section-title,
 h4#divTitulo {
@@ -471,7 +465,7 @@ h4#divTitulo {
 }
 
 .section-title::after,
-.prateleira.vitrine h2::after,
+.prateleira.vitrine > h2::after,
 h4#divTitulo::after {
     content: "";
     display: block;
@@ -870,13 +864,8 @@ h4#divTitulo::after {
     z-index: 2;
 }
 
-.slick-prev {
-    left: 5px !important;
-}
 
-.slick-next {
-    right: 5px !important;
-}
+
 
 .fullbanner .slick-prev {
     left: 24px !important;
@@ -1025,12 +1014,7 @@ h4#divTitulo::after {
     .header-container {
         padding-top: 32px;
     }
-    .slick-prev {
-        left: -15px !important;
-    }
-    .slick-next {
-        right: -15px !important;
-    }
+
     #special-icon {
         width: 24%;
     }

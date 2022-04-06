@@ -1,71 +1,47 @@
 #set($id = $product.Id)
- #set($idSku = $product.productVariantId)
- #set($uri = $product.Uri)
- #set($escapedName = $product.HtmlEscapedName)
- 
- #if ($product.IsInStock)
- <span class="box-item text-center">
- 
+#set($idSku = $product.productVariantId)
+#set($uri = $product.Uri)
+#set($escapedName = $product.HtmlEscapedName)
 
- #else
- <span class="box-item text-center product-off">
- #end
-<div class="shelf-heart" style="position:absolute;z-index:99999999"><img style="width:64% !important" src="/arquivos/coracaovazio.svg" alt=""/>
-            <span style="display:none" class="myid">$product.Id</span>
-            <span style="display:none" class="myurl">$uri</span>
-       </div>
-     <a class="product-image" title="$escapedName" href="$uri">
-    
-        <div class="discount">$product.DiscountHightLight</div>
-            <div class="principal">$product.GetImageTag(2)</div>
+<div>
+
+    <button class="shelf__wishlist">
+        <svg width="24" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M11.833 21l-1.57-1.439C4.682 14.471 1 11.114 1 6.995 1 3.638 3.622 1 6.958 1c1.885 0 3.694.883 4.875 2.278C13.014 1.883 14.823 1 16.708 1c3.337 0 5.959 2.638 5.959 5.995 0 4.12-3.684 7.476-9.263 12.577L11.834 21z"
+                stroke="#007DA5"></path>
+        </svg>
+    </button>
+    <a class="shelf__product" title="$escapedName" href="$uri">
+        <span class="shelf__flag">$product.DiscountHightLight</span>
+
+        $product.GetImageTag(2)
+        <h2 class="shelf__title">$product.Name</h2>
+    </a>
+
+    #if ($product.IsInStock)
+    <div class="shelf__prices">
+        #if ($product.HasBestPrice)
+        <span class="shelf__listprice">
+            De: <span>$product.ListPrice</span>
+        </span>
+        #end
+        <span class="shelf__bestprice">
+            <span>Por: $product.BestPrice</span> à vista
+        </span>
+        #if ($product.NumbersOfInstallment > 1)
+        <span class="shelf__installment">
+            Ou <span>$product.InstallmentValue</span> em até <span>${product.NumbersOfInstallment}x</span>
+        </span>
+        #end
          
-     
-     </a>
-      
-      
-     <b class="product-name">
-         <a title="$escapedName" href="$uri">$product.Name</a>
-     </b>
-     
-     
-      
-     
-     #if ($product.IsInStock)
-         <span class="price">
-             <a title="$escapedName" href="$uri">
-                 #if ($product.HasBestPrice)
-                     <span class="old-price">
-                       $product.ListPrice 
-                     </span>
-                     
-                     <span class="best-price">
-                      <div class="priceitself">$product.BestPrice</div> 
-                     </span>
-                 #else
-                     <span class="best-price">
-                        <div class="priceitself">$product.BestPrice</div> 
-                     </span>                    
-                 #end
-                
-             </a>
-             
-               
-         </span>
-         <span class="installment">
-     #if ($product.NumbersOfInstallment > 1)
-        ou ${product.NumbersOfInstallment}x de $product.InstallmentValue SEM JUROS
-     #end
-    </span> 
-     <div class="buy-btns">
-     
-        <!-- $product.BottomBuyAsynchronous-->
-        <a href="$uri" class="btn-add-buy-button-asynchronous btn-dinamico  asynchronousBuyButton actionActivated btover-active" style="margin-top: 0.3em;text-decoration:none">COMPRAR</a>
-       <div class="buy-btn-icon">$product.BottomBuyAsynchronous</div>
-     </div>
-     
-    
-     #else
-         <span class="out-of-stock">Produto Esgotado</span> 
-     #end
-     
- </span>
+    </div>
+    <button class="shelf__buy-button">
+        Comprar
+    </button>
+    #else
+    <span class="shelf__unavailable">Produto Esgotado</span>
+    #end
+
+    </span>
+</div>
