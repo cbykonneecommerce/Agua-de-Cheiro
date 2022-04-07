@@ -19,11 +19,11 @@ function verifyUserIsLogged() {
             if (!profile) return
 
             if (profile.IsUserDefined) {
-                console.log(profile)
+              $('body').addClass('user-is-logged')
                 const userName = profile.FirstName !== null ? profile.FirstName : profile.Email.split('@')[0]
                 $('body').find('.header__user .dropdown-toggle span').replaceWith(`
-            <span> Olá, <strong> ${userName} </strong>  </span>
-            `)
+                  <span> Olá, <strong> ${userName} </strong>  </span>
+                  `)
 
                 if (window.screen.width > 1024) {
                     userModal();
@@ -60,13 +60,13 @@ $(document).ready(function() {
             margin: auto;">
                  <div class="col-sm-2">
                      <ul class="">
-                         
+
 
                      </ul>
                  </div>
                  <div class="col-sm-2">
                      <ul>
-                     
+
 
                      </ul>
                  </div>
