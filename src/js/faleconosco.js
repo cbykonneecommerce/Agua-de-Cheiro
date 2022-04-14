@@ -1,7 +1,6 @@
 $("#commit").on('click', () => {
 
   event.preventDefault();
-  //console.log($("#cl_email").val())
   let dados = {
     firstName: $("#cl_first_name").val(),
     email: $("#cl_email").val(),
@@ -19,31 +18,12 @@ $("#commit").on('click', () => {
   })
     .then((res) => { return res })
     .then(result => {
-      console.log(result);
       alert("Formulario enviado");
     })
-    .catch(err => console.log(err))
-})
-
-$(document).ready(() => {
-  if (~window.location.search.indexOf('test=true')) {
-    $('#institucional-content .row > .col-md-10').html(`
-        <div class="stores">
-          <h4> CENTRAL DE ATENDIMENTO </h4>
-          <h2> Nossas Lojas</h2>
-          <div class="stores__body">
-
-          </div>
-        </div>
-    `)
-
-    getStores();
-
-  }
+    .catch(err => console.error(err))
 })
 
 const getStores = () => {
-  console.log('passei')
   fetch("/api/dataentities/LS/search?_fields=state,city,neighborhood,address,contact", {
     method: 'GET',
     headers: {
@@ -54,16 +34,17 @@ const getStores = () => {
   })
     .then((res) => { return res.json() })
     .then((result) => {
-      const state = result.map((item) => {
+      let state = result.map((item) => {
+
         return item.state
       }).filter((item, index, array) => {
         return array.indexOf(item) === index
       })
-
+      state = state.sort();
       renderStates(state)
       renderCities(result)
     })
-    .catch(err => console.log(err))
+    .catch(err => console.error(err))
 }
 
 const renderStates = (state) => {
@@ -98,3 +79,11 @@ const renderCities = (state) => {
   })
 
 }
+
+
+$(document).ready(() => {
+  if ($('body').hasClass('quem-somos')) {
+    getStores();
+  }
+})
+
