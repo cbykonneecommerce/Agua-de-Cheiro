@@ -3,21 +3,6 @@ setTimeout(function () {
 
   $(".bt-refinar.search-filter-button.even").text("Aplicar Filtros");
 
-  $(".refino h5").append(`<svg style="width: 26px;
-        max-width: 26px;
-        float: right;
-        margin-top: -9px;" xmlns="http://www.w3.org/2000/svg" width="50.523" height="39.523" viewBox="0 0 50.523 39.523">
-        <path fill="none" stroke="rgb(0,0,0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="5" d="M11.76158875 11.76155253L25.7615618 27.76157612l13.00002696-15.9999781"/>
-      </svg>
-      `);
-
-
-  $("fieldset.refino h5").on("click", function () {
-    $(this).parent().toggleClass("active")
-  })
-
-
-
 
   $("fieldset.refino div label").prepend(`<i class="fa fa-square-o"></i>`);
 
@@ -29,23 +14,6 @@ setTimeout(function () {
     }
 
   })
-
-
-
-
-  $(".refino-marca h5").append(`<svg style="width: 26px;
-     max-width: 26px;
-     float: right;
-     margin-top: -9px;" xmlns="http://www.w3.org/2000/svg" width="50.523" height="39.523" viewBox="0 0 50.523 39.523">
-     <path fill="none" stroke="rgb(0,0,0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="5" d="M11.76158875 11.76155253L25.7615618 27.76157612l13.00002696-15.9999781"/>
-   </svg>
-   `);
-
-
-  $("fieldset.refino-marca h5").on("click", function () {
-    $(this).parent().toggleClass("active")
-  })
-
 
 
 
@@ -61,11 +29,6 @@ setTimeout(function () {
   })
 
 
-
-
-
-
-
   $("a.ver-filtros").siblings("label").children("i").attr('class', "fa fa-check-square-o")
 
   $(".resultado-busca-filtro > fieldset.orderBy select option:first-of-type").text("Ordenar por");
@@ -78,26 +41,31 @@ setInterval(() => {
 }, 1000);
 
 
+const filters = () => {
+
+
+  $("fieldset h5").append(`
+    <span class="filters__icon">
+      <svg  xmlns="http://www.w3.org/2000/svg" width="50.523" height="39.523" viewBox="0 0 50.523 39.523">
+          <path fill="none" stroke="rgb(0,0,0)" stroke-linecap="butt" stroke-linejoin="miter" stroke-width="5" d="M11.76158875 11.76155253L25.7615618 27.76157612l13.00002696-15.9999781"/>
+        </svg>
+    </span>
+  `);
 
 
 
-const mq = window.matchMedia("(max-width: 800px)");
+  $("body").on("click", 'fieldset > h5', function () {
+    let $fieldset = $(this).parent()
+    $(this).next().slideToggle("slow");
+    $fieldset.toggleClass('is-hide')
+  })
 
-if (mq.matches) {
-  $(".resultado-busca-filtro").append(`
+  $('body').on('click', '.js-toggle-filter', function () {
+    $('body').toggleClass('filter-is-open')
+  })
 
-      <span onclick="openNavfiltro()" style="
-      border: 1px solid #F2F2F2 !important;
-      border-radius: 0 !important;
-      color: #007DA5 !important;
-      background-color: #F2F2F2;
-      padding: 3px;
-      padding-left: 10px;
-      width: 46%;
-      position: absolute;
-      text-align: center;
-  ">Filtros <img src="/arquivos/filtro.svg" style="max-width: 25px;margin-left: 10px;"></span>
-      `)
 }
 
-
+$(document).ready(function () {
+  filters();
+})

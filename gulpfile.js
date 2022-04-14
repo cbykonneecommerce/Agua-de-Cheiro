@@ -12,17 +12,17 @@ const cssnano = require('cssnano');
 var replace = require('gulp-replace');
 
 // Caminhos de arquivo
-const files = { 
+const files = {
     scssPath: 'src/scss/**/*.scss',
     jsPath: 'src/js/**/*.js'
 }
 
 // Tarefa Sass: compila o arquivo style.scss em style.css
-function scssTask(){    
+function scssTask() {
     return src(files.scssPath)
         // .pipe(sourcemaps.init()) // inicializar mapas de origem primeiro
         .pipe(sass()) // compile SCSS to CSS
-        .pipe(postcss([ autoprefixer(), cssnano() ])) // PostCSS plugins
+      .pipe(postcss([autoprefixer(), cssnano({ zindex: false })])) // PostCSS plugins
         // .pipe(sourcemaps.write('/map/.')) // escrever o arquivo de mapas de origem no diretório atual
         .pipe(dest('dist/css')
     ); // coloca o CSS final na pasta dist
@@ -40,7 +40,7 @@ function scssTask(){
 //     );
 // }
 
-function jsTask(){    
+function jsTask() {
     return src([
         files.jsPath
         // ,'!' + 'includes/js/jquery.min.js', // para excluir quaisquer arquivos específicos
@@ -70,7 +70,7 @@ function watchTask(){
             parallel(scssTask, jsTask),
             cacheBustTask
         )
-    );    
+    );
 }
 
 function addComputerNameAndDate(file){
@@ -83,7 +83,7 @@ function addComputerNameAndDate(file){
 // Executa as tarefas scss e js simultaneamente
 // em seguida, executa cacheBust e observa a tarefa
 exports.default = series(
-    parallel(scssTask, jsTask), 
+  parallel(scssTask, jsTask),
     cacheBustTask,
     watchTask
 );

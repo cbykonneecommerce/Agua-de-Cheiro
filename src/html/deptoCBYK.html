@@ -1,166 +1,138 @@
-<!-- 
- *
- * Desenvolvido por Integrando.se
- * hello@integrando.se
- * 
- * Bootstrap v.3
- *
- -->
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common" xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
+  xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
 
 <head>
-    <title>Departamento</title>
-    <vtex:metaTags/>
+  <title>Departamento</title>
+  <vtex:metaTags />
 
-    <link href="/arquivos/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
-    <link href="/arquivos/ion.rangeSlider.skinHTML5.css" rel="stylesheet" type="text/css" />
-    <script src="/arquivos/ion.rangeSlider.min.js"></script>
+  <link href="/arquivos/ion.rangeSlider.css" rel="stylesheet" type="text/css" />
+  <link href="/arquivos/ion.rangeSlider.skinHTML5.css" rel="stylesheet" type="text/css" />
+  <script src="/arquivos/ion.rangeSlider.min.js"></script>
 
-    <vtex:template id="CBYKcommonStyles" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/arquivos/deptoCBYK.css" rel="stylesheet" type="text/css" />
+  <vtex:template id="CBYKcommonStyles" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/arquivos/deptoCBYKhomolog.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body id="departament-page">
 
-    <div class="page">
+  <div class="page">
 
-        <!--  SubTemplate: Header -->
-        <vtex:template id="CBYK-header" />
-        <!-- /SubTemplate: Header -->
+    <!--  SubTemplate: Header -->
+    <vtex:template id="CBYK-header" />
+    <!-- /SubTemplate: Header -->
 
-        <div id="departament-extra-top"></div>
+    <div id="departament-extra-top"></div>
 
-        <div class="container">
+    <div class="container">
 
-            <div id="box-bread-brumb">
-                <vtex.cmc:breadCrumb />
-            </div>
-
-
-        </div>
-
-        <div id="sidenavCTRfiltros" style="position: fixed;top: 50%;z-index: 99;background: #fff;
-     opacity: .8;">
-            <!--<a  onclick="openNavfiltro()" id="open"><img src="/arquivos/filtro.svg" style="max-width: 50px;"/></a>-->
-            <a onclick="closeNavfiltro()" id="close"><img src="/arquivos/filtro.svg" style="max-width: 50px;" /></a>
-        </div>
-
-        <section class="container-fluid visible-xs visible-sm">
-            <div id="departament-banner ">
-                <!--  placeholder -->
-                <vtex:contentPlaceHolder id="Banner-PrincipalMOB" />
-                <!-- /placeholder -->
-            </div>
-            <!-- #departament-banner -->
-        </section>
-        <section id="content" class="container">
+      <div id="box-bread-brumb">
+        <vtex.cmc:breadCrumb />
+      </div>
 
 
-            <div id="departament-extra-middle"></div>
+    </div>
 
-            <div class="row">
+    <section class="container-fluid visible-xs visible-sm">
+      <div id="departament-banner ">
+        <!--  placeholder -->
+        <vtex:contentPlaceHolder id="Banner-PrincipalMOB" />
+        <!-- /placeholder -->
+      </div>
+      <!-- #departament-banner -->
+    </section>
+    <section id="content" class="container">
 
-                <aside class="col-xs-3 sidebar" id="mySidenavfiltros">
-                    <div id="departament-navegador">
-                        <h3 class="section-filter-title">Filtros</h3>
-                        <!--  Controle: navegador de departamento -->
-                        <!-- <vtex.cmc:singleDepartmentNavigator keepCurrentPath="true" />-->
-                        <vtex.cmc:searchNavigator />
-                        <!-- /Controle: navegador de departamento -->
 
-                        <div id="departament-extra-menu"></div>
+      <div id="departament-extra-middle"></div>
+
+      <div class="row">
+                <aside class="col-xs-3 sidebar filters__body">
+                  <button class="filters__close js-toggle-filter">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M1 10.5L10.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M1 1L11 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                  </button>
+                  <div id="departament-navegador">
+                    <h3 class="section-filter-title">Filtros</h3>
+                    <vtex.cmc:searchNavigator />
+
+                    <div id="departament-extra-menu"></div>
                     </div>
-                    <!-- #departament-navegador -->
                 </aside>
-                <!-- .sidebar -->
+                <div class="filters__overlay js-toggle-filter"></div>
 
                 <article id="main-content" class="col-xs-12 col-md-9">
+                  <button class="filters__button js-toggle-filter">
+                    <span>Filtros</span>
+                    <img src="/arquivos/filtro.svg" />
+                  </button>
+                  <div class="hidden-xs hidden-sm">
+                    <div id="departament-banner">
+                      <!--  placeholder -->
+                      <vtex:contentPlaceHolder id="Banner-Principal" />
+                      <!-- /placeholder -->
+                    </div>
+                    <!-- #departament-banner -->
+                  </div>
 
-                    <div class="hidden-xs hidden-sm">
-                        <div id="departament-banner">
-                            <!--  placeholder -->
-                            <vtex:contentPlaceHolder id="Banner-Principal" />
-                            <!-- /placeholder -->
-                        </div>
-                        <!-- #departament-banner -->
+
+                  <div class="hidden-xs">
+                    <div class="brand-carousel">
+                      <vtex:contentPlaceHolder id="Marca-banner" />
+                    </div>
+                  </div>
+
+
+                  <div id="collections">
+
+                    <div class="collection-wrap">
+                      <vtex.cmc:searchResult layout="59cae138-ada3-44de-b9be-ad1313a21e98" itemCount="32" columnCount="4" />
                     </div>
 
 
-                    <div class="hidden-xs">
-                        <div class="brand-carousel">
-                            <vtex:contentPlaceHolder id="Marca-banner" />
-                        </div>
+                    <div class="showcase-default">
+                      <vtex:contentPlaceHolder id="Destaques" />
                     </div>
 
-
-                    <div id="collections">
-
-                        <div class="collection-wrap">
-                            <vtex.cmc:searchResult layout="59cae138-ada3-44de-b9be-ad1313a21e98" itemCount="32" columnCount="4" />
-                        </div>
-
-
-                        <div class="showcase-default">
-                            <vtex:contentPlaceHolder id="Destaques" />
-                        </div>
-
-                        <div class="showcase-default">
-                            <vtex:contentPlaceHolder id="Lançamentos" />
-                        </div>
-
+                    <div class="showcase-default">
+                      <vtex:contentPlaceHolder id="Lançamentos" />
                     </div>
-                    <!-- #collections -->
 
-                    <div class="bottom-banners">
-                        <vtex:contentPlaceHolder id="Bottom-banner1" />
-                        <vtex:contentPlaceHolder id="Bottom-banner2" />
-                    </div>
+                  </div>
+                  <!-- #collections -->
+
+                  <div class="bottom-banners">
+                    <vtex:contentPlaceHolder id="Bottom-banner1" />
+                    <vtex:contentPlaceHolder id="Bottom-banner2" />
+                  </div>
 
                 </article>
                 <!-- #main-content -->
                 <div class="col-md-12 col-sm-12 col-xs-12 texto">
-                    <vtex:contentPlaceHolder id="texto" />
+                  <vtex:contentPlaceHolder id="texto" />
                 </div>
-            </div>
-            <!-- .row -->
+                </div>
+                <!-- .row -->
 
-        </section>
-        <!-- #content -->
+                </section>
+                <!-- #content -->
 
-        <div id="departament-extra-bottom"></div>
+                <div id="departament-extra-bottom"></div>
 
-        <!--  SubTemplate: Footer -->
-        <vtex:template id="CBYKFooter" />
-        <!-- /SubTemplate: Footer -->
+                <!--  SubTemplate: Footer -->
+                <vtex:template id="CBYKFooter" />
+                <!-- /SubTemplate: Footer -->
 
-    </div>
-    <!-- .container-fluid -->
+                </div>
+                <!-- .container-fluid -->
 
-</body>
-<vtex:template id="CBYKcommonScripts" />
-<script src="/arquivos/pagination.js"></script>
-<script src="/arquivos/filtersCBYK.js"></script>
-<script>
-    $("#sidenavCTRfiltros #close").hide();
+                </body>
+                <vtex:template id="CBYKcommonScripts" />
+                <script src="/arquivos/pagination.js"></script>
+                <script src="/arquivos/filtersCBYKhomolog.js"></script>
 
-    function openNavfiltro() {
-        document.getElementById("mySidenavfiltros").style.left = "0px";
-        document.getElementById("sidenavCTRfiltros").style.left = "64%";
-        $("#sidenavCTRfiltros #open").hide();
-        $("#sidenavCTRfiltros #close").show();
-    }
-
-    function closeNavfiltro() {
-        document.getElementById("mySidenavfiltros").style.left = "-880px";
-        document.getElementById("sidenavCTRfiltros").style.left = "0%";
-        $("#sidenavCTRfiltros #close").hide();
-        $("#sidenavCTRfiltros #open").show();
-    }
-</script>
-
-
-
-</html>
+                </html>

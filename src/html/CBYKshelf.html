@@ -34,11 +34,11 @@
             Ou <span>$product.InstallmentValue</span> em até <span>${product.NumbersOfInstallment}x</span>
         </span>
         #end
-         
+
     </div>
-    <button class="shelf__buy-button">
-        Comprar
-    </button>
+    <a href="$uri" class="shelf__buy-button  btn-add-buy-button-asynchronous asynchronousBuyButton">
+      $product.BottomBuyAsynchronous
+    </a>
     #else
     <span class="shelf__unavailable">Produto Esgotado</span>
     #end
