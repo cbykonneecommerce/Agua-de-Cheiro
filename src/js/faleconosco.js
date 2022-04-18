@@ -41,8 +41,11 @@ const getStores = () => {
         return array.indexOf(item) === index
       })
       state = state.sort();
+      let newArr = result.sort(function (firstIndex, secondIndex) {
+        return (firstIndex.city > secondIndex.city) ? 1 : ((secondIndex.city > firstIndex.city) ? - 1 : 0)
+      })
       renderStates(state)
-      renderCities(result)
+      renderCities(newArr)
     })
     .catch(err => console.error(err))
 }
@@ -70,9 +73,9 @@ const renderCities = (state) => {
   state.forEach(store => {
     $('.stores__body').find(`.stores__state[data-id='${store.state}'] .stores__cities`).append(`
       <div class="stores__table">
-        <div class="stores__cell stores__cell--city">${store.city}</div>
-        <div class="stores__cell">${store.neighborhood}</div>
-        <div class="stores__cell stores__cell--address">${store.address}</div>
+        <div class="stores__cell stores__cell--city">${store.city.toLowerCase()}</div>
+        <div class="stores__cell">${store.neighborhood.toLowerCase()}</div>
+        <div class="stores__cell stores__cell--address">${store.address.toLowerCase()}</div>
         <div class="stores__cell">${store.contact}</div>
       </div>
     `)

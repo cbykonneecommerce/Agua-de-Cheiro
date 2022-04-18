@@ -99,12 +99,16 @@ body {
       border-radius: 10px;
       height: 45px;
       padding-left: 40px !important;
+      border: none;
       &:focus-visible {
         outline: 0;
       }
       @media screen and (max-width: 1024px) {
         padding-left: 2;
       }
+    }
+    input.fulltext-search-box{
+      display: none;
     }
     input.btn-buscar {
       position: absolute;
@@ -135,6 +139,9 @@ body {
     li {
       &.header__user {
         margin-top: 5px;
+        a span{
+          white-space: nowrap;
+        }
         .dropdown-toggle {
           display: flex;
           align-items: center;
@@ -1006,6 +1013,9 @@ h4#divTitulo::after {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
+    .nav.navbar-nav{
+      display: flex;
+    }
   }
   .header-container {
     padding-top: 32px;
