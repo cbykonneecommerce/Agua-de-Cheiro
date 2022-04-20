@@ -146,11 +146,18 @@ $(document).ready(function () {
         }
       });
     }).then(() => {
-      $(".deptos ul").prepend(`
+      $(".js-menu").prepend(`
             <li class="item-maes">
-              <a href="/dia-das-maes" class="btn_maes">Dia das Mães</a>
+              <a href="https://www.aguadecheiro.com.br/busca?fq=H:171" class="btn_maes">Dia das Mães</a>
             </li>
-          `)
+      `)
+      $(".js-menu").append(`
+            <li class="item-outlet">
+              <a href="https://www.aguadecheiro.com.br/outlet">
+                <img src="https://aguadecheiro.vteximg.com.br/arquivos/outlet.gif" />
+              </a>
+            </li>
+      `)
     })
 
   setTimeout(() => {

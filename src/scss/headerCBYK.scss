@@ -104,11 +104,11 @@ body {
         outline: 0;
       }
       @media screen and (max-width: 1024px) {
-        padding-left: 2;
+        min-width: initial;
       }
     }
     input.fulltext-search-box{
-      display: none;
+      border: none;
     }
     input.btn-buscar {
       position: absolute;
@@ -589,6 +589,14 @@ h4#divTitulo::after {
   align-items: stretch;
   justify-content: space-between;
   margin: 0;
+  .item-outlet{
+    a{
+      padding: 15px 10px;
+    }
+    img{
+      max-width: 90px;
+    }
+  }
 }
 
 .deptos ul li a {
@@ -711,10 +719,9 @@ h4#divTitulo::after {
   padding: 17px 8px 17px 0px;
   text-decoration: none;
   font-size: 17px;
-  color: #007da5 !important;
   font-weight: 500;
   display: block;
-  text-transform: capitalize !important;
+  text-transform: capitalize;
   border: none;
   background: none;
   width: 100%;
@@ -1178,4 +1185,9 @@ body.dia-das-maes {
   .footer {
     background-color: #dc5865;
   }
+}
+
+//todo
+.depto-Outlet{
+  display: none !important;
 }

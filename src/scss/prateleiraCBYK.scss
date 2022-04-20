@@ -255,7 +255,12 @@
       top: 15px;
       left: 15px;
       z-index: 3;
-      &:hover {
+      svg{
+        pointer-events: none;
+      }
+
+      &:hover,
+      &.is-active {
         svg path {
           fill: #007da5;
         }
@@ -315,5 +320,11 @@
       }
     }
   }
-
+  .box-item{
+    .shelf-heart{
+      > img{
+        pointer-events: none;
+      }
+    }
+  }
 }
