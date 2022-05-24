@@ -147,8 +147,8 @@ $(document).ready(function () {
       });
     }).then(() => {
       $(".js-menu").prepend(`
-            <li class="item-maes">
-              <a href="https://www.aguadecheiro.com.br/busca?fq=H:171" class="btn_maes">Dia das Mães</a>
+            <li class="item-special">
+              <a href="https://www.aguadecheiro.com.br/busca?fq=H:173" class="btn_special">Dia dos Namorados</a>
             </li>
       `)
       $(".js-menu").append(`

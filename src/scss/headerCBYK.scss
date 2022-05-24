@@ -525,7 +525,7 @@ h4#divTitulo::after {
 }
 
 .btn-buscar {
-  background-image: url(/arquivos/lupa-rosa.svg) !important;
+  background-image: url('/arquivos/lupa-azul.svg') !important;
   background-repeat: no-repeat !important;
   background-size: contain;
   background-position: center center;
@@ -597,6 +597,14 @@ h4#divTitulo::after {
       max-width: 90px;
     }
   }
+  // .depto-Ofertas{
+  //   display: none;
+  // }
+  .item-special{
+    display: flex;
+    align-items: center;
+  }
+
 }
 
 .deptos ul li a {
@@ -1150,40 +1158,49 @@ button {
   }
 }
 
-body.dia-das-maes {
+body.campanha-especial {
   .header-container {
-    background-color: #dc5865;
+    background-color: #A51000;
     fieldset.busca {
       border-color: #dc5865;
       .principal-voice-icone {
-        color: #dc5865;
+        // color: #dc5865;
       }
     }
     .item-maes{
       display: flex;
-    align-items: center;
-    justify-content: center;
+      align-items: center;
+      justify-content: center;
     }
-    .btn_maes {
+    // .btn-buscar {
+    //   background-image: url(/arquivos/lupa-rosa.svg) !important;
+    // }
+
+    #deptos-list li a{
+      &::before{
+        background-color: #A51000;
+      }
+    }
+
+    .btn_special {
       padding: 10px 20px;
-      background-color: #dc3747;
+      background-color: #FF1402;
       color: #ffffff;
       animation: fadeIn linear 7s;
       &:hover {
         background-color: #ffffff;
-        color: #dc3747;
+        color: #FF1402;
         animation: fadeIn linear 7s;
 
       }
     }
 
-
   }
   .depto-menu-footer {
-    background-color: #dc5865;
+    background-color: #A51000;
   }
   .footer {
-    background-color: #dc5865;
+    background-color: #A51000;
   }
 }
 
