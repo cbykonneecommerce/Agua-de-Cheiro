@@ -28,7 +28,10 @@ $(document).ready(function() {
         }]
     });
 
-    $('.product-carousel .prateleira.vitrine ul').slick({
+    const shelfSlider = () =>{
+      const $shelf = $('.product-carousel .prateleira.vitrine ul')
+      if($shelf.children().length < 5) return
+      $shelf.slick({
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
@@ -46,8 +49,9 @@ $(document).ready(function() {
                 arrows: false
             }
         }]
-
     });
+    }
+    shelfSlider();
     // $('.absinto .prateleira.vitrine ul').not('.slick-initialized').slick({
     //     infinite: true,
     //     slidesToShow: 4,

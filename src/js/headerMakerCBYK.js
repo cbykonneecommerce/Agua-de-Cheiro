@@ -22,7 +22,7 @@ function verifyUserIsLogged() {
         $('body').addClass('user-is-logged')
         const userName = profile.FirstName !== null ? profile.FirstName : profile.Email.split('@')[0]
         $('body').find('.header__user .dropdown-toggle span').replaceWith(`
-                  <span> Olá, <strong> ${userName} </strong>  </span>
+                  <span> Olá, <strong> ${ userName } </strong>  </span>
                   `)
 
         if (window.screen.width > 1024) {
@@ -49,13 +49,14 @@ $(document).ready(function () {
         let divtext = element.name;
         element.name = element.name.replace(/[\s/,&]+/g, '-');
         $(".deptos ul").append(`
-          <li class="depto-${element.name}">
-            <a href="${element.url}" title="${element.name}">${divtext}</a>
+          <li class="depto-${ element.name }">
+            <a href="${ element.url }" title="${ element.name }">${ divtext }</a>
           </li>
         `);
         if (element.hasChildren) {
+          const categoryName = element.name.toLowerCase();
           $("#top-menu .container-fluid #deptos-list").append(`
-            <div class="deptonav depto-${element.name}" id="${element.name}" style="display: none">
+            <div class="deptonav depto-${ element.name }" id="${ element.name }" style="display: none">
 
             <div class="row" style="width: 1180px;
             margin: auto;">
@@ -79,8 +80,8 @@ $(document).ready(function () {
                  </div>
                  <div class="col-sm-4">
                   <a>
-                    <img  src="/arquivos/menu_${element.name}.jpg"
-                          alt="${element.name}"
+                    <img  src="/arquivos/menu_${categoryName}.jpg"
+                          alt="${ element.name }"
                           onerror="this.parentNode.parentNode.style.display='none'"
                     />
                   </a>
@@ -93,56 +94,56 @@ $(document).ready(function () {
           //mobile
           $(".sidenav").append(`
             <div class="depto-box" style="display:block;border-top: solid 1px #333;">
-              <span class="depto-${element.name}">
-                <a href="${element.url}">${divtext}</a>
+              <span class="depto-${ element.name }">
+                <a href="${ element.url }">${ divtext }</a>
               </span>
-              <button class="dropdown-btn" id="${element.name}">
+              <button class="dropdown-btn" id="${ element.name }">
                 <i class="fa fa-angle-down"></i>
               </button>
             </div>
-               <div class="dropdown-container" id="${element.name}"></div>`);
+               <div class="dropdown-container" id="${ element.name }"></div>`);
 
           //Desktop
-          $(`.depto-${element.name}`).mouseenter(function () {
+          $(`.depto-${ element.name }`).mouseenter(function () {
             $(".deptonav").hide();
-            $(`#deptos-list .depto-${element.name}#${element.name}`).show()
+            $(`#deptos-list .depto-${ element.name }#${ element.name }`).show()
           });
 
 
-          $(`#deptos-list .depto-${element.name}#${element.name}`).mouseleave(function () {
-            $(`#deptos-list .depto-${element.name}#${element.name}`).hide()
+          $(`#deptos-list .depto-${ element.name }#${ element.name }`).mouseleave(function () {
+            $(`#deptos-list .depto-${ element.name }#${ element.name }`).hide()
           });
 
 
           //Mobile
-          $(`.dropdown-btn#${element.name}`).toggle(() => {
+          $(`.dropdown-btn#${ element.name }`).toggle(() => {
             // $(".dropdown-container").slideUp();
             $(`.dropdown-btn i`).attr('class', 'fa fa-angle-down');
-            $(`.dropdown-btn#${element.name} i`).attr('class', 'fa fa-angle-up');
-            $(`.dropdown-container#${element.name}`).slideDown()
+            $(`.dropdown-btn#${ element.name } i`).attr('class', 'fa fa-angle-up');
+            $(`.dropdown-container#${ element.name }`).slideDown()
           }, () => {
-            $(`.dropdown-container#${element.name}`).slideUp()
-            $(`.dropdown-btn#${element.name} i`).attr('class', 'fa fa-angle-down');
+            $(`.dropdown-container#${ element.name }`).slideUp()
+            $(`.dropdown-btn#${ element.name } i`).attr('class', 'fa fa-angle-down');
           })
 
 
           element.children.forEach((subs, index) => {
             if (index < 5) {
-              $(`.depto-${element.name} .row .col-sm-2:nth-of-type(1) ul`).append(`<li><a href="${subs.url}">${subs.name}</a></li>`);
+              $(`.depto-${ element.name } .row .col-sm-2:nth-of-type(1) ul`).append(`<li><a href="${ subs.url }">${ subs.name }</a></li>`);
             } else if (index < 10) {
-              $(`.depto-${element.name} .row .col-sm-2:nth-of-type(2) ul`).append(`<li><a href="${subs.url}">${subs.name}</a></li>`);
+              $(`.depto-${ element.name } .row .col-sm-2:nth-of-type(2) ul`).append(`<li><a href="${ subs.url }">${ subs.name }</a></li>`);
             } else if (index < 15) {
-              $(`.depto-${element.name} .row .col-sm-2:nth-of-type(3) ul`).append(`<li><a href="${subs.url}">${subs.name}</a></li>`);
+              $(`.depto-${ element.name } .row .col-sm-2:nth-of-type(3) ul`).append(`<li><a href="${ subs.url }">${ subs.name }</a></li>`);
             } else {
-              $(`.depto-${element.name} .row .col-sm-2:nth-of-type(4) ul`).append(`<li><a href="${subs.url}">${subs.name}</a></li>`);
+              $(`.depto-${ element.name } .row .col-sm-2:nth-of-type(4) ul`).append(`<li><a href="${ subs.url }">${ subs.name }</a></li>`);
             }
 
-            $(`.dropdown-container#${element.name}`).append(`<a href="${subs.url}">${subs.name}</a>`)
+            $(`.dropdown-container#${ element.name }`).append(`<a href="${ subs.url }">${ subs.name }</a>`)
 
           })
 
         } else {
-          $(".sidenav").append(`<span class="depto-${element.name}"><a style="border-top: solid 1px #333;" href="${element.url}">${divtext}</a></span>`)
+          $(".sidenav").append(`<span class="depto-${ element.name }"><a style="border-top: solid 1px #333;" href="${ element.url }">${ divtext }</a></span>`)
         }
       });
     }).then(() => {
