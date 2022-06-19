@@ -459,6 +459,21 @@ body {
       top: 5px;
     }
   }
+
+  .btn_special {
+    padding: 10px 20px;
+    background-color:  #006687;
+    border: 1px solid  #006687;
+    color: #ffffff;
+    animation: fadeIn linear 7s;
+    &:hover {
+      background-color: #ddf2f9;
+      border-color: #242728;
+      color: #242728;
+      animation: fadeIn linear 7s;
+
+    }
+  }
 }
 
 .section-title,
@@ -1182,18 +1197,7 @@ body.campanha-especial {
       }
     }
 
-    .btn_special {
-      padding: 10px 20px;
-      background-color: #FF1402;
-      color: #ffffff;
-      animation: fadeIn linear 7s;
-      &:hover {
-        background-color: #ffffff;
-        color: #FF1402;
-        animation: fadeIn linear 7s;
 
-      }
-    }
 
   }
   .depto-menu-footer {

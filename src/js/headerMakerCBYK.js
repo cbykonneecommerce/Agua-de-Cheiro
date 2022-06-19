@@ -80,7 +80,7 @@ $(document).ready(function () {
                  </div>
                  <div class="col-sm-4">
                   <a>
-                    <img  src="/arquivos/menu_${categoryName}.jpg"
+                    <img  src="/arquivos/menu_${ categoryName }.jpg"
                           alt="${ element.name }"
                           onerror="this.parentNode.parentNode.style.display='none'"
                     />
@@ -149,7 +149,7 @@ $(document).ready(function () {
     }).then(() => {
       $(".js-menu").prepend(`
             <li class="item-special">
-              <a href="https://www.aguadecheiro.com.br/busca?fq=H:173" class="btn_special">Dia dos Namorados</a>
+              <a href="https://www.aguadecheiro.com.br/busca?fq=H:173" class="btn_special">Lançamentos</a>
             </li>
       `)
       $(".js-menu").append(`
