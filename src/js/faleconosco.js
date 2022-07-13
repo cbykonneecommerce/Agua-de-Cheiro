@@ -50,6 +50,22 @@ const getStores = () => {
     .catch(err => console.error(err))
 }
 
+function convertToPhone(phone) {
+
+  let newPhone = phone.replace(/\D/g, "");
+  newPhone = newPhone.replace(/^0/, "");
+  if (newPhone.length > 10) {
+    newPhone = newPhone.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+  } else if (newPhone.length > 5) {
+    newPhone = newPhone.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+  } else if (newPhone.length > 2) {
+    newPhone = newPhone.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+  } else {
+    newPhone = newPhone.replace(/^(\d*)/, "($1");
+  }
+  return newPhone;
+}
+
 const renderStates = (state) => {
   const stateList = state.map(item => {
     return (`
@@ -76,7 +92,7 @@ const renderCities = (state) => {
         <div class="stores__cell stores__cell--city">${store.city.toLowerCase()}</div>
         <div class="stores__cell">${store.neighborhood.toLowerCase()}</div>
         <div class="stores__cell stores__cell--address">${store.address.toLowerCase()}</div>
-        <div class="stores__cell">${store.contact}</div>
+        <div class="stores__cell stores__cell--phone">${convertToPhone(store.contact)}</div>
       </div>
     `)
   })

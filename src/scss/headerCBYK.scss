@@ -615,7 +615,7 @@ h4#divTitulo::after {
   // .depto-Ofertas{
   //   display: none;
   // }
-  .item-special{
+  &.js-menu > li{
     display: flex;
     align-items: center;
   }
@@ -1054,15 +1054,7 @@ h4#divTitulo::after {
   #special-icon {
     width: 24%;
   }
-  .depto-Cheiro-de-Promo {
-    background-color: #007da5;
-    top: -8px;
-    position: relative;
-    padding: 10px 16px;
-  }
-  .depto-Cheiro-de-Promo a {
-    color: white !important;
-  }
+
 }
 
 @media screen and (max-width: 1200px) {

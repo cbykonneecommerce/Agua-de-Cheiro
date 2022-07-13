@@ -125,6 +125,7 @@ td {
     margin: 5px;
     border-bottom: 1px solid #007da5;
     text-transform:capitalize;
+
     &--address{
       width: 540px;
       @media screen and (max-width:1024px) {
@@ -136,6 +137,9 @@ td {
       @media screen and (max-width:1024px) {
         width: auto;
       }
+    }
+    &--phone{
+      white-space: nowrap;
     }
   }
 }
