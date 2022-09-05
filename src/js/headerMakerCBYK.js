@@ -38,7 +38,6 @@ function verifyUserIsLogged() {
 }
 
 $(document).ready(function () {
-
   verifyUserIsLogged();
 
   fetch("/api/catalog_system/pub/category/tree/3/")
@@ -93,7 +92,7 @@ $(document).ready(function () {
 
           //mobile
           $(".sidenav").append(`
-            <div class="depto-box" style="display:block;border-top: solid 1px #333;">
+            <div class="depto-box">
               <span class="depto-${ element.name }">
                 <a href="${ element.url }">${ divtext }</a>
               </span>
@@ -143,13 +142,13 @@ $(document).ready(function () {
           })
 
         } else {
-          $(".sidenav").append(`<span class="depto-${ element.name }"><a style="border-top: solid 1px #333;" href="${ element.url }">${ divtext }</a></span>`)
+          $(".sidenav").append(`<span class="depto-${ element.name }"><a href="${ element.url }">${ divtext }</a></span>`)
         }
       });
     }).then(() => {
       $(".js-menu").prepend(`
             <li class="item-special">
-              <a href="https://www.aguadecheiro.com.br/busca?fq=H:173" class="btn_special">Lançamentos</a>
+              <a href="https://www.aguadecheiro.com.br/busca?fq=H:173" class="btn_special">Pedras Preciosas</a>
             </li>
       `)
       $(".js-menu").append(`
@@ -277,11 +276,6 @@ setInterval(() => {
     imgProduct = imgProduct.replace(/-55-55/g, '-90-90');
     $($("#mini-cart-admake .mini-cart-item .imagem img")[i]).attr("src", imgProduct);
   }
-
-
-
-
-  //colocar icone de sacola nos cards
 
   $(".prateleira .buy-btn-icon .btn-add-buy-button-asynchronous").html(`
 <svg xmlns="http://www.w3.org/2000/svg" width="19.461" height="27.559" viewBox="0 0 19.461 27.559">

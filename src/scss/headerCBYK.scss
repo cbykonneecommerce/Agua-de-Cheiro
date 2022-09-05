@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import "./_mixins/media";
+
 * {
   font-family: "Roboto", sans-serif;
 }
@@ -107,7 +110,7 @@ body {
         min-width: initial;
       }
     }
-    input.fulltext-search-box{
+    input.fulltext-search-box {
       border: none;
     }
     input.btn-buscar {
@@ -139,7 +142,7 @@ body {
     li {
       &.header__user {
         margin-top: 5px;
-        a span{
+        a span {
           white-space: nowrap;
         }
         .dropdown-toggle {
@@ -462,16 +465,18 @@ body {
 
   .btn_special {
     padding: 10px 20px;
-    background-color:  #006687;
-    border: 1px solid  #006687;
+    background-color: #006687;
+    border: 1px solid #006687;
     color: #ffffff;
     animation: fadeIn linear 7s;
+    @include mobile() {
+      text-align: center;
+    }
     &:hover {
       background-color: #ddf2f9;
       border-color: #242728;
       color: #242728;
       animation: fadeIn linear 7s;
-
     }
   }
 }
@@ -540,7 +545,7 @@ h4#divTitulo::after {
 }
 
 .btn-buscar {
-  background-image: url('/arquivos/lupa-azul.svg') !important;
+  background-image: url("/arquivos/lupa-azul.svg") !important;
   background-repeat: no-repeat !important;
   background-size: contain;
   background-position: center center;
@@ -584,15 +589,15 @@ h4#divTitulo::after {
 
 #menu-mobile ul li {
   border-top: 0px solid #efefef;
-  padding: 10px 8px 10px 16px;
 }
 
 #menu-mobile ul li a {
-  color: #007da5 !important;
-  font-size: 17px !important;
-  line-height: 30px !important;
+  color: #007da5;
+  font-size: 17px;
+  line-height: 30px;
   margin-left: -1em;
-  font-weight: 400 !important;
+  font-weight: 400;
+  padding: 10px 8px 10px 16px;
 }
 
 .depto-nav-area {
@@ -604,22 +609,21 @@ h4#divTitulo::after {
   align-items: stretch;
   justify-content: space-between;
   margin: 0;
-  .item-outlet{
-    a{
+  .item-outlet {
+    a {
       padding: 15px 10px;
     }
-    img{
+    img {
       max-width: 90px;
     }
   }
   // .depto-Ofertas{
   //   display: none;
   // }
-  &.js-menu > li{
+  &.js-menu > li {
     display: flex;
     align-items: center;
   }
-
 }
 
 .deptos ul li a {
@@ -729,38 +733,38 @@ h4#divTitulo::after {
   top: 0;
   left: 0;
   overflow-x: hidden;
+  @include mobile() {
+    .depto-box,
+    .depto-Kits {
+      display: block;
+      position: relative;
+      border-bottom: 1px solid #efefef;
+      .dropdown-btn {
+        float: initial;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  a {
+    padding: 17px 8px 17px 0px;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    display: block;
+    text-transform: capitalize;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
 }
 
 .menu-mobile-account hr {
   display: none;
-}
-
-/* Style the sidenav links and the dropdown button */
-
-.sidenav a
-/*, .dropdown-btn */ {
-  padding: 17px 8px 17px 0px;
-  text-decoration: none;
-  font-size: 17px;
-  font-weight: 500;
-  display: block;
-  text-transform: capitalize;
-  border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
-  cursor: pointer;
-  outline: none;
-}
-
-.sidenav .depto-box span {
-  display: inline-block;
-}
-.sidenav .depto-box {
-  border-top: 1px solid #efefef !important;
-}
-.sidenav span a {
-  border-top: 1px solid #efefef !important;
 }
 
 .sidenav span.depto-Blue-Friday a {
@@ -779,34 +783,25 @@ h4#divTitulo::after {
   outline: none;
 }
 
-/* On mouse-over */
-
 .sidenav a:hover,
 .dropdown-btn:hover {
   color: #000;
 }
 
-/* Add an active class to the active dropdown button */
-
 .active {
   color: #000;
 }
-
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 
 .dropdown-container {
   display: none;
   padding-left: 8px;
 }
 
-/* Optional: Style the caret down icon */
 .link-login p {
-  color: #007da5 !important;
-  font-size: 14px !important;
-  line-height: 30px !important;
-  margin-left: -16px;
-  font-weight: 400 !important;
-  margin-bottom: -19px;
+  color: #007da5;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
 }
 .fa-angle-down,
 .fa-angle-up {
@@ -1043,7 +1038,7 @@ h4#divTitulo::after {
     display: flex;
     align-items: center;
     margin-bottom: 8px;
-    .nav.navbar-nav{
+    .nav.navbar-nav {
       display: flex;
     }
   }
@@ -1054,7 +1049,6 @@ h4#divTitulo::after {
   #special-icon {
     width: 24%;
   }
-
 }
 
 @media screen and (max-width: 1200px) {
@@ -1166,41 +1160,80 @@ button {
 }
 
 body.campanha-especial {
+  $color1: #1a1a1a;
+  $color2: #ffc551;
   .header-container {
-    background-color: #A51000;
+    background-color: $color1;
     fieldset.busca {
-      border-color: #dc5865;
+      border-color: $color1;
       .principal-voice-icone {
         // color: #dc5865;
       }
     }
-    .item-maes{
+    .logo {
+      svg path {
+        fill: $color2;
+      }
+    }
+    .item-maes {
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    // .btn-buscar {
-    //   background-image: url(/arquivos/lupa-rosa.svg) !important;
-    // }
-
-    #deptos-list li a{
-      &::before{
-        background-color: #A51000;
+    .btn_special {
+      background-color: $color2;
+      border: 1px solid $color2;
+      color: $color1;
+      &:hover {
+        background-color: $color1;
+        border-color: $color2;
+        color: $color2;
       }
     }
 
+    .header .mini-cart span.badge {
+      background-color: $color2;
+      color: $color1;
+    }
 
+    .deptonav {
+      background-color: $color1;
+    }
 
+    #deptos-list {
+      li a {
+        color: #fff;
+        &::before {
+          background-color: $color2;
+        }
+      }
+    }
   }
   .depto-menu-footer {
-    background-color: #A51000;
+    background-color: $color1;
   }
   .footer {
-    background-color: #A51000;
+    background-color: $color1;
+  }
+  #menu-mobile {
+    background-color: $color1;
+    .sidenav {
+      .depto-box,
+      .depto-Kits {
+        border-color: $color2;
+      }
+      a {
+        color: #fff;
+      }
+    }
+    .link-login p,
+    ul li a {
+      color: #fff;
+    }
   }
 }
 
 //todo
-.depto-Outlet{
+.depto-Outlet {
   display: none !important;
 }
