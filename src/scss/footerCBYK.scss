@@ -2,6 +2,45 @@
     margin-top: 0px !important;
     padding-top: 20px;
     background-color: #007DA5 ;
+    &__copyright{
+      padding-top: 10vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      color: #fff;
+      .copyright{
+        flex: 0 1 60%;
+        padding-right: 10px;
+      }
+    }
+    &__powered,
+    &__stamps{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 0 30%;
+      li{
+        color: #fff;
+        margin-right: 10px;
+        img{
+          max-height: 25px;
+        }
+        &:last-of-type{
+          margin-right: 0;
+          img{
+            max-height: 50px;
+          }
+        }
+      }
+    }
+    &__stamps{
+      padding-left: 20px;
+      .liFooter{
+        img{
+          max-height: 70px;
+        }
+      }
+    }
 }
 
 .footer ul li a,

@@ -148,7 +148,7 @@ $(document).ready(function () {
     }).then(() => {
       $(".js-menu").prepend(`
             <li class="item-special">
-              <a href="https://www.aguadecheiro.com.br/busca?fq=H:173" class="btn_special">Pedras Preciosas</a>
+              <a href="https://www.aguadecheiro.com.br/busca?fq=H:193" class="btn_special">Pedras Preciosas</a>
             </li>
       `)
       $(".js-menu").append(`
