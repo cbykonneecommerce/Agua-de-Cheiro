@@ -1160,8 +1160,8 @@ button {
 }
 
 body.campanha-especial {
-  $color1: #1a1a1a;
-  $color2: #ffc551;
+  $color1: #0C0C0C;
+  $color2: #C7265C;
   .header-container {
     background-color: $color1;
     fieldset.busca {
@@ -1183,7 +1183,7 @@ body.campanha-especial {
     .btn_special {
       background-color: $color2;
       border: 1px solid $color2;
-      color: $color1;
+      color: #fff;
       &:hover {
         background-color: $color1;
         border-color: $color2;
