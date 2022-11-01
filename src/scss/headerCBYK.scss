@@ -917,7 +917,11 @@ h4#divTitulo::after {
 }
 
 #box-bread-brumb {
-  padding: 10px 0 15px !important;
+  padding: 10px 0;
+  ul{
+    margin: 0;
+    contain: all;
+  }
 }
 
 #mini-cart-admake {

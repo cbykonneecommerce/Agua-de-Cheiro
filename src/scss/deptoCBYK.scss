@@ -1,33 +1,14 @@
-@keyframes todownmenu {
-  0% {
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -50, 0, 1);
-  }
-  3.2% {
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -28.273, 0, 1);
-  }
-  6.41% {
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -14.931, 0, 1);
-  }
-  9.61% {
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -7.248, 0, 1);
-  }
-  12.81% {
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -3.108, 0, 1);
-  }
-  19.22% {
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -0.121, 0, 1);
-  }
-  25.63% {
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0.289, 0, 1);
-  }
-  100%,
-  65.67% {
-    transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
-  }
-}
-
 #departament-banner {
   margin-bottom: 2em;
+}
+
+.departament{
+  &__banner{
+    picture{
+      margin-bottom: 20px;
+      display: block;
+    }
+  }
 }
 
 .pages li.page-number {
@@ -131,15 +112,9 @@ fieldset.refino h5 {
   }
 }
 
-fieldset.refino.active > div {
-  animation: todownmenu 1s linear both;
-  display: block;
-}
 
-fieldset.refino > div {
-  animation: todownmenu 1s linear both;
-  display: block ;
-}
+
+
 
 fieldset.refino.active > h5 svg {
   transform: rotate(180deg);
@@ -166,15 +141,6 @@ fieldset.refino-marca h5 {
   text-transform: uppercase;
 }
 
-fieldset.refino-marca.active > div {
-  animation: todownmenu 1s linear both;
-  display: block;
-}
-
-fieldset.refino-marca > div {
-  animation: todownmenu 1s linear both;
-  display: block ;
-}
 
 fieldset.refino-marca.active > h5 svg {
   transition: 0.6s;

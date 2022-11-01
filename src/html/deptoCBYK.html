@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:vtex="http://www.vtex.com.br/2009/vtex-common"
   xmlns:vtex.cmc="http://www.vtex.com.br/2009/vtex-commerce" lang="en-us">
@@ -35,104 +34,83 @@
 
     </div>
 
-    <section class="container-fluid visible-xs visible-sm">
-      <div id="departament-banner ">
-        <!--  placeholder -->
-        <vtex:contentPlaceHolder id="Banner-PrincipalMOB" />
-        <!-- /placeholder -->
-      </div>
-      <!-- #departament-banner -->
-    </section>
     <section id="content" class="container">
-
 
       <div id="departament-extra-middle"></div>
 
       <div class="row">
-                <aside class="col-xs-3 sidebar filters__body">
-                  <button class="filters__close js-toggle-filter">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M1 10.5L10.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                      <path d="M1 1L11 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </button>
-                  <div id="departament-navegador">
-                    <h3 class="section-filter-title">Filtros</h3>
-                    <vtex.cmc:searchNavigator />
+        <section class="departament__banner container">
+          <vtex:contentPlaceHolder id="Banner-Principal" />
+        </section>
 
-                    <div id="departament-extra-menu"></div>
-                    </div>
-                </aside>
-                <div class="filters__overlay js-toggle-filter"></div>
+        <aside class="col-xs-3 sidebar filters__body">
+          <button class="filters__close js-toggle-filter">
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 10.5L10.5 1.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M1 1L11 11" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div id="departament-navegador">
+            <h3 class="section-filter-title">Filtros</h3>
+            <vtex.cmc:searchNavigator />
 
-                <article id="main-content" class="col-xs-12 col-md-9">
-                  <button class="filters__button js-toggle-filter">
-                    <span>Filtros</span>
-                    <img src="/arquivos/filtro.svg" />
-                  </button>
-                  <div class="hidden-xs hidden-sm">
-                    <div id="departament-banner">
-                      <!--  placeholder -->
-                      <vtex:contentPlaceHolder id="Banner-Principal" />
-                      <!-- /placeholder -->
-                    </div>
-                    <!-- #departament-banner -->
-                  </div>
+            <div id="departament-extra-menu"></div>
+          </div>
+        </aside>
+        <div class="filters__overlay js-toggle-filter"></div>
 
+        <section id="main-content" class="col-xs-12 col-md-9">
+          <button class="filters__button js-toggle-filter">
+            <span>Filtros</span>
+            <img src="/arquivos/filtro.svg" />
+          </button>
 
-                  <div class="hidden-xs">
-                    <div class="brand-carousel">
-                      <vtex:contentPlaceHolder id="Marca-banner" />
-                    </div>
-                  </div>
+          <div id="collections">
+
+            <div class="collection-wrap">
+              <vtex.cmc:searchResult layout="59cae138-ada3-44de-b9be-ad1313a21e98" itemCount="32" columnCount="4" />
+            </div>
 
 
-                  <div id="collections">
+            <div class="showcase-default">
+              <vtex:contentPlaceHolder id="Destaques" />
+            </div>
 
-                    <div class="collection-wrap">
-                      <vtex.cmc:searchResult layout="59cae138-ada3-44de-b9be-ad1313a21e98" itemCount="32" columnCount="4" />
-                    </div>
+            <div class="showcase-default">
+              <vtex:contentPlaceHolder id="Lançamentos" />
+            </div>
 
+          </div>
+          <!-- #collections -->
 
-                    <div class="showcase-default">
-                      <vtex:contentPlaceHolder id="Destaques" />
-                    </div>
+          <div class="bottom-banners">
+            <vtex:contentPlaceHolder id="Bottom-banner1" />
+          </div>
 
-                    <div class="showcase-default">
-                      <vtex:contentPlaceHolder id="Lançamentos" />
-                    </div>
+        </section>
+        <!-- #main-content -->
+        <div class="col-md-12 col-sm-12 col-xs-12 texto">
+          <vtex:contentPlaceHolder id="texto" />
+        </div>
+      </div>
+      <!-- .row -->
 
-                  </div>
-                  <!-- #collections -->
+    </section>
+    <!-- #content -->
 
-                  <div class="bottom-banners">
-                    <vtex:contentPlaceHolder id="Bottom-banner1" />
-                    <vtex:contentPlaceHolder id="Bottom-banner2" />
-                  </div>
+    <div id="departament-extra-bottom"></div>
 
-                </article>
-                <!-- #main-content -->
-                <div class="col-md-12 col-sm-12 col-xs-12 texto">
-                  <vtex:contentPlaceHolder id="texto" />
-                </div>
-                </div>
-                <!-- .row -->
+    <!--  SubTemplate: Footer -->
+    <vtex:template id="CBYKFooter" />
+    <!-- /SubTemplate: Footer -->
 
-                </section>
-                <!-- #content -->
+  </div>
+  <!-- .container-fluid -->
 
-                <div id="departament-extra-bottom"></div>
+</body>
+<vtex:template id="CBYKcommonScripts" />
+<script src="/arquivos/pagination.js"></script>
+<script src="/arquivos/filtersCBYK.js"></script>
 
-                <!--  SubTemplate: Footer -->
-                <vtex:template id="CBYKFooter" />
-                <!-- /SubTemplate: Footer -->
-
-                </div>
-                <!-- .container-fluid -->
--
-                </body>
-                <vtex:template id="CBYKcommonScripts" />
-                <script src="/arquivos/pagination.js"></script>
-                <script src="/arquivos/filtersCBYK.js"></script>
-
-                </html>
+</html>
