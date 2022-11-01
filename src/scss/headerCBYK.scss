@@ -465,8 +465,8 @@ body {
 
   .btn_special {
     padding: 10px 20px;
-    background-color: #006687;
-    border: 1px solid #006687;
+    background-color: #192CC3;
+    border: 1px solid #192CC3;
     color: #ffffff;
     animation: fadeIn linear 7s;
     @include mobile() {
@@ -1160,6 +1160,24 @@ button {
     border: none;
     outline: none;
     box-shadow: none;
+  }
+}
+
+//blue friday remover dps
+#menu-mobile {
+  background-color: #007DA5;
+  .sidenav {
+    .depto-box,
+    .depto-Kits {
+      border-color: #fff;
+    }
+    a {
+      color: #fff;
+    }
+  }
+  .link-login p,
+  ul li a {
+    color: #fff;
   }
 }
 

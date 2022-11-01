@@ -148,7 +148,7 @@ $(document).ready(function () {
     }).then(() => {
       $(".js-menu").prepend(`
             <li class="item-special">
-              <a href="https://www.aguadecheiro.com.br/busca?fq=H:205" class="btn_special">Absinto Poison</a>
+              <a href="https://www.aguadecheiro.com.br/busca?fq=H:210" class="btn_special">Blue Friday</a>
             </li>
       `)
       $(".js-menu").append(`
