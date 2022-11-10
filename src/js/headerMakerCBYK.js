@@ -291,6 +291,11 @@ $(document).ready(function () {
 
     $('.mini-cart-qty-admake').text(quantity)
   })
+
+  // remove do footer do minicart
+  $('.test-b .cart__buttons button.cart__button').remove()
+  $('.test-b .sidenavcart').prepend(`<button onclick="$('.cart__close').click()" class='cart__button'>CONTINUAR COMPRANDO</button>`)
+
 })
 
 $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {

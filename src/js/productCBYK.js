@@ -259,9 +259,6 @@ $("#wishlist-btn").click(() => {
 console.log('terst')
 
 $(document).ready(function () {
-  // disable tag a href
-  window.document.body.classList.add('test-b')
-
   $('.test-b .buy-button-box a').prop('href', '#')
   $('.test-b .buy-button-box a').on('click', function () {
 
