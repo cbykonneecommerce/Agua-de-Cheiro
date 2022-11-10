@@ -284,3 +284,17 @@ setInterval(() => {
 
 `)
 }, 1000)
+
+$(document).ready(function () {
+  vtexjs.checkout.getOrderForm().done((orderForm) => {
+    const quantity = orderForm.items.length
+
+    $('.mini-cart-qty-admake').text(quantity)
+  })
+})
+
+$(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
+  const quantity = orderForm.items.length
+
+  $('.mini-cart-qty-admake').text(quantity)
+});
