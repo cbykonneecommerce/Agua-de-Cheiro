@@ -72,6 +72,7 @@
   max-width: 281px;
   width: 281px;
 }
+
 #divCompreJunto td a img {
   width: 182px;
   height: auto;
@@ -293,6 +294,12 @@
   color: #4f4f4f;
   text-transform: uppercase;
   margin-top: 9px;
+  position: relative;
+
+  label {
+    margin: 0;
+  }
+
 }
 
 #modalstuff {
@@ -358,6 +365,7 @@
 .content-payments .list {
   margin-top: 20px;
 }
+
 .content-payments .list li {
   display: inline-block;
 }
@@ -410,6 +418,7 @@
   padding: 0.3em;
   padding-top: 1em;
 }
+
 .under-img div span {
   font-size: 12px;
   padding-top: 4px;
@@ -419,10 +428,12 @@
   color: #0f69b5;
   border-top: solid #0f69b5;
 }
+
 .garantia span {
   color: #d87027;
   border-top: solid #d87027;
 }
+
 .laudo span {
   color: #006e3b;
   border-top: solid #006e3b;
@@ -533,6 +544,7 @@ label.combination_unavaliable:after {
 .nr-icon.grey {
   font-size: 16px !important;
 }
+
 .nr-icon.gold {
   color: #0088c3 !important;
 }
@@ -713,7 +725,7 @@ label.combination_unavaliable:after {
   margin-right: 1em;
 }
 
-.prateleira.vitrine > ul {
+.prateleira.vitrine>ul {
   margin-left: 0px !important;
 }
 
@@ -762,6 +774,7 @@ label.item_unavaliable:after {
 .glis-li {
   margin-top: 10px;
 }
+
 .glis-title {
   font-size: 21px;
 }
@@ -771,6 +784,7 @@ label.item_unavaliable:after {
   color: #8d7573 !important;
   font-weight: 600;
 }
+
 .product-description-box #description,
 .product-description-box #specification {
   display: none;
@@ -852,6 +866,7 @@ label.item_unavaliable:after {
 }
 
 @media screen and (max-width: 800px) {
+
   .selectedQuantity span.label,
   .selectedspecification span.label,
   .selectedspecification-value {
@@ -888,6 +903,7 @@ label.item_unavaliable:after {
   display: block;
   margin-top: 10px;
 }
+
 .myoptions a:first-of-type {
   font-weight: 400;
   color: #fe5000 !important;
@@ -983,9 +999,11 @@ label.item_unavaliable:after {
 .product-details .seletor-sku .topic.Material {
   order: 1;
 }
+
 .product-details .seletor-sku .topic.Fixacao {
   order: 2;
 }
+
 .product-details .seletor-sku .topic.Tamanho {
   order: 3;
 }
@@ -1033,6 +1051,7 @@ label.item_unavaliable:after {
   .installmentslist {
     top: 31px;
   }
+
   .content-payments .list li {
     padding: 4px;
   }
@@ -1041,46 +1060,59 @@ label.item_unavaliable:after {
     width: 100%;
     margin-bottom: 1em;
   }
+
   #wishlist-btn,
   #wishlist-btn-deactivated {
     left: 0%;
   }
+
   .product-image .zoomPad {
     display: none !important;
   }
+
   .product-details .product-name {
     margin-top: 1%;
   }
+
   .buy-button-box .box-qtd {
     margin-left: 0%;
   }
+
   .product-details .seletor-sku .topic {
     width: 100%;
   }
+
   .under-img {
     display: none;
   }
+
   .giftlist-insertsku-popup {
     position: initial !important;
   }
+
   .product-description .buy-together-content td.buy .comprar-junto a,
   .buy-button.buy-button-ref {
     margin-top: 0px;
     width: 100%;
   }
+
   .sku-selector-container ul li.select {
     text-align: center;
   }
+
   .product-info .seletor-sku .select label {
     float: none !important;
   }
+
   .modal {
     width: 100% !important;
     left: auto !important;
   }
+
   .modal-body img {
     max-width: 48% !important;
   }
+
   .product-info .discount p {
     top: 74px;
   }
@@ -1096,13 +1128,16 @@ label.item_unavaliable:after {
     display: inline;
     float: initial;
   }
+
   .product-description-box #description,
   .product-description-box #specification {
     display: block;
   }
+
   .product-info .seletor-sku .select label {
     margin: 5px 9px 0 0;
   }
+
   .tabela-de-medidas {
     margin-left: -33px;
   }
@@ -1110,16 +1145,19 @@ label.item_unavaliable:after {
   #TB_ajaxContent {
     width: 100% !important;
   }
+
   #TB_window {
     top: 53% !important;
     left: 0 !important;
     margin-left: 16px !important;
     width: 90% !important;
   }
+
   #TB_closeWindowButton {
     color: #836c6a !important;
     font-weight: 700 !important;
   }
+
   #description,
   #specification {
     z-index: 9999999999;
@@ -1151,6 +1189,7 @@ label.item_unavaliable:after {
   .modal-content {
     top: 0px !important;
   }
+
   .modal-header h3 {
     font-size: 17px;
     line-height: 20px;
@@ -1178,6 +1217,7 @@ label.item_unavaliable:after {
   }
 
   @media screen and (max-width: 800px) {
+
     .selectedQuantity span.label,
     .selectedspecification span.label,
     .selectedspecification-value {
@@ -1209,6 +1249,7 @@ label.item_unavaliable:after {
     background-color: white !important;
     border: 2px solid rgb(254, 80, 0) !important;
   }
+
   .myoptions a {
     font-weight: 400;
     text-transform: uppercase;
@@ -1222,6 +1263,7 @@ label.item_unavaliable:after {
     background-color: rgb(254, 80, 0) !important;
     color: rgb(255, 255, 255) !important;
   }
+
   #modalstuff .descricao-preco .valor-por strong {
     font-size: 22px !important;
   }
@@ -1278,6 +1320,7 @@ label.item_unavaliable:after {
     border: solid 1px #cecece;
     border-radius: 5px;
   }
+
   #divCompreJunto td a:first-of-type {
     display: inline-block;
   }
@@ -1286,6 +1329,7 @@ label.item_unavaliable:after {
     display: inline-block;
     width: 63%;
   }
+
   #divCompreJunto td.buy {
     border: none;
   }
@@ -1322,15 +1366,19 @@ label.item_unavaliable:after {
   .parcelamentoProd {
     padding-right: 10px;
   }
+
   .parcelamentoProd .caret {
     margin-left: 0px !important;
   }
+
   .product-info .shipping-box .freight-btn {
     margin-top: -1px;
   }
+
   .product-image .zoomPad {
     display: none !important;
   }
+
   .content-product-custom-render {
     width: 83%;
     top: 144px;
@@ -1341,9 +1389,11 @@ label.item_unavaliable:after {
   .product-details .codigo-produto .NETREVIEWS_PRODUCT_STARS {
     margin-bottom: 20px;
   }
+
   .slick-prev {
     left: -15px !important;
   }
+
   .slick-next {
     right: -15px !important;
   }
@@ -1353,6 +1403,7 @@ label.item_unavaliable:after {
   .product-info .shipping-box label .fitext {
     width: 24em;
   }
+
   .product-image .zoomPad {
     display: block !important;
   }
@@ -1375,6 +1426,7 @@ label.item_unavaliable:after {
   position: relative;
   z-index: 1;
 }
+
 .product-details {
   .product {
     &__flag {
@@ -1382,11 +1434,13 @@ label.item_unavaliable:after {
         font-size: 0;
         display: none;
       }
+
       .flag.outlet {
         display: block;
         border: 1px solid #ff5e6e;
         text-align: center;
         max-width: 100px;
+
         &::before {
           content: "Validade Próxima";
           font-size: 11px;

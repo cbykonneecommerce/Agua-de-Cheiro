@@ -268,3 +268,29 @@ $("#wishlist-btn").click(() => {
 
 
 })
+
+const priceInstallments = () =>{
+  const skuBestInstallmentNumber = $('.skuBestInstallmentNumber').text();
+  const skuBestInstallmentValue = $('.skuBestInstallmentValue').text();
+
+  if(!skuBestInstallmentValue.length || !skuBestInstallmentNumber.length) return
+
+  $('.valor-dividido.price-installments').html(`
+    <span>
+      <label class="skuBestInstallmentNumber"> ${skuBestInstallmentNumber }</label>
+      <span>de</span>
+      <label class="skuBestInstallmentValue"> ${skuBestInstallmentValue}</label>
+    </span>
+  `)
+
+  $('.descricao-preco').append(`
+  <em class="valor-dividido price-installments">
+    ou <strong>pague</strong> também com <strong>pix</strong> parcelado
+  </em>
+`)
+}
+
+$(document).ready(()=>{
+  priceInstallments();
+
+})
