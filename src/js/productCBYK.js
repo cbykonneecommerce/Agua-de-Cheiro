@@ -257,8 +257,8 @@ $("#wishlist-btn").click(() => {
 })
 
 $(document).ready(function () {
-  $('.buy-button-box a').removeAttr('href')
-  $('.buy-button-box a').on('click', function () {
+  $('.teste-b .buy-button-box a').removeAttr('href')
+  $('.teste-b .buy-button-box a').on('click', function () {
 
     const quantity = Number($('.buy-button-box input.qtd').val() || '1') ?? 1
     const sku = selectedToBuy.length ? selectedToBuy[0] : skuJson.skus[0].sku

@@ -290,13 +290,13 @@ setInterval(() => {
     $('.mini-cart-qty-admake').text(quantity)
   })
 
-  // remove do footer do minicart
-  $('.test-b .cart__buttons button.cart__button').remove()
-  $('.test-b .sidenavcart').prepend(`<button onclick="$('.cart__close').click()" class='cart__button'>CONTINUAR COMPRANDO</button>`)
+  // remove do footer do minicart teste b
+  $('.teste-b .cart__buttons button.cart__button').remove()
+  $('.teste-b .sidenavcart').prepend(`<button onclick="$('.cart__close').click()" class='cart__button'>CONTINUAR COMPRANDO</button>`)
 
 
   // add produto ao carrinho shelfs
-  const shelfItems = document.querySelectorAll('.box-item .buy-btns a')
+  const shelfItems = document.querySelectorAll('.teste-b .box-item .buy-btns a')
 
   for (let index = 0; index < shelfItems.length; index++) {
     const element = shelfItems.item(index);
