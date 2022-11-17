@@ -1,4 +1,3 @@
-
 $(".notifymetitle.notifyme-title").text("Produto indisponível");
 $(".sku-notifyme-form p").text("Avise-me quando estiver disponível");
 
@@ -77,31 +76,30 @@ setTimeout(() => {
       slidesToScroll: 1,
       autoplay: false,
       arrows: false,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            dots: true
-          }
+      responsive: [{
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
         }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        }
+      }
         // You can unslick at a given breakpoint now by adding:
         // settings: "unslick"
         // instead of a settings object
@@ -110,7 +108,9 @@ setTimeout(() => {
 
 
     $(".product-info .seletor-sku .select .sku-selector").click(() => {
-      setTimeout(() => { $(".product-image .apresentacao .thumbs").html(aa) }, 800)
+      setTimeout(() => {
+        $(".product-image .apresentacao .thumbs").html(aa)
+      }, 800)
 
 
       setTimeout(() => {
@@ -135,8 +135,12 @@ setTimeout(() => {
 
 
     $(".product-info .shipping-box label").click(() => {
-      $(".product-info .shipping-box label .fitext").css({ "display": "block" });
-      $(".product-info .shipping-box .freight-btn").css({ "display": "inline-block" });
+      $(".product-info .shipping-box label .fitext").css({
+        "display": "block"
+      });
+      $(".product-info .shipping-box .freight-btn").css({
+        "display": "inline-block"
+      });
     })
 
 
@@ -153,18 +157,9 @@ setTimeout(() => {
     }
   }, 1000)
 
-
   //redes sociais
-
   $(".share-btns #fbshare").attr("href", `https://www.facebook.com/sharer/sharer.php?u=${ window.location.href }`);
   $(".share-btns #twshare").attr("href", `https://twitter.com/share?url=${ window.location.href }`);
-
-
-
-
-
-
-
 }, 1000)
 
 const mq = window.matchMedia("(max-width: 800px)");
@@ -258,15 +253,28 @@ $("#wishlist-btn").click(() => {
     } else {
       alert("Você precisa realizar login na sua conta ou criar uma conta para adicionar produtos à sua lista de desejos!");
     }
+  })
+})
 
+$(document).ready(function () {
+  $('.teste-b .buy-button-box a').removeAttr('href')
+  $('.teste-b .buy-button-box a').on('click', function () {
 
+    const quantity = Number($('.buy-button-box input.qtd').val() || '1') ?? 1
+    const sku = selectedToBuy.length ? selectedToBuy[0] : skuJson.skus[0].sku
+    const seller = '1'
 
-  }
+    const item = [{
+      id: sku,
+      quantity: quantity,
+      seller
+    }]
 
-  )
-
-
-
+    vtexjs.checkout.addToCart(item, null, 1).done(() => {
+      // abrir minicart aqui
+      $('.btn-mini-cart').click()
+    })
+  })
 })
 
 const priceInstallments = () =>{
