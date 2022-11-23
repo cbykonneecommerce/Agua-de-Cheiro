@@ -257,8 +257,8 @@ $("#wishlist-btn").click(() => {
 })
 
 $(document).ready(function () {
-  $('.teste-b .buy-button-box a').removeAttr('href')
-  $('.teste-b .buy-button-box a').on('click', function () {
+  $('.buy-button-box a').removeAttr('href')
+  $('.buy-button-box a').on('click', function () {
 
     const quantity = Number($('.buy-button-box input.qtd').val() || '1') ?? 1
     const sku = selectedToBuy.length ? selectedToBuy[0] : skuJson.skus[0].sku
@@ -270,24 +270,28 @@ $(document).ready(function () {
       seller
     }]
 
-    vtexjs.checkout.addToCart(item, null, 1).done(() => {
-      // abrir minicart aqui
-      $('.btn-mini-cart').click()
+    vtexjs.checkout.getOrderForm().done(() => {
+      vtexjs.checkout.addToCart(item, null, 1).done(() => {
+        // abrir minicart aqui
+        setTimeout(() => {
+          $('.btn-mini-cart').click()
+        }, 1000)
+      })
     })
   })
 })
 
-const priceInstallments = () =>{
+const priceInstallments = () => {
   const skuBestInstallmentNumber = $('.skuBestInstallmentNumber').text();
   const skuBestInstallmentValue = $('.skuBestInstallmentValue').text();
 
-  if(!skuBestInstallmentValue.length || !skuBestInstallmentNumber.length) return
+  if (!skuBestInstallmentValue.length || !skuBestInstallmentNumber.length) return
 
   $('.valor-dividido.price-installments').html(`
     <span>
-      <label class="skuBestInstallmentNumber"> ${skuBestInstallmentNumber }</label>
+      <label class="skuBestInstallmentNumber"> ${ skuBestInstallmentNumber }</label>
       <span>de</span>
-      <label class="skuBestInstallmentValue"> ${skuBestInstallmentValue}</label>
+      <label class="skuBestInstallmentValue"> ${ skuBestInstallmentValue }</label>
     </span>
   `)
 
@@ -298,7 +302,7 @@ const priceInstallments = () =>{
 `)
 }
 
-$(document).ready(()=>{
+$(document).ready(() => {
   priceInstallments();
 
 })
