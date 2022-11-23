@@ -1,5 +1,5 @@
-
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
 
 /******************************************************************************************/
 
@@ -128,13 +128,13 @@ html > object {
 }
 
 span {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 a,
 button,
-input[type="submit"],
-input[type="button"],
+input[type='submit'],
+input[type='button'],
 .btn,
 a:before,
 a:after {
@@ -315,7 +315,7 @@ textarea {
   border: 5px solid transparent;
   border-bottom-color: #fff;
   display: block;
-  content: "";
+  content: '';
   position: absolute;
   top: -10px;
   right: 30px;
@@ -339,7 +339,7 @@ textarea {
 #mini-cart-admake .mini-cart-item:after {
   display: block;
   clear: both;
-  content: "";
+  content: '';
 }
 
 #mini-cart-admake .mini-cart-item.item-0 {
@@ -478,7 +478,7 @@ textarea {
 .ui-autocomplete:before {
   border: 5px solid transparent;
   border-bottom-color: #fff;
-  content: "";
+  content: '';
   position: absolute;
   left: 30px;
   top: -10px;
@@ -537,7 +537,7 @@ textarea {
 }
 
 #top-menu .menu:after {
-  content: "";
+  content: '';
   clear: both;
   display: block;
 }
@@ -644,10 +644,10 @@ textarea {
   #menu-mobile .header-menu-mobile:after {
     display: block;
     clear: both;
-    content: "";
+    content: '';
   }
   #menu-mobile .close-menu::after {
-    content: "×";
+    content: '×';
     color: #000;
     font-size: 35px;
   }
@@ -862,8 +862,8 @@ textarea {
 
 .prateleira .product-image:after {
   background-color: #fff;
-  content: "Veja +";
-  font: 40 12px/14px "Helvetica Neue", Helvetica, Arial, sans-serif;
+  content: 'Veja +';
+  font: 40 12px/14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #000;
   padding: 5px 0;
   border: 1px solid #ccc;
@@ -993,7 +993,7 @@ textarea {
 }
 
 #box-bread-brumb li:before {
-  content: "/";
+  content: '/';
   display: inline-block;
   vertical-align: middle;
   font-size: 14px;
@@ -1004,7 +1004,7 @@ textarea {
 }
 
 #box-bread-brumb li:first-child:before {
-  content: "";
+  content: '';
   display: none;
 }
 
@@ -1122,7 +1122,7 @@ textarea {
 
 .product-details .codigo-produto:after {
   clear: both;
-  content: "";
+  content: '';
   display: block;
 }
 
@@ -1226,7 +1226,7 @@ textarea {
 
 .product-info .seletor-sku .select > span:after {
   display: block;
-  content: "";
+  content: '';
   clear: both;
 }
 
@@ -1259,7 +1259,7 @@ textarea {
 .buy-button-box:after {
   display: block;
   clear: both;
-  content: "";
+  content: '';
 }
 
 .buy-button-box .box-qtd {
@@ -1426,7 +1426,7 @@ textarea {
   position: absolute;
   left: 5%;
   top: -10px;
-  content: "";
+  content: '';
   display: block;
   padding: 0;
   margin: 0;
@@ -1466,7 +1466,7 @@ textarea {
 .product-description .product-description-box:after {
   display: block;
   clear: both;
-  content: "";
+  content: '';
 }
 
 .product-description .product-description-box .showcase-default {
@@ -1583,7 +1583,7 @@ textarea {
 .product-description .buy-together-content td.buy .comprar-junto:after {
   clear: both;
   display: block;
-  content: "";
+  content: '';
 }
 
 .product-description .buy-together-content td.buy .more {
@@ -1720,7 +1720,8 @@ textarea {
 }
 
 .navigation-tabs {
-  background: url("/arquivos/loader-admake-filter.gif") no-repeat scroll center transparent;
+  background: url('/arquivos/loader-admake-filter.gif') no-repeat scroll center
+    transparent;
   min-height: 100px;
   width: 100%;
 }
@@ -1789,7 +1790,7 @@ textarea {
 
 #admake-advanced-filter .opcoes .ver-filtros:after {
   color: #000;
-  content: "\f00d";
+  content: '\f00d';
   font-size: 14px;
   font-family: FontAwesome;
   line-height: 14px;
@@ -2097,7 +2098,7 @@ textarea {
   margin: 0;
 }
 
-#publishUserReview #formUserReview input[type="text"],
+#publishUserReview #formUserReview input[type='text'],
 #publishUserReview #formUserReview textarea {
   color: #999999;
   background-color: #fff;
@@ -2197,7 +2198,7 @@ textarea {
 }
 
 .rating-produto:after {
-  content: "Avalie";
+  content: 'Avalie';
   display: inline-block;
   font-size: 13px;
   margin-left: 8px;
@@ -2208,7 +2209,7 @@ textarea {
 .rating-produto:before,
 .rating-demonstrativo:before,
 .rating-wrapper .rating:before {
-  content: "\f006   \f006   \f006   \f006   \f006";
+  content: '\f006   \f006   \f006   \f006   \f006';
   /* f005 - f006 - f123 */
   font-family: FontAwesome;
   font-size: 14px;
@@ -2228,14 +2229,14 @@ textarea {
   line-height: 20px;
   color: #f0ad4e;
   font-style: normal;
-  content: "\f006";
+  content: '\f006';
   text-decoration: none;
   -webkit-transition: 0.3s all;
   transition: 0.3s all;
 }
 
 .rating-avalie .ratingStar.filledRatingStar:before {
-  content: "\f005";
+  content: '\f005';
 }
 
 .rating-produto.avaliacao50:before,
@@ -2244,7 +2245,7 @@ textarea {
 .rating-demonstrativo.a50:before,
 .rating-wrapper .rating.avaliacao50:before,
 .rating-wrapper .rating.a50:before {
-  content: "\f005   \f005   \f005   \f005   \f005";
+  content: '\f005   \f005   \f005   \f005   \f005';
 }
 
 .rating-produto.avaliacao45:before,
@@ -2253,7 +2254,7 @@ textarea {
 .rating-demonstrativo.a45:before,
 .rating-wrapper .rating.avaliacao45:before,
 .rating-wrapper .rating.a45:before {
-  content: "\f005   \f005   \f005   \f005   \f123";
+  content: '\f005   \f005   \f005   \f005   \f123';
 }
 
 .rating-produto.avaliacao40:before,
@@ -2262,7 +2263,7 @@ textarea {
 .rating-demonstrativo.a40:before,
 .rating-wrapper .rating.avaliacao40:before,
 .rating-wrapper .rating.a40:before {
-  content: "\f005   \f005   \f005   \f005    \f006";
+  content: '\f005   \f005   \f005   \f005    \f006';
 }
 
 .rating-produto.avaliacao35:before,
@@ -2271,7 +2272,7 @@ textarea {
 .rating-demonstrativo.a35:before,
 .rating-wrapper .rating.avaliacao35:before,
 .rating-wrapper .rating.a35:before {
-  content: "\f005   \f005   \f005   \f123   \f006";
+  content: '\f005   \f005   \f005   \f123   \f006';
 }
 
 .rating-produto.avaliacao30:before,
@@ -2280,7 +2281,7 @@ textarea {
 .rating-demonstrativo.a30:before,
 .rating-wrapper .rating.avaliacao30:before,
 .rating-wrapper .rating.a30:before {
-  content: "\f005   \f005   \f005   \f006   \f006";
+  content: '\f005   \f005   \f005   \f006   \f006';
 }
 
 .rating-produto.avaliacao25:before,
@@ -2289,7 +2290,7 @@ textarea {
 .rating-demonstrativo.a25:before,
 .rating-wrapper .rating.avaliacao25:before,
 .rating-wrapper .rating.a25:before {
-  content: "\f005   \f005   \f123   \f006   \f006";
+  content: '\f005   \f005   \f123   \f006   \f006';
 }
 
 .rating-produto.avaliacao20:before,
@@ -2298,7 +2299,7 @@ textarea {
 .rating-demonstrativo.a20:before,
 .rating-wrapper .rating.avaliacao20:before,
 .rating-wrapper .rating.a20:before {
-  content: "\f005   \f005   \f006   \f006   \f006";
+  content: '\f005   \f005   \f006   \f006   \f006';
 }
 
 .rating-produto.avaliacao15:before,
@@ -2307,7 +2308,7 @@ textarea {
 .rating-demonstrativo.a15:before,
 .rating-wrapper .rating.avaliacao15:before,
 .rating-wrapper .rating.a15:before {
-  content: "\f005   \f123   \f006   \f006   \f006";
+  content: '\f005   \f123   \f006   \f006   \f006';
 }
 
 .rating-produto.avaliacao10:before,
@@ -2316,7 +2317,7 @@ textarea {
 .rating-demonstrativo.a10:before,
 .rating-wrapper .rating.avaliacao10:before,
 .rating-wrapper .rating.a10:before {
-  content: "\f005   \f006   \f006   \f006   \f006";
+  content: '\f005   \f006   \f006   \f006   \f006';
 }
 
 .rating-produto.avaliacao5:before,
@@ -2325,7 +2326,7 @@ textarea {
 .rating-demonstrativo.a5:before,
 .rating-wrapper .rating.avaliacao5:before,
 .rating-wrapper .rating.a5:before {
-  content: "\f123   \f006   \f006   \f006   \f006";
+  content: '\f123   \f006   \f006   \f006   \f006';
 }
 
 .rating-produto.avaliacao0:before,
@@ -2334,7 +2335,7 @@ textarea {
 .rating-demonstrativo.a0:before,
 .rating-wrapper .rating.avaliacao0:before,
 .rating-wrapper .rating.a0:before {
-  content: "\f006   \f006   \f006   \f006   \f006";
+  content: '\f006   \f006   \f006   \f006   \f006';
 }
 
 /** ************************************************************************************ **/
@@ -2488,13 +2489,13 @@ textarea {
   padding: 10px 0 3px;
 }
 
-#account-content input[type="text"],
+#account-content input[type='text'],
 #account-content select {
   width: 100%;
 }
 
-#account-content input[type="radio"],
-#account-content input[type="checkbox"] {
+#account-content input[type='radio'],
+#account-content input[type='checkbox'] {
   margin: 0 5px 0 0;
   float: none;
   position: relative;
@@ -2622,7 +2623,7 @@ textarea {
 .modal-footer:after {
   display: table;
   line-height: 0;
-  content: "";
+  content: '';
 }
 
 .modal-footer:after {
@@ -2640,4 +2641,104 @@ textarea {
 
 .modal-footer .btn-block + .btn-block {
   margin-left: 0;
+}
+
+.box-banner .cb-landing-countdown {
+  position: absolute !important;
+  top: 50%;
+  max-width: 600px;
+  width: 100%;
+}
+
+.box-banner .cb-landing-countdown h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: -0.06em;
+  color: #ffffff;
+}
+
+.box-banner ul.thefinalcountdown {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.box-banner ul.thefinalcountdown li span {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  margin-top: 0.5rem;
+  line-height: 13px;
+  text-align: center;
+  letter-spacing: -0.06em;
+
+  color: #ffffff;
+  display: block;
+  text-transform: uppercase;
+}
+
+.box-banner ul.thefinalcountdown li div {
+  border: 2px solid #ff00f5;
+
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 46px;
+  text-align: center;
+  letter-spacing: -0.06em;
+
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0px 0px 4px 1px rgba(250, 0, 255, 0.5);
+  border-radius: 8px;
+  min-width: 70px;
+  min-height: 70px;
+  max-width: 70px;
+}
+
+.box-banner ul.thefinalcountdown li:first-child div {
+  background: #ff00f5;
+  border: 2px solid #ff00f5;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 700px) {
+  div#cybermonday-relogio {
+    max-width: 300px;
+  }
+
+  div#cybermonday-relogio h6 {
+    font-size: 10px;
+  }
+
+  .box-banner ul.thefinalcountdown li div {
+    min-width: 50px;
+    min-height: 50px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  div#cybermonday-relogio h6 {
+    font-size: 14px;
+  }
+
+  .box-banner ul.thefinalcountdown li div {
+    min-width: 38px;
+    min-height: 38px;
+    font-size: 20px;
+    max-width: 38px;
+    margin: 0 auto;
+  }
+
+  .box-banner .cb-landing-countdown {
+    top: 58%;
+  }
 }

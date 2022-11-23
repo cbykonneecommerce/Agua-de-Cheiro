@@ -43,7 +43,7 @@ var x = setInterval(function() {
     document.getElementById("timer").innerHTML = days + "d " + hours + ":" +
         minutes + ":" + seconds + "h";
 
-    // If the count down is over, write some text 
+    // If the count down is over, write some text
     if (distance < 0) {
         clearInterval(x);
         document.getElementById("timer").innerHTML = "0d 00:00:00h";
