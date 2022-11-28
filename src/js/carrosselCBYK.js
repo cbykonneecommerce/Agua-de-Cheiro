@@ -282,9 +282,30 @@ $(document).ready(function () {
 
 });
 
-const bannerIdentifier = 'Banner Delikad brinde'
+const innerHTMLContagem = `<div class="cb-landing-countdown" id="cybermonday-relogio-desktop">
+  <h6>CONTAGEM REGRESSIVA: </h6>
+  <ul class="thefinalcountdown">
+    <li>
+      <div class="diasblock"></div>
+      <span>DIAS</span>
+    </li>
+    <li>
+      <div class="horasblock"></div>
+      <span>HORAS</span>
+    </li>
+    <li>
+      <div class="minutosblock"></div>
+      <span>MINUTOS</span>
+    </li>
+    <li>
+      <div class="segundosblock"></div>
+      <span>SEGUNDOS</span>
+    </li>
+  </ul>
+</div>`
 
-const innerHTMLContagem = `<div class="cb-landing-countdown" id="cybermonday-relogio">
+
+const innerHTMLContagemMobile = `<div class="cb-landing-countdown" id="cybermonday-relogio">
   <h6>CONTAGEM REGRESSIVA: </h6>
   <ul class="thefinalcountdown">
     <li>
@@ -307,7 +328,7 @@ const innerHTMLContagem = `<div class="cb-landing-countdown" id="cybermonday-rel
 </div>`
 
 // Set the date we're counting down to
-var countDownDate = new Date("Nov 26, 2022 00:00:00").getTime();
+var countDownDate = new Date("Nov 29, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -371,9 +392,12 @@ $(".dropdown-container").hide();
 function calculateHMSleft() {
 
   const banner = $('[alt="Banner cyberweek - Desktop"]')
+
+  console.log(banner)
+
   $('.box-banner').css({ position: "relative" })
 
-  if (banner.length && !$('#cybermonday-relogio').length) {
+  if (banner.length && !$('#cybermonday-relogio-desktop').length) {
     $(banner[0]).parent().append(innerHTMLContagem)
     // $(banner[0]).attr('src', 'https://aguadecheiro.vteximg.com.br/arquivos/cyber-monday.png')
   }
@@ -381,19 +405,19 @@ function calculateHMSleft() {
   const windowscreen = $(window).width()
 
   if (windowscreen >= 1300) {
-    $('#cybermonday-relogio').css({
+    $('#cybermonday-relogio-desktop').css({
       right: `${ ($(window).width() * 0.85) / 100 }%`
     })
   } else if (windowscreen <= 1200 && windowscreen >= 1100) {
-    $('#cybermonday-relogio').css({
+    $('#cybermonday-relogio-desktop').css({
       right: `${ ($(window).width() * 0.60) / 100 }%`
     })
   } else if (windowscreen < 1199 && windowscreen >= 1000) {
-    $('#cybermonday-relogio').css({
+    $('#cybermonday-relogio-desktop').css({
       right: `${ ($(window).width() * 0.40) / 100 }%`
     })
   } else if (windowscreen < 1000 && windowscreen >= 700) {
-    $('#cybermonday-relogio').css({
+    $('#cybermonday-relogio-desktop').css({
       right: `${ ($(window).width() * 1) / 100 }%`,
       top: '45%'
     })
@@ -422,7 +446,7 @@ function calculateHMSleftMobile() {
   $('.box-banner').css({ position: "relative" })
 
   if (banner.length && !$('#cybermonday-relogio').length) {
-    $(banner[0]).parent().append(innerHTMLContagem)
+    $(banner[0]).parent().append(innerHTMLContagemMobile)
     // $(banner[0]).attr('src', 'https://aguadecheiro.vteximg.com.br/arquivos/cyber-monday-mobile.png')
   }
 
@@ -444,4 +468,6 @@ function calculateHMSleftMobile() {
 }
 
 calculateHMSleftMobile();
+calculateHMSleft();
 setInterval(calculateHMSleftMobile, 1000);
+setInterval(calculateHMSleft, 1000);

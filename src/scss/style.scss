@@ -2710,11 +2710,11 @@ textarea {
 }
 
 @media screen and (max-width: 1000px) and (min-width: 700px) {
-  div#cybermonday-relogio {
+  div.cb-landing-countdown {
     max-width: 300px;
   }
 
-  div#cybermonday-relogio h6 {
+  div.cb-landing-countdown h6 {
     font-size: 10px;
   }
 
@@ -2726,7 +2726,7 @@ textarea {
 }
 
 @media screen and (max-width: 600px) {
-  div#cybermonday-relogio h6 {
+  div.cb-landing-countdown h6 {
     font-size: 14px;
   }
 
