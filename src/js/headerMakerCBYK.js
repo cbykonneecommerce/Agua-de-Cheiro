@@ -55,6 +55,14 @@ $(document).ready(function () {
     })
   }
 
+  const addFlag2 = window.location.href.includes('H:209')
+
+  if (addFlag2) {
+    Array.from($('.prateleira ul li a')).forEach(item => {
+      $(item).find('img').after(`<p style="font-size: 11px;color: #ff5e6e; border: 1px solid #ff5e6e; text-align: center;" class="flag outlet embalagem">Embalagem Amassada</p>`)
+    })
+  }
+
   verifyUserIsLogged();
 
   fetch("/api/catalog_system/pub/category/tree/3/")
