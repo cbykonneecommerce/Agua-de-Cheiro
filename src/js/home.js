@@ -12,6 +12,7 @@
     })
   }
 
+
   const init = () => {
     brandCarousel()
   }

@@ -307,39 +307,6 @@ setInterval(() => {
     $('.mini-cart-qty-admake').text(quantity)
   })
 
-  // remove do footer do minicart teste b
-  $('.teste-b .cart__buttons button.cart__button').remove()
-  $('.teste-b .sidenavcart').prepend(`<button onclick="$('.cart__close').click()" class='cart__button'>CONTINUAR COMPRANDO</button>`)
-
-
-  // add produto ao carrinho shelfs
-  const shelfItems = document.querySelectorAll('.teste-b .box-item .buy-btns a')
-
-  for (let index = 0; index < shelfItems.length; index++) {
-    const element = shelfItems.item(index);
-    const productlink = $(element).prop('href')
-
-    if (productlink && productlink.includes('?')) {
-      const params = new URLSearchParams(productlink.split('?').pop())
-
-      $(element).removeAttr("href")
-      $(element).on('click', function () {
-        const item = [{
-          id: params.get('sku'),
-          quantity: 1,
-          seller: params.get('seller')
-        }]
-
-        vtexjs.checkout.addToCart(item, null, 1).done(() => {
-          // abrir minicart aqui
-          setTimeout(() => {
-            $('.btn-mini-cart').click()
-          }, 1000)
-        })
-      })
-    }
-  }
-
 }, 1000)
 
 $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
@@ -347,3 +314,40 @@ $(window).on('orderFormUpdated.vtex', function (evt, orderForm) {
 
   $('.mini-cart-qty-admake').text(quantity)
 });
+
+$(document).ready(function () {
+  setTimeout(() => {
+    // remove do footer do minicart teste b
+    $('.cart__buttons button.cart__button').remove()
+    $('.sidenavcart').prepend(`<button onclick="$('.cart__close').click()" class='cart__button'>CONTINUAR COMPRANDO</button>`)
+
+    const shelfItems = document.querySelectorAll('.box-item .buy-btns a')
+
+    for (let index = 0; index < shelfItems.length; index++) {
+      const element = shelfItems.item(index);
+      const productlink = $(element).prop('href')
+
+      if (productlink && productlink.includes('?')) {
+        const params = new URLSearchParams(productlink.split('?').pop())
+
+        $(element).removeAttr("href")
+        $(element).on('click', function () {
+          const item = [{
+            id: params.get('sku'),
+            quantity: 1,
+            seller: params.get('seller')
+          }]
+
+          vtexjs.checkout.getOrderForm().done(() => {
+            vtexjs.checkout.addToCart(item, null, 1).done(() => {
+              // abrir minicart aqui
+              setTimeout(() => {
+                $('.btn-mini-cart').click()
+              }, 500)
+            })
+          })
+        })
+      }
+    }
+  }, 1000);
+})
