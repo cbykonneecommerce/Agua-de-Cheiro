@@ -1427,7 +1427,10 @@ label.item_unavaliable:after {
 .product-details {
   .product {
     &__flag {
-      padding: 0px;
+      @media screen and (max-width: 768px) {
+        padding: 0px;
+      }
+
       margin-top: 1rem;
       .flag {
         font-size: 0;
