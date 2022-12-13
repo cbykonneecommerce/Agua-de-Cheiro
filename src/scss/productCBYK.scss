@@ -20,7 +20,7 @@
   font-size: 12px;
   color: black;
   padding-left: 10px;
-  font-family: "Lato";
+  font-family: 'Lato';
   display: block;
   outline: none;
   width: 100%;
@@ -44,7 +44,7 @@
   background-color: #000;
   padding: 8px 16px;
   text-decoration: none;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .installmentslist {
@@ -243,7 +243,7 @@
 }
 
 .user-review h4::after {
-  content: "";
+  content: '';
   display: block;
   width: 55px;
   height: 2px;
@@ -299,7 +299,6 @@
   label {
     margin: 0;
   }
-
 }
 
 #modalstuff {
@@ -405,7 +404,7 @@
 }
 
 .buy-button-box .box-qtd::before {
-  content: "Quantidade:";
+  content: 'Quantidade:';
   font-size: 16px;
   margin-right: 1em;
   position: relative;
@@ -511,7 +510,7 @@ input.qtd.pull-left {
 }
 
 label.combination_unavaliable:after {
-  content: " X";
+  content: ' X';
   color: #f00;
 }
 
@@ -701,7 +700,7 @@ label.combination_unavaliable:after {
   border-color: #8d7573 !important;
   /* font-size: 12px; */
   color: black;
-  font-family: "Lato";
+  font-family: 'Lato';
   /* display: block; */
   outline: none;
   /* width: 100%; */
@@ -725,7 +724,7 @@ label.combination_unavaliable:after {
   margin-right: 1em;
 }
 
-.prateleira.vitrine>ul {
+.prateleira.vitrine > ul {
   margin-left: 0px !important;
 }
 
@@ -733,13 +732,13 @@ label.combination_unavaliable:after {
   line-height: 18px;
   font-weight: 400;
   letter-spacing: 3px;
-  font-family: "Lato";
+  font-family: 'Lato';
   text-align: center;
   color: black;
 }
 
 .recomendations h2::after {
-  content: "";
+  content: '';
   display: block;
   width: 50px;
   height: 1px;
@@ -751,7 +750,7 @@ label.item_unavaliable:after {
   color: #fff;
   background-color: #8b0000;
   padding: 0px 5px;
-  content: "X";
+  content: 'X';
   border-radius: 100px;
   position: absolute;
   margin-top: -17px;
@@ -866,7 +865,6 @@ label.item_unavaliable:after {
 }
 
 @media screen and (max-width: 800px) {
-
   .selectedQuantity span.label,
   .selectedspecification span.label,
   .selectedspecification-value {
@@ -1217,7 +1215,6 @@ label.item_unavaliable:after {
   }
 
   @media screen and (max-width: 800px) {
-
     .selectedQuantity span.label,
     .selectedspecification span.label,
     .selectedspecification-value {
@@ -1357,7 +1354,7 @@ label.item_unavaliable:after {
 }
 
 .buy-button-box .box-qtd:before {
-  content: "Quantidade:";
+  content: 'Quantidade:';
   color: #4f4f4f !important;
   font-size: 16px;
 }
@@ -1430,6 +1427,11 @@ label.item_unavaliable:after {
 .product-details {
   .product {
     &__flag {
+      @media screen and (max-width: 768px) {
+        padding: 0px;
+      }
+
+      margin-top: 1rem;
       .flag {
         font-size: 0;
         display: none;
@@ -1442,9 +1444,56 @@ label.item_unavaliable:after {
         max-width: 100px;
 
         &::before {
-          content: "Validade Próxima";
+          content: 'Validade Próxima';
           font-size: 11px;
           color: #ff5e6e;
+        }
+      }
+
+      .flag.colecao-embalagens-amassadas {
+        display: block;
+        border: 1px solid #ff5e6e;
+        text-align: center;
+        max-width: 200px;
+
+        &::before {
+          content: 'Embalagem Amassada';
+          font-size: 11px;
+          color: #ff5e6e;
+        }
+      }
+
+      .flag.colecao-de-natal-agua-de-cheiro {
+        display: block;
+        border: 1px solid #ff5e6e;
+        text-align: center;
+        max-width: 250px;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #c51c30;
+        border: 1px dashed #e88888;
+        border-radius: 4px;
+
+        &::before {
+          content: 'Para Presentear';
+          font-size: 11px;
+          text-align: center;
+          color: #fff;
+        }
+
+        &::after {
+          content: '';
+          background: url(https://aguadecheiro.vteximg.com.br/arquivos/presente.png);
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 20px;
+          height: 20px;
+          display: block;
+          position: relative;
+          top: -2px;
         }
       }
     }

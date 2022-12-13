@@ -45,6 +45,31 @@ function verifySpecialCampaign () {
 
 $(document).ready(function () {
   verifySpecialCampaign();
+
+  const addFlag = window.location.href.includes('H:212')
+
+  if (addFlag) {
+
+    const presentearContent = `
+            <div style="padding: 5px 10px; display: flex; align-items: center; justify-content: space-between; background-color: #C51C30; border: 1px dashed #E88888; border-radius: 4px;">
+                <span style="color: #fff; font-size: 12px;">Para presentear</span>
+                <img width="20px" style="max-width: 20px; position: relative; top: -2px;" alt="para presentear" title="para presentear" src='/arquivos/presente.png' />
+            </div>
+        `
+
+    Array.from($('.prateleira ul li a')).forEach(item => {
+      $(item).find('img').after(presentearContent)
+    })
+  }
+
+  const addFlag2 = window.location.href.includes('H:209')
+
+  if (addFlag2) {
+    Array.from($('.prateleira ul li a')).forEach(item => {
+      $(item).find('img').after(`<p style="font-size: 11px;color: #ff5e6e; border: 1px solid #ff5e6e; text-align: center;" class="flag outlet embalagem">Embalagem Amassada</p>`)
+    })
+  }
+
   verifyUserIsLogged();
 
   fetch("/api/catalog_system/pub/category/tree/3/")
