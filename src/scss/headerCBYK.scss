@@ -1165,7 +1165,7 @@ button {
 
 //blue friday remover dps
 #menu-mobile {
-  background-color: #007DA5;
+  background-color: #5C0000;
   .sidenav {
     .depto-box,
     .depto-Kits {
@@ -1182,8 +1182,8 @@ button {
 }
 
 body.campanha-especial {
-  $color1: #0C0C0C;
-  $color2: #C7265C;
+  $color1: #5C0000;
+  $color2: #FF0000;
   .header-container {
     background-color: $color1;
     fieldset.busca {
@@ -1194,7 +1194,7 @@ body.campanha-especial {
     }
     .logo {
       svg path {
-        fill: $color2;
+        fill: #fff;
       }
     }
     .item-maes {
@@ -1203,8 +1203,8 @@ body.campanha-especial {
       justify-content: center;
     }
     .btn_special {
-      background-color: $color2;
-      border: 1px solid $color2;
+      background-color:  #de3846;
+      border: 1px solid  #de3846;
       color: #fff;
       &:hover {
         background-color: $color1;

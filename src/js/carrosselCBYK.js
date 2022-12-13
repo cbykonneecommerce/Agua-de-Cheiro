@@ -1,4 +1,3 @@
-console.log('test')
 
 $(document).ready(function () {
 
@@ -393,7 +392,6 @@ function calculateHMSleft() {
 
   const banner = $('[alt="Banner cyberweek - Desktop"]')
 
-  console.log(banner)
 
   $('.box-banner').css({ position: "relative" })
 
@@ -434,7 +432,6 @@ function calculateHMSleft() {
   if (secondsleft < 10) secondsleft = "0" + secondsleft;
 
   //display
-  console.log(hoursleft + ":" + minutesleft + ":" + secondsleft);
   $(".hoursleft").html(`${ hoursleft }`)
   $(".minutesleft").html(`${ minutesleft }`)
   $(".secondsleft").html(`${ secondsleft }`)
@@ -461,7 +458,6 @@ function calculateHMSleftMobile() {
   if (secondsleft < 10) secondsleft = "0" + secondsleft;
 
   //display
-  console.log(hoursleft + ":" + minutesleft + ":" + secondsleft);
   $(".hoursleft").html(`${ hoursleft }`)
   $(".minutesleft").html(`${ minutesleft }`)
   $(".secondsleft").html(`${ secondsleft }`)

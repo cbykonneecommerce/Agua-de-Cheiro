@@ -37,7 +37,14 @@ function verifyUserIsLogged() {
     })
 }
 
+function verifySpecialCampaign () {
+  if($('.js-item-menu a').length){
+    $('body').addClass('campanha-especial')
+  }
+}
+
 $(document).ready(function () {
+  verifySpecialCampaign();
   verifyUserIsLogged();
 
   fetch("/api/catalog_system/pub/category/tree/3/")
@@ -146,11 +153,11 @@ $(document).ready(function () {
         }
       });
     }).then(() => {
+      const menuCustomElement = $('.js-item-menu a').clone();
       $(".js-menu").prepend(`
-            <li class="item-special">
-              <a href="https://www.aguadecheiro.com.br/busca?fq=H:210" class="btn_special">Blue Friday</a>
-            </li>
+            <li class="item-special"></li>
       `)
+      $('.js-menu .item-special').append(menuCustomElement)
       $(".js-menu").append(`
             <li class="item-outlet">
               <a href="https://www.aguadecheiro.com.br/outlet">
