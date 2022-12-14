@@ -958,7 +958,6 @@ h4#divTitulo::after {
   &.has-product {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     overflow-x: auto;
     .cart__empty {
       display: none;
