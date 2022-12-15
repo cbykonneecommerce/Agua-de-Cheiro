@@ -2683,7 +2683,7 @@ textarea {
 }
 
 .box-banner ul.thefinalcountdown li div {
-  border: 2px solid #ff00f5;
+  border: 2px solid #5C0000;
 
   font-family: 'Montserrat', sans-serif;
   font-style: normal;
@@ -2697,16 +2697,16 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0px 0px 4px 1px rgba(250, 0, 255, 0.5);
   border-radius: 8px;
   min-width: 70px;
   min-height: 70px;
   max-width: 70px;
+  box-shadow: 0px 0px 3px 4px #5C0000;
 }
 
 .box-banner ul.thefinalcountdown li:first-child div {
-  background: #ff00f5;
-  border: 2px solid #ff00f5;
+  background: #5C0000;
+  border: 2px solid #5C0000;
 }
 
 @media screen and (max-width: 1000px) and (min-width: 700px) {

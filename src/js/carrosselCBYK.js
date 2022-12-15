@@ -327,7 +327,7 @@ const innerHTMLContagemMobile = `<div class="cb-landing-countdown" id="cybermond
 </div>`
 
 // Set the date we're counting down to
-var countDownDate = new Date("Nov 29, 2022 00:00:00").getTime();
+var countDownDate = new Date("Dec 25, 2022 00:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -390,7 +390,10 @@ $(".dropdown-container").hide();
 
 function calculateHMSleft() {
 
-  const banner = $('[alt="Banner cyberweek - Desktop"]')
+  let bannerNameDesktop = 'Banner natal contador - Desktop'
+  let bannerNameMobile = 'Banner natal contador - Mobile'
+
+  const banner = $('[alt="Banner natal contador - Desktop"]')
 
 
   $('.box-banner').css({ position: "relative" })
@@ -439,7 +442,7 @@ function calculateHMSleft() {
 
 function calculateHMSleftMobile() {
 
-  const banner = $('[alt="Banner cyberweek - mobile"]')
+  const banner = $('[alt="Banner natal contador - Mobile"]')
   $('.box-banner').css({ position: "relative" })
 
   if (banner.length && !$('#cybermonday-relogio').length) {
