@@ -102,12 +102,6 @@ function verifyUserIsLogged() {
     })
 }
 
-function verifySpecialCampaign() {
-  if ($('.js-item-menu a').length) {
-    $('body').addClass('campanha-especial')
-  }
-}
-
 $(document).ready(function () {
   verifySpecialCampaign();
 
