@@ -103,7 +103,6 @@ function verifyUserIsLogged() {
 }
 
 $(document).ready(function () {
-  verifySpecialCampaign();
 
   const addFlag = window.location.href.includes('H:212')
 
